@@ -1,4 +1,4 @@
-# MLOps Project - Brain Tumor Segmentation
+# MLOps Project - Hippocampus segmentation
 
 ## Project description
 
@@ -11,7 +11,7 @@ Mejse Grønborg-Koch, s196050
 
 ### Overall goal of the project
 
-In this project we aim to use a deep learning model to segment brain tumors in images - specifically CT scans - of human heads. The overall goal of this project is to succesfully utilize machine learning operations (MLOps) practices throughtout the modelling process. 
+In this project we aim to use a deep learning model to segment hippocampus left and right part in images - specifically MRI scans - of human heads. The overall goal of this project is to succesfully utilize machine learning operations (MLOps) practices throughtout the modelling process. 
 
 ### Third party framework 
 
@@ -21,10 +21,15 @@ We will use nnU-Net to configure a U-Net model based on our dataset (see section
 
 ### Data 
 
+The dataset used in this project is Task04 – Hippocampus from the Medical Segmentation Decathlon. It consists of 3D MRI scans of human brains with corresponding voxel-level annotations of the left and right hippocampus.
+
+The dataset contains a total of 394 3D MRI scans: 263 for training and 131 for testing. Each MRI volume is provided as a NIfTI file (.nii.gz) along with a segmentation mask where each voxel is labeled as background, left hippocampus, or right hippocampus. This makes the task a multiclass, voxel-wise segmentation problem.
+
+The data is split into predefined training and test sets and is stored in the project’s data/raw directory before being processed and converted into the format required by nnU-Net.
+
 ### Deep learning model used
 
 As mentioned above, the deep learning model used will be a U-Net model for image segmentation. 
-
 
 ## Project structure
 
