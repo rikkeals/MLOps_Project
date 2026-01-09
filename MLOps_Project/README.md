@@ -11,7 +11,8 @@ Mejse Grønborg-Koch, s196050
 
 ### Overall goal of the project
 
-In this project we aim to use a deep learning model to segment brain tumors in images - specifically CT scans - of human heads. The overall goal of this project is to succesfully utilize machine learning operations (MLOps) practices throughtout the modelling process. 
+In this project we aim to use a deep learning model to segment brain tumors in images - specifically CT scans - of human heads. Segmentation is the process of identifying and outlining structures - in this case we aim to outline tumors in the brain.
+The overall goal of this project is to succesfully utilize machine learning operations (MLOps) practices throughtout the modelling process. 
 
 ### Third party framework 
 
