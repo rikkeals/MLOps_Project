@@ -1,6 +1,30 @@
-# mlops_project
+# MLOps Project - Brain Tumor Segmentation
 
-Brain Tumor Segmentation
+## Project description
+
+Exam project for course 02476 Machine Learning Operations at Technical University of Denmark (DTU), Jan 2026. Created by group 65.
+
+Authors:
+Lotte Alstrup, s204297
+Rikke Alstrup, s194693
+Mejse Grønborg-Koch, s196050
+
+### Overall goal of the project
+
+In this project we aim to use a deep learning model to segment brain tumors in images - specifically CT scans - of human heads. The overall goal of this project is to succesfully utilize machine learning operations (MLOps) practices throughtout the modelling process. 
+
+### Third party framework 
+
+We will use [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) as our third party framework. U-Net is convolutional neural network specially designed for image segmentation. nnU-Net is a framework which analyzes the given training data and configure a U-Net pipeline based specifically on the given dataset. Therefore, nnU-Net can easily adapt to different datasets. 
+
+We will use nnU-Net to configure a U-Net model based on our dataset (see section below). This is the model we will train to segment brain tumors and hopefully fine-tune to enhance performance.
+
+### Data 
+
+### Deep learning model used
+
+As mentioned above, the deep learning model used will be a U-Net model for image segmentation. 
+
 
 ## Project structure
 
