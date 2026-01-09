@@ -4,9 +4,9 @@
 
 Exam project for course 02476 Machine Learning Operations at Technical University of Denmark (DTU), Jan 2026. Created by group 65.
 
-Authors:
-Lotte Alstrup, s204297
-Rikke Alstrup, s194693
+Authors: \
+Lotte Alstrup, s204297 \
+Rikke Alstrup, s194693 \
 Mejse Grønborg-Koch, s196050
 
 ### Overall goal of the project
