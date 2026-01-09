@@ -11,18 +11,18 @@ Mejse Grønborg-Koch, s196050
 
 ### Overall goal of the project
 
-In this project we aim to use a deep learning model to segment hippocampus left and right part in images - specifically MRI scans - of human heads. Segmentation is the process of identifying and outlining structures - in this case we aim to outline tumors in the brain.
+In this project we aim to use a deep learning model to segment hippocampus left and right part in images - specifically MRI scans - of human heads. Segmentation is the process of identifying and outlining structures - in this case we aim to outline hippocampus in the brain.
 The overall goal of this project is to succesfully utilize machine learning operations (MLOps) practices throughtout the modelling process. 
 
 ### Third party framework 
 
 We will use [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) as our third party framework. U-Net is a convolutional neural network (CNN) specially designed for image segmentation. nnU-Net is a framework based on U-Net designed specifically for segmentation of medical images. Instead of designing a new neural network architecture for every new dataset, the nnU-Net framework analyzes the given dataset and configures a U-Net based pipeline suited to said dataset. nnU-Net automatically determines configurations such as normalization methods and loss functions as well as hyperparameters such as batch size and network depth, reducing the "startup" time when creating a new model for a new dataset. Therefore, nnU-Net can easily adapt to different datasets. 
 
-We will use nnU-Net to configure a U-Net model based on our dataset (see section below). This is the model we will train to segment brain tumors and hopefully fine-tune to enhance performance.
+We will use nnU-Net to configure a U-Net model based on our dataset (see section below). This is the model we will train to segment hippocampus and hopefully fine-tune to enhance performance.
 
 ### Data 
 
-The dataset used in this project is Task04 – Hippocampus from the Medical Segmentation Decathlon. It consists of 3D MRI scans of human brains with corresponding voxel-level annotations of the left and right hippocampus.
+The dataset used in this project is [Task04 – Hippocampus from the Medical Segmentation Decathlon](http://medicaldecathlon.com/dataaws/). It consists of 3D MRI scans of human brains with corresponding voxel-level annotations of the left and right hippocampus.
 
 The dataset contains a total of 394 3D MRI scans: 263 for training and 131 for testing. Each MRI volume is provided as a NIfTI file (.nii.gz) along with a segmentation mask where each voxel is labeled as background, left hippocampus, or right hippocampus. This makes the task a multiclass, voxel-wise segmentation problem.
 
