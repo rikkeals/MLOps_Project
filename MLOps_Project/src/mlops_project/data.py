@@ -27,3 +27,22 @@ def preprocess(data_path: Path, output_folder: Path) -> None:
 
 if __name__ == "__main__":
     typer.run(preprocess)
+
+##New name to files in nnUNet format
+$imgTr = "$env:nnUNet_raw\Dataset621_Hippocampus\imagesTr"
+
+Get-ChildItem $imgTr -Filter *.nii.gz | ForEach-Object {
+    if ($_.Name -notmatch "_\d{4}\.nii\.gz$") {
+        $newName = $_.Name -replace "\.nii\.gz$", "_0000.nii.gz"
+        Rename-Item $_.FullName $newName
+    }
+}
+
+
+#Set environment variable for nnUNet
+$data = "C:\Users\rikke\OneDrive - Danmarks Tekniske Universitet\Universitet\Kandidat - MMC\Machine Learning Operations\MLOps_Project\MLOps_Project\data"
+
+$env:nnUNet_raw = "$data\nnUNet_raw"
+$env:nnUNet_preprocessed = "$data\nnUNet_preprocessed"
+$env:nnUNet_results = "$data\nnUNet_results"
+
