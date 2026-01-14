@@ -1,0 +1,6 @@
+dataset:
+  name: Dataset621_Hippocampus
+  raw_root: data/original
+  nnunet_raw_root: data/nnUNet_raw
+  channel_name: T1
+  gdrive_id: "1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C"
