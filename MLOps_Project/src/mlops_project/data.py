@@ -5,16 +5,37 @@ import json
 from typing import Any
 import shutil
 
+"""
+This script downloads and preprocesses the Hippocampus dataset 
+from Medical Segmentation Decathlon 
+for use with nnU-Net v2.
+"""
 
+################################################################
+# Parameters
+################################################################
+
+# Data directory to store the original data downloaded from MSD
+# Is changable but recommended to keep this structure
 DATA_DIR = Path("data/original")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+# Google Drive file ID for the Hippocampus dataset (Should not be changed)
 HIPPOCAMPUS_ID = "1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C"
 ARCHIVE_PATH = DATA_DIR / "Task_04_hippocampus.tar"
 EXTRACTED_DIR = DATA_DIR / "Task04_Hippocampus"
 
-DATASET_NAME = "Dataset621_Hippocampus"
+# Dataset name 
+# Is is changable but needs to be this structure DatasetXXX_Name for nnUNet v2
+DATASET_NAME = "Dataset621_Hippocampus" #
+
+# Preprocessed data directory for nnU-Net v2 (should not be changed)
 PREPROCESSED_DATA_DIR = Path(f"data/nnUNet_raw/{DATASET_NAME}")
+
+
+################################################################
+# Function to download and extract the dataset
+################################################################
 
 def download_and_extract_dataset() -> None:
     """
@@ -39,6 +60,10 @@ def download_and_extract_dataset() -> None:
     else:
         print("Dataset already exists.")
 
+
+################################################################
+# Functions of the changes needed to preprocess the dataset for nnU-Net v2
+################################################################
 
 def _to_0000_name(name: str) -> str:
     if name.endswith("_0000.nii.gz"):
@@ -111,6 +136,9 @@ def remove_appledouble_files(dataset_dir: Path) -> int:
     return removed
 
 
+#################################################################
+# Main preprocessing function
+#################################################################
 
 def preprocess(
     data_path: Path,             # folder containing Task04_Hippocampus
@@ -136,15 +164,14 @@ def preprocess(
     print(f"✓ Dataset written to: {dst_dataset_dir}")
 
 
+################################################################
+# Main script execution
+################################################################
+
 if __name__ == "__main__":
     download_and_extract_dataset()
     preprocess(EXTRACTED_DIR, PREPROCESSED_DATA_DIR.parent)
     print("All done!")
 
-# #Set environment variable for nnUNet
-# $data = "C:\Users\rikke\OneDrive - Danmarks Tekniske Universitet\Universitet\Kandidat - MMC\Machine Learning Operations\MLOps_Project\MLOps_Project\data"
 
-# $env:nnUNet_raw = "$data\nnUNet_raw"
-# $env:nnUNet_preprocessed = "$data\nnUNet_preprocessed"
-# $env:nnUNet_results = "$data\nnUNet_results"
 
