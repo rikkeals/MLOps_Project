@@ -9,6 +9,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from MLOps_Project.MLOps_Project.src.mlops_project.model import set_nnunet_env
+import hydra
+from omegaconf import DictConfig
+
 import yaml
 
 
@@ -61,10 +65,8 @@ def run_and_tee(cmd: list[str], log_path: Path, env: dict[str, str]) -> None:
             raise RuntimeError(f"Command failed with exit code {rc}: {' '.join(cmd)}")
 
 
-def maybe_init_wandb(cfg: dict[str, Any], log_path: Path) -> Optional[object]:
-    wandb_cfg = cfg.get("wandb", {}) or {}
-    enabled = bool(wandb_cfg.get("enabled", False))
-    if not enabled:
+def maybe_init_wandb(cfg: DictConfig, log_path: Path) -> Optional[object]:
+    if not cfg.get("wandb") or not bool(cfg.wandb.get("enabled", False)):
         return None
 
     try:
@@ -75,28 +77,31 @@ def maybe_init_wandb(cfg: dict[str, Any], log_path: Path) -> Optional[object]:
             "  pip install wandb\n"
         ) from e
 
-    training = cfg.get("training", {}) or {}
-
     run = wandb.init(
-        project=wandb_cfg.get("project", "mlops-nnunet"),
-        entity=wandb_cfg.get("entity", None),
-        name=wandb_cfg.get("run_name", None),
+        project=str(cfg.wandb.get("project", "mlops-nnunet")),
+        entity=cfg.wandb.get("entity", None),
+        name=cfg.wandb.get("run_name", None),
         config={
-            # log exactly what we train with
-            "dataset_id": training.get("dataset_id"),
-            "config": training.get("nnunet_config"),
-            "fold": training.get("fold"),
-            "trainer": training.get("trainer"),
-            "device": training.get("device"),
+            "dataset_id": int(cfg.dataset.dataset_id),
+            "nnunet_config": str(cfg.training.get("nnunet_config")),
+            "fold": str(cfg.training.get("fold")),
+            "trainer": str(cfg.training.get("trainer")),
+            "device": str(cfg.training.get("device")),
         },
     )
 
     wandb.save(str(log_path), policy="now")
     return run
 
+def set_nnunet_env(env: dict[str, str], nnunet_raw: Path, nnunet_preprocessed: Path, nnunet_results: Path) -> None:
+    env["nnUNet_raw"] = str(nnunet_raw)
+    env["nnUNet_preprocessed"] = str(nnunet_preprocessed)
+    env["nnUNet_results"] = str(nnunet_results)
 
-def main() -> None:
-    root = repo_root()
+
+@hydra.main(version_base=None, config_path="../../configs", config_name="config")
+def main(cfg: DictConfig) -> None:
+    project_root = Path(hydra.utils.get_original_cwd())
 
     # Optional CLI override for config path (but no need to pass dataset/config/fold etc.)
     parser = argparse.ArgumentParser(description="nnU-Net v2 training runner (train-only, config-driven)")
@@ -110,26 +115,31 @@ def main() -> None:
     cfg = load_cfg(config_path)
 
     # ---- Read training args from config ----
-    training = cfg.get("training", {}) or {}
+    if not cfg.get("dataset") or cfg.training.get("dataset_id") is None:
+        raise KeyError("Missing required key: dataset.dataset_id in config.yaml")
 
-    if "dataset_id" not in training:
-        raise KeyError("Missing required key: training.dataset_id in config.yaml")
+    dataset_id = int(cfg.dataset.dataset_id)
 
+    if not cfg.get("training"):
+        raise KeyError("Missing required section: training in config.yaml")
 
-    dataset_id = training["dataset_id"]          # required
-    nnunet_config = training.get("nnunet_config", "2d")
-    fold = str(training.get("fold", 0))
-    trainer = training.get("trainer", "nnUNetTrainer")
-    device = training.get("device", "cpu")
+    nnunet_config = str(cfg.training.get("nnunet_config", "3d_fullres"))
+    fold = str(cfg.training.get("fold", 0))
+    trainer = str(cfg.training.get("trainer", "nnUNetTrainer"))
+    device = str(cfg.training.get("device", "cpu"))
+
 
     # ---- Paths (also from config, default to repo layout) ----
-    paths = cfg.get("paths", {}) or {}
-    nnunet_raw = root / paths.get("nnunet_raw", "data/nnUNet_raw")
-    nnunet_preprocessed = root / paths.get("nnunet_preprocessed", "data/nnUNet_preprocessed")
-    nnunet_results = root / paths.get("nnunet_results", "data/nnUNet_results")
+    nnunet_raw = project_root / str(cfg.dataset.nnunet_raw_root)
+
+    # Keep these in training/paths only if you have them there.
+    # If your YAML does NOT define them yet, we’ll add them in the next step.
+    nnunet_preprocessed = project_root / str(cfg.dataset.nnunet_preprocessed_root)
+    nnunet_results = project_root / str(cfg.dataset.nnunet_results_root)
+
 
     logging_cfg = cfg.get("logging", {}) or {}
-    logs_dir = root / logging_cfg.get("logs_dir", "logs")
+    logs_dir = project_root / logging_cfg.get("logs_dir", "logs")
     ensure_dir(logs_dir)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -145,12 +155,9 @@ def main() -> None:
                 "It will appear only if the corresponding nnU-Net step ran successfully."
             )
 
-
-    # nnU-Net expects these env vars
     env = os.environ.copy()
-    env["nnUNet_raw"] = str(nnunet_raw)
-    env["nnUNet_preprocessed"] = str(nnunet_preprocessed)
-    env["nnUNet_results"] = str(nnunet_results)
+    set_nnunet_env(env, nnunet_raw, nnunet_preprocessed, nnunet_results)
+
 
     # Required inputs must exist
     require_dir(nnunet_raw, "nnUNet_raw")

@@ -5,6 +5,8 @@ dataset:
   nnunet_raw_root: data/nnUNet_raw
   channel_name: T1
   gdrive_id: 1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C
+  nnunet_preprocessed_root: data/nnUNet_preprocessed
+  nnunet_results_root: data/nnUNet_results
 
 model:
   configuration: 2d
@@ -78,6 +80,7 @@ wandb:
   project: hippocampus-segmentation
   entity: your_wandb_entity
   run_name: nnunetv2_fold0
+
 training:
   dataset_id: 621
   nnunet_config: 2d
