@@ -1,0 +1,22 @@
+# Base image
+FROM python:3.12-slim
+
+RUN apt update && \
+    apt install --no-install-recommends -y build-essential gcc && \
+    apt clean && rm -rf /var/lib/apt/lists/*
+
+# Copy essential parts of the project to container
+COPY requirements.txt requirements.txt
+COPY pyproject.toml pyproject.toml
+COPY src/ src/
+# data is mounted at runtime to keep the image smaller
+
+# Set working directory in container
+WORKDIR /
+
+# Install dependencies and packages
+RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt --no-cache-dir
+RUN pip install . --no-deps --no-cache-dir
+
+# Entry point (what should be run when image is executed)
+ENTRYPOINT ["python", "-u", "src/mlops_project/train.py"]
