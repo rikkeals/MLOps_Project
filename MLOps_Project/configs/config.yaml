@@ -6,3 +6,18 @@ dataset:
   channel_name: T1
   gdrive_id: "1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C"
 
+
+
+wandb:
+  project: hippocampus-segmentation
+  entity: your_wandb_entity
+  run_name: nnunetv2_fold0
+
+training:
+  nnunet_config: 2d
+  fold: 0
+  trainer: nnUNetTrainer
+  device: cpu
+  plans: nnUNetPlans
+  preprocess: true
+  num_processes: 8

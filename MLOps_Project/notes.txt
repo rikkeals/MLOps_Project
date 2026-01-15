@@ -1,0 +1,9 @@
+TO-DO:
+- train.py (Rikke, Lotte)
+- docker files (Mejse)
+- wandb (Mejse)
+
+
+QUESTIONS:
+- Is it fine we don't have a model.py because it is part of the nnU-Net framework? 
+- Data version control? Is our ID enough or what do you recommend?
