@@ -87,6 +87,15 @@ started with Machine Learning Operations (MLOps).
 ## How to run the project
 
 1. Activate your conda environment
+
+# Install all relevant packages for the project
 2. Run the requirement.txt file by typing "python3 -m pip install -r requirements.txt
 python3 -m pip install -e ."
-3. 
+
+# Download data and preprocess to nnUNetv2 format
+3. python3 src\mlops_project\data.py
+
+# Make sure that the nnUNet_preprocess folder in the data folder does not exist (this gives problems if your connected with OneDrive)
+
+# Under preprocessing the nnUNetPlans.json the framework has 
+# and dataset_fingerprint.json
