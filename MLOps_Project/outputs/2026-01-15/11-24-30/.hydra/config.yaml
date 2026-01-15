@@ -1,0 +1,30 @@
+dataset:
+  name: Dataset621_Hippocampus
+  dataset_id: 621
+  raw_root: data/original
+  nnunet_raw_root: data/nnUNet_raw
+  channel_name: T1
+  gdrive_id: 1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C
+nnunet:
+  plans_path: nnUNet_preprocessed/Dataset621_Hippocampus/nnUNetPlans.json
+  configuration: 2d
+  override:
+    batch_size: 4
+    patch_size:
+    - 48
+    - 64
+    - 48
+    architecture:
+      arch_kwargs:
+        features_per_stage:
+        - 32
+        - 64
+        - 128
+        - 320
+        n_stages: 5
+        n_conv_per_stage:
+        - 2
+        - 2
+        - 2
+        - 2
+        - 2

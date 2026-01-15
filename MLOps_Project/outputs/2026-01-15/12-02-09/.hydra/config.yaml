@@ -5,11 +5,13 @@ dataset:
   nnunet_raw_root: data/nnUNet_raw
   channel_name: T1
   gdrive_id: 1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C
-
-model:
+preprocessing:
   configuration: 2d
   defaults:
+    plans_path: C:\Users\rikke\OneDrive - Danmarks Tekniske Universitet\Universitet\Kandidat
+      - MMC\Machine Learning Operations\MLOps_Project\MLOps_Project\data\nnUNet_preprocessed\Dataset621_Hippocampus\nnUNetPlans.json
     data_identifier: nnUNetPlans_2d
+    preprocessor_name: DefaultPreprocessor
     batch_size: 366
     patch_size:
     - 56
@@ -19,6 +21,9 @@ model:
     - 1.0
     normalization_schemes:
     - ZScoreNormalization
+    use_mask_for_norm:
+    - false
+    batch_dice: true
     architecture:
       network_class_name: dynamic_network_architectures.architectures.unet.PlainConvUNet
       arch_kwargs:
@@ -72,8 +77,6 @@ model:
       - dropout_op
       - nonlin
   override: {}
-
-
 wandb:
   project: hippocampus-segmentation
   entity: your_wandb_entity
