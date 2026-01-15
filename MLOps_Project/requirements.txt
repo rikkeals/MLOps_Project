@@ -2,7 +2,6 @@
 torch==2.6.0
 nnunetv2
 
-
 # --- Scientific stack ---
 numpy>=1.26
 scipy>=1.11
@@ -18,3 +17,10 @@ tqdm>=4.66
 
 # --- Config / validation ---
 pydantic>=2.6
+
+# --- Config / experiment management ---
+hydra-core==1.3.2
+omegaconf==2.3.0
+
+# --- Utilities / data download ---
+gdown==5.2.0
