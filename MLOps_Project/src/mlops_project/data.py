@@ -69,7 +69,7 @@ def download_and_extract_dataset(
 
 
 ################################################################
-# nnU-Net v2 preprocessing
+# Preprocessing to nnU-Net v2 format
 ################################################################
 
 def copy_images_with_0000(src_task_dir: Path, dst_dataset_dir: Path) -> None:
