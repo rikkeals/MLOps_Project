@@ -11,6 +11,7 @@ wandb:
   run_name: nnunetv2_fold0
 
 training:
+  dataset_id: 621
   nnunet_config: 2d
   fold: 0
   trainer: nnUNetTrainer
