@@ -9,6 +9,7 @@ RUN apt update && \
 COPY requirements.txt requirements.txt
 COPY pyproject.toml pyproject.toml
 COPY src/ src/
+COPY configs/ configs/
 # data is mounted at runtime to keep the image smaller
 
 # Set working directory in container
