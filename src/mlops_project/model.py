@@ -1,10 +1,11 @@
-from pathlib import Path
+import json
 import os
 import subprocess
 import sys
+from pathlib import Path
+
 import hydra
 from omegaconf import DictConfig, OmegaConf
-import json
 
 
 def set_nnunet_env(project_root: Path) -> None:
@@ -92,7 +93,7 @@ def main(cfg: DictConfig) -> None:
     except subprocess.CalledProcessError as e:
         print(f"\nERROR: nnUNet command failed with exit code {e.returncode}")
         sys.exit(e.returncode)
-    
+
     # 4) Update config.yaml from the generated Plans_2d
     config_path = project_root / "configs" / "config.yaml"
     dataset_name = str(cfg.dataset.name)

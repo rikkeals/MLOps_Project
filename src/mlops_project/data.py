@@ -1,12 +1,12 @@
+import json
+import shutil
+import tarfile
 from pathlib import Path
 from typing import Any
+
 import gdown
 import hydra
 from omegaconf import DictConfig
-import tarfile
-import json
-import shutil
-
 
 """
 This script downloads and preprocesses the Hippocampus dataset
