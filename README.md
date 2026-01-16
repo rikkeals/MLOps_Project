@@ -93,7 +93,7 @@ python3 -m pip install -e ."
 
 ### Run using Docker 
 
-The project can also be run using Docker by building and and executing a Docker image from the Docker file train.dockerfile. You need to [install Docker](https://docs.docker.com/get-started/get-docker/) to do this. In the terminal write the following (and make sure that your current directory is /MLOps_Project/MLOps_Project, i.e. the root of the project):
+The project can also be run using Docker by building and and executing a Docker image from the Docker file train.dockerfile. You need to [install Docker](https://docs.docker.com/get-started/get-docker/) to do this. In the terminal write the following (and make sure that your current directory is /MLOps_Project, i.e. the root of the project):
 
 1. *Build a Docker image:* "docker build -f dockerfiles/train.dockerfile . -t train:latest"
 2. *Execute the Docker image:* "docker run --rm --shm-size=2g -v $(pwd)/data:/data --name experiment1 train:latest"
