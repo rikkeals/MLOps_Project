@@ -180,3 +180,6 @@ cython_debug/
 data/nnUNet_raw/
 data/nnUNet_preprocessed/
 data/original/
+
+# DVC
+dvc-key.json
