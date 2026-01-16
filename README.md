@@ -86,13 +86,14 @@ started with Machine Learning Operations (MLOps).
 
 ## How to run the project
 
-1. Activate your conda environment
-2. Run the requirement.txt file by typing 
+1. Clone GitHub repository (repo) locally 
+2. Activate your conda environment
+3. Run the requirement.txt file by typing 
 ```txt 
 python3 -m pip install -r requirements.txt 
 python3 -m pip install -e .
 ```
-3. 
+4. 
 
 ### Run using Docker 
 
@@ -104,3 +105,45 @@ The project can also be run using Docker by building and and executing a Docker 
 Note: ```--shm-size=2g``` sets the shared memory to 2GB in the Docker container (default is 64 MB). You can try without, but will most likely get the error message "No space left on device". This is because PyTorch and nnU-Net use multiprocessing and has workers that share large tensors. 
 
 Note: [$(pwd) needs to change depending on your OS](https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10).
+
+
+## Data versioning and storage
+
+*Section modified from ChatGPT*
+
+This project uses DVC (Data Version Control) together with Google Cloud Storage (GCS) to version and store datasets. The datasets are thus not tracked by Git, but by DVC instead.
+
+The following directories are tracked with DVC:
+- ```data/original``` – original dataset downloaded from the Medical Segmentation Decathlon
+- ```data/nnUNet_raw``` – dataset converted to nnU-Net input format using data.py
+
+The following directory is *not* tracked with DVC:
+- ```data/nnUNet_preprocessed``` – dataset derived from running train.py
+
+Only the corresponding .dvc metadata files are committed to Git.
+
+### Pull data from Google Cloud
+
+Prerequisites:
+- A Google account
+- Access to the Google Cloud Platform (GCP) project ```mlops-project-group65```
+- Dependencies installed via ```requirements.txt```
+- This Git repo cloned locally
+- Your cd set to the repo root in the terminal
+
+Type in terminal:
+1. *Set active GCP project:* ```gcloud config set project mlops-project-group65```
+2. *Create service account:* ```gcloud iam service-accounts create dvc-sa-<yourname> \
+  --display-name "DVC service account (<yourname>) ```
+3. *Grant access to cloud storage:* ```gcloud projects add-iam-policy-binding mlops-project-group65 \
+  --member="serviceAccount:dvc-sa-<yourname>@mlops-project-group65.iam.gserviceaccount.com" \
+  --role="roles/storage.objectAdmin```
+4. *Create a key file (OBS do NOT commit this file to Git):* ```gcloud iam service-accounts keys create dvc-key.json \
+  --iam-account=dvc-sa-<yourname>@mlops-project-group65.iam.gserviceaccount.com```
+5. *Authenticate locally:* ```export GOOGLE_APPLICATION_CREDENTIALS="$(pwd)/dvc-key.json```
+3. *Pull data from cloud:* ```dvc pull```
+
+The datasets should be downloaded into data/. 
+
+
+

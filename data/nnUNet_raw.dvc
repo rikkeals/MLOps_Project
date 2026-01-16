@@ -1,0 +1,4561 @@
+outs:
+- hash: md5
+  path: nnUNet_raw
+  files:
+  - relpath: Dataset621_Hippocampus/dataset.json
+    md5: f83792a19ae8aadb5dc95f2b373ad0db
+    size: 458
+    cloud:
+      storage:
+        etag: 088899b7c1b29092031001
+        version_id: '1768578012269704'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_001_0000.nii.gz
+    md5: 7de26cb8d2525d4345fc3a1018505250
+    size: 49874
+    cloud:
+      storage:
+        etag: 0887a6a2c2b29092031001
+        version_id: '1768578014024455'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_003_0000.nii.gz
+    md5: e51bcb5cdb15aafe83c157b442952366
+    size: 75632
+    cloud:
+      storage:
+        etag: 0898e596c2b29092031001
+        version_id: '1768578013835928'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_004_0000.nii.gz
+    md5: 1f43c21f14c11a343d3953bbf65b21b9
+    size: 87109
+    cloud:
+      storage:
+        etag: 08b7f88ec2b29092031001
+        version_id: '1768578013707319'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_006_0000.nii.gz
+    md5: 1c3254c648875e550422e4388a996e1b
+    size: 78933
+    cloud:
+      storage:
+        etag: 08be949ec2b29092031001
+        version_id: '1768578013956670'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_007_0000.nii.gz
+    md5: 302ea9ea85c172523c8856ac0572088e
+    size: 83038
+    cloud:
+      storage:
+        etag: 0890f2ecc1b29092031001
+        version_id: '1768578013149456'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_008_0000.nii.gz
+    md5: 73bb8dd1b38b1efbaae82840ea9357cc
+    size: 89370
+    cloud:
+      storage:
+        etag: 08d68fdfc1b29092031001
+        version_id: '1768578012923862'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_011_0000.nii.gz
+    md5: f669d9e2f5fe586dcc6995d6c49ad71e
+    size: 70886
+    cloud:
+      storage:
+        etag: 08a3e0efc1b29092031001
+        version_id: '1768578013196323'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_014_0000.nii.gz
+    md5: 2cdefc5c1d2e3fc2373f4161669bc32a
+    size: 94757
+    cloud:
+      storage:
+        etag: 08dce0a4c2b29092031001
+        version_id: '1768578014064732'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_015_0000.nii.gz
+    md5: bd11ee11de0cb99ad1124f96bfc61816
+    size: 73716
+    cloud:
+      storage:
+        etag: 08cbe6a8c2b29092031001
+        version_id: '1768578014131019'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_017_0000.nii.gz
+    md5: 31a678ce8aea225cb526afbf46c71b17
+    size: 66844
+    cloud:
+      storage:
+        etag: 088eb9b9c2b29092031001
+        version_id: '1768578014403726'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_019_0000.nii.gz
+    md5: 2a04908c12c0377eca81ee667efd32ca
+    size: 87302
+    cloud:
+      storage:
+        etag: 08ed92b0c2b29092031001
+        version_id: '1768578014251373'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_020_0000.nii.gz
+    md5: 56629f24c8311654d0de81978b278db8
+    size: 89703
+    cloud:
+      storage:
+        etag: 08a9f4efc1b29092031001
+        version_id: '1768578013198889'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_023_0000.nii.gz
+    md5: abb36f54396d15a0cf7a6db47e0a4796
+    size: 76768
+    cloud:
+      storage:
+        etag: 089bcbb3c2b29092031001
+        version_id: '1768578014307739'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_024_0000.nii.gz
+    md5: 7e2a0fd062b29d533ed42efae5de7a08
+    size: 81231
+    cloud:
+      storage:
+        etag: 089be59fc2b29092031001
+        version_id: '1768578013983387'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_025_0000.nii.gz
+    md5: 25c62223af8b26b26bb4dd0e4c92abb3
+    size: 72996
+    cloud:
+      storage:
+        etag: 08daccdcc1b29092031001
+        version_id: '1768578012882522'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_026_0000.nii.gz
+    md5: ad53d146726de2412264bc048bf12c45
+    size: 80500
+    cloud:
+      storage:
+        etag: 08f3c9abc2b29092031001
+        version_id: '1768578014176499'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_033_0000.nii.gz
+    md5: 9ef98da09fa9e1872492d47ce0483f50
+    size: 49888
+    cloud:
+      storage:
+        etag: 088285edc1b29092031001
+        version_id: '1768578013151874'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_034_0000.nii.gz
+    md5: 4f05c89af10d203f9a28074bf0b90c89
+    size: 58267
+    cloud:
+      storage:
+        etag: 08b0b499c2b29092031001
+        version_id: '1768578013878832'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_035_0000.nii.gz
+    md5: be5f01d6828f2fa58b7f0164b9d8772b
+    size: 78103
+    cloud:
+      storage:
+        etag: 08abd99ac2b29092031001
+        version_id: '1768578013899947'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_036_0000.nii.gz
+    md5: 96d6e5c4a3059ce0bc6989acbbd710fd
+    size: 84751
+    cloud:
+      storage:
+        etag: 08c5bc8bc2b29092031001
+        version_id: '1768578013650501'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_037_0000.nii.gz
+    md5: 3dad14f2b2adce54520232028d5d82ae
+    size: 65731
+    cloud:
+      storage:
+        etag: 08d7b5bfc2b29092031001
+        version_id: '1768578014501591'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_038_0000.nii.gz
+    md5: 90b6722097a542c5b15bc48ca908e480
+    size: 78570
+    cloud:
+      storage:
+        etag: 08f6dffdc1b29092031001
+        version_id: '1768578013425654'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_039_0000.nii.gz
+    md5: 5595a6b62cb6f959aeca98b79114b264
+    size: 76233
+    cloud:
+      storage:
+        etag: 08c1f982c2b29092031001
+        version_id: '1768578013510849'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_040_0000.nii.gz
+    md5: 7f92da0fb3e52c46d6837161005e44f9
+    size: 85738
+    cloud:
+      storage:
+        etag: 08e7f5d9c1b29092031001
+        version_id: '1768578012838631'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_041_0000.nii.gz
+    md5: c8e99f548a286bfe3ab63ff32f0b42aa
+    size: 76720
+    cloud:
+      storage:
+        etag: 08e9e1afc2b29092031001
+        version_id: '1768578014245097'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_042_0000.nii.gz
+    md5: 2295f15de5e7fdc41b9fda64f6dab2b8
+    size: 80237
+    cloud:
+      storage:
+        etag: 08e286bac2b29092031001
+        version_id: '1768578014413666'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_044_0000.nii.gz
+    md5: 0ee17c16d69800fc60afa8f2004d3e4f
+    size: 70628
+    cloud:
+      storage:
+        etag: 089daf9dc2b29092031001
+        version_id: '1768578013943709'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_045_0000.nii.gz
+    md5: 222bdc197e98ae242193d446a1a4ca96
+    size: 83581
+    cloud:
+      storage:
+        etag: 08bcc689c2b29092031001
+        version_id: '1768578013619004'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_046_0000.nii.gz
+    md5: 8a49edd0bda59643089ee0dc321f5e03
+    size: 87988
+    cloud:
+      storage:
+        etag: 08ede484c2b29092031001
+        version_id: '1768578013540973'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_048_0000.nii.gz
+    md5: e623b74e042929c6da25df010fca6210
+    size: 75761
+    cloud:
+      storage:
+        etag: 08acfdfac1b29092031001
+        version_id: '1768578013380268'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_049_0000.nii.gz
+    md5: 3b3aaeb5789de303e5e93c6856202928
+    size: 79879
+    cloud:
+      storage:
+        etag: 08b795a1c2b29092031001
+        version_id: '1768578014005943'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_050_0000.nii.gz
+    md5: 3bfbd6f63b4392889f71873503443bce
+    size: 88013
+    cloud:
+      storage:
+        etag: 08dcceabc2b29092031001
+        version_id: '1768578014177116'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_051_0000.nii.gz
+    md5: 01d49fb0c4c0e062fd079a9ecf88db87
+    size: 84435
+    cloud:
+      storage:
+        etag: 089ebaecc1b29092031001
+        version_id: '1768578013142302'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_052_0000.nii.gz
+    md5: 32e334d0d6041bf8fdc8e19265dffba2
+    size: 85941
+    cloud:
+      storage:
+        etag: 08b1cbb7c2b29092031001
+        version_id: '1768578014373297'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_053_0000.nii.gz
+    md5: a4ee09b23575c6f05f63da406805a9ea
+    size: 88702
+    cloud:
+      storage:
+        etag: 08e0c7b1c2b29092031001
+        version_id: '1768578014274528'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_056_0000.nii.gz
+    md5: 9fbe03fcc780d7f82a5ef6c08e93d712
+    size: 104294
+    cloud:
+      storage:
+        etag: 088db2fbc1b29092031001
+        version_id: '1768578013387021'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_057_0000.nii.gz
+    md5: ed968611a6276bd3b29c555c9fec80fc
+    size: 75511
+    cloud:
+      storage:
+        etag: 08b4ca82c2b29092031001
+        version_id: '1768578013504820'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_058_0000.nii.gz
+    md5: 43df2a0e93893463c50849878fc2c7b3
+    size: 80036
+    cloud:
+      storage:
+        etag: 08c8e484c2b29092031001
+        version_id: '1768578013540936'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_060_0000.nii.gz
+    md5: 3617218d3b07e4e91afef10a5ed2dbac
+    size: 75101
+    cloud:
+      storage:
+        etag: 0884bfe1c1b29092031001
+        version_id: '1768578012962692'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_064_0000.nii.gz
+    md5: 73c74dbafa0a9d5b0daa2f19171d8cd8
+    size: 77096
+    cloud:
+      storage:
+        etag: 08a1f584c2b29092031001
+        version_id: '1768578013543073'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_065_0000.nii.gz
+    md5: 74720cf49c3e09a653f673af33fde8e2
+    size: 60545
+    cloud:
+      storage:
+        etag: 08e1a584c2b29092031001
+        version_id: '1768578013532897'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_067_0000.nii.gz
+    md5: 6afbd789b26f5eaacbf6489bdf41d9d0
+    size: 79360
+    cloud:
+      storage:
+        etag: 0896f0bac2b29092031001
+        version_id: '1768578014427158'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_068_0000.nii.gz
+    md5: 0533b7e23e83539369afd4d0da030500
+    size: 78852
+    cloud:
+      storage:
+        etag: 08b9f983c2b29092031001
+        version_id: '1768578013527225'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_070_0000.nii.gz
+    md5: ad4241c1c7d47c07e0db88ee52ba8ddb
+    size: 60592
+    cloud:
+      storage:
+        etag: 08ebb1bbc2b29092031001
+        version_id: '1768578014435563'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_074_0000.nii.gz
+    md5: 30854292fdda0307c41288692b8a8ed0
+    size: 87702
+    cloud:
+      storage:
+        etag: 08c6b3e8c1b29092031001
+        version_id: '1768578013075910'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_075_0000.nii.gz
+    md5: 42c14cc8e41f5fe540bf88a02aff2f68
+    size: 48607
+    cloud:
+      storage:
+        etag: 08a9ea94c2b29092031001
+        version_id: '1768578013803817'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_077_0000.nii.gz
+    md5: 1dc36c774097f201e64fb3d7cc117259
+    size: 86276
+    cloud:
+      storage:
+        etag: 08e1fd8ec2b29092031001
+        version_id: '1768578013708001'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_083_0000.nii.gz
+    md5: ad4a785ecfdd64625891f7573a26876d
+    size: 79170
+    cloud:
+      storage:
+        etag: 08fb97f6c1b29092031001
+        version_id: '1768578013301755'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_084_0000.nii.gz
+    md5: d77b34aeab0107321a760b33021fe522
+    size: 80935
+    cloud:
+      storage:
+        etag: 08cba0dbc2b29092031001
+        version_id: '1768578014957643'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_087_0000.nii.gz
+    md5: d51e81bbf2822885b353f772e468ec2c
+    size: 49164
+    cloud:
+      storage:
+        etag: 08d7fddcc1b29092031001
+        version_id: '1768578012888791'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_088_0000.nii.gz
+    md5: a72c729a400673bb43bd23980f2ef820
+    size: 58576
+    cloud:
+      storage:
+        etag: 08cef1fcc1b29092031001
+        version_id: '1768578013411534'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_089_0000.nii.gz
+    md5: 7d98daa812832e5d0737a0965afae633
+    size: 83111
+    cloud:
+      storage:
+        etag: 08e0e9b4c2b29092031001
+        version_id: '1768578014328032'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_090_0000.nii.gz
+    md5: 3e385c0dc8699bb36223996bd9913468
+    size: 93006
+    cloud:
+      storage:
+        etag: 08e481ecc1b29092031001
+        version_id: '1768578013135076'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_091_0000.nii.gz
+    md5: db6bf5f9f173381dbcd0877ea2440948
+    size: 64328
+    cloud:
+      storage:
+        etag: 08aab4f9c1b29092031001
+        version_id: '1768578013354538'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_092_0000.nii.gz
+    md5: 912cb79b56ed6b92888a802ecad41b4f
+    size: 63270
+    cloud:
+      storage:
+        etag: 088ad0a7c2b29092031001
+        version_id: '1768578014111754'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_093_0000.nii.gz
+    md5: b3477fe67e07278648e09995463750de
+    size: 84725
+    cloud:
+      storage:
+        etag: 08c8b0a9c2b29092031001
+        version_id: '1768578014140488'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_094_0000.nii.gz
+    md5: 7d26e4adbda7fe186635d9ff4901b58c
+    size: 91190
+    cloud:
+      storage:
+        etag: 08c0cd8fc2b29092031001
+        version_id: '1768578013718208'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_095_0000.nii.gz
+    md5: b6c70ca9c41e475fab20df1bcb7a03fc
+    size: 77883
+    cloud:
+      storage:
+        etag: 08ddb2f8c1b29092031001
+        version_id: '1768578013337949'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_096_0000.nii.gz
+    md5: 3ecc52ea4d4c3226d5e2fe0689114afe
+    size: 74710
+    cloud:
+      storage:
+        etag: 089f81c6c2b29092031001
+        version_id: '1768578014609567'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_097_0000.nii.gz
+    md5: ff7100a461a758a58896ef8450831c14
+    size: 71159
+    cloud:
+      storage:
+        etag: 08bfe3dec1b29092031001
+        version_id: '1768578012918207'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_098_0000.nii.gz
+    md5: f705eb74211e2ec7c6575ca1525a8148
+    size: 71912
+    cloud:
+      storage:
+        etag: 08fab2bbc2b29092031001
+        version_id: '1768578014435706'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_099_0000.nii.gz
+    md5: aa00903568aa96f7ea567c64392c54ff
+    size: 57286
+    cloud:
+      storage:
+        etag: 08e7deadc2b29092031001
+        version_id: '1768578014211943'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_101_0000.nii.gz
+    md5: 2bfb3188e65509e528dbe819b9df1250
+    size: 71582
+    cloud:
+      storage:
+        etag: 08f7f4e4c1b29092031001
+        version_id: '1768578013018743'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_102_0000.nii.gz
+    md5: 46c5f7b22a7f8d66ad1a073da168353c
+    size: 75742
+    cloud:
+      storage:
+        etag: 08d5feb1c2b29092031001
+        version_id: '1768578014281557'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_104_0000.nii.gz
+    md5: e11eb50e7600f230155250a8089b3c19
+    size: 88740
+    cloud:
+      storage:
+        etag: 08e281cdc2b29092031001
+        version_id: '1768578014724322'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_105_0000.nii.gz
+    md5: 9d0d31268dcbc8c51dc0a023e3e49f18
+    size: 71333
+    cloud:
+      storage:
+        etag: 08dccaaec2b29092031001
+        version_id: '1768578014225756'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_106_0000.nii.gz
+    md5: 6b56da96e55209f15565a48479e2fc59
+    size: 75108
+    cloud:
+      storage:
+        etag: 08aab192c2b29092031001
+        version_id: '1768578013763754'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_107_0000.nii.gz
+    md5: 6f0f922086092bc7f65516907218dba6
+    size: 80275
+    cloud:
+      storage:
+        etag: 0892f989c2b29092031001
+        version_id: '1768578013625490'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_108_0000.nii.gz
+    md5: 1844b1953205ec82be3089bdb52fbf0f
+    size: 86761
+    cloud:
+      storage:
+        etag: 08c5e0fcc1b29092031001
+        version_id: '1768578013409349'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_109_0000.nii.gz
+    md5: e27d355bfcb5586e1227677a23ea6ab0
+    size: 51360
+    cloud:
+      storage:
+        etag: 08889eecc1b29092031001
+        version_id: '1768578013138696'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_114_0000.nii.gz
+    md5: 74df81e0779be2213a7d6f2f5c17d893
+    size: 61301
+    cloud:
+      storage:
+        etag: 08dba6b5c2b29092031001
+        version_id: '1768578014335835'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_123_0000.nii.gz
+    md5: 04a3e32922e0e9f66bb6d7993193a0ae
+    size: 54403
+    cloud:
+      storage:
+        etag: 088eee9cc2b29092031001
+        version_id: '1768578013935374'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_124_0000.nii.gz
+    md5: 3fa4b47c27c9f4b18606791e45421606
+    size: 66820
+    cloud:
+      storage:
+        etag: 0881acb7c2b29092031001
+        version_id: '1768578014369281'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_125_0000.nii.gz
+    md5: 16e7e9ae09683075a4d1f3a27969b1ce
+    size: 58805
+    cloud:
+      storage:
+        etag: 089cdb91c2b29092031001
+        version_id: '1768578013752732'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_126_0000.nii.gz
+    md5: 9c9b59637e77216331d53fdbd6f8cc87
+    size: 61241
+    cloud:
+      storage:
+        etag: 08e8fd80c2b29092031001
+        version_id: '1768578013478632'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_127_0000.nii.gz
+    md5: b92dcca281ccc93c0511db3c3bf5d1f4
+    size: 53598
+    cloud:
+      storage:
+        etag: 08889992c2b29092031001
+        version_id: '1768578013760648'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_130_0000.nii.gz
+    md5: fd8ab320b189d3f3fd35efa29a48cb2b
+    size: 56133
+    cloud:
+      storage:
+        etag: 088aaf8ac2b29092031001
+        version_id: '1768578013632394'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_132_0000.nii.gz
+    md5: f892b481947b2511cc9e4be2ed1cfbd2
+    size: 56452
+    cloud:
+      storage:
+        etag: 08cb99cac2b29092031001
+        version_id: '1768578014678219'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_133_0000.nii.gz
+    md5: d4c4749e29d9ec0b238c2a88de398bc8
+    size: 53095
+    cloud:
+      storage:
+        etag: 08cac281c2b29092031001
+        version_id: '1768578013487434'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_135_0000.nii.gz
+    md5: d6ea0acbea7f454f909cfaa70d603642
+    size: 73019
+    cloud:
+      storage:
+        etag: 0898a8a5c2b29092031001
+        version_id: '1768578014073880'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_136_0000.nii.gz
+    md5: 1af956a291b717b693735f20531c34c9
+    size: 83180
+    cloud:
+      storage:
+        etag: 08ebd59bc2b29092031001
+        version_id: '1768578013915883'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_138_0000.nii.gz
+    md5: c580fc903896808f10ee11755989f08e
+    size: 77407
+    cloud:
+      storage:
+        etag: 08d0819cc2b29092031001
+        version_id: '1768578013921488'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_141_0000.nii.gz
+    md5: 35503a7f75f5be0bf02c530d9a1e8434
+    size: 46334
+    cloud:
+      storage:
+        etag: 08bdb587c2b29092031001
+        version_id: '1768578013584061'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_142_0000.nii.gz
+    md5: d77d813dccd02ae974c04cc2918eeed9
+    size: 50910
+    cloud:
+      storage:
+        etag: 08d7feaec2b29092031001
+        version_id: '1768578014232407'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_143_0000.nii.gz
+    md5: 4d89cf4d8030a7c79c7105c38275d770
+    size: 46147
+    cloud:
+      storage:
+        etag: 0889bfa0c2b29092031001
+        version_id: '1768578013994889'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_144_0000.nii.gz
+    md5: e5e55e78fdfc18683c079a77bc7e0e1b
+    size: 51147
+    cloud:
+      storage:
+        etag: 08d3f987c2b29092031001
+        version_id: '1768578013592787'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_145_0000.nii.gz
+    md5: 543e26c169aa7c202c9d935ef7ae824b
+    size: 82548
+    cloud:
+      storage:
+        etag: 08e3bdffc1b29092031001
+        version_id: '1768578013454051'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_146_0000.nii.gz
+    md5: f0a767133ed1d75a6d5c52d4cd2e3497
+    size: 76571
+    cloud:
+      storage:
+        etag: 08f2d7b3c2b29092031001
+        version_id: '1768578014309362'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_148_0000.nii.gz
+    md5: 10490581024e871aff0fb87026fe55e1
+    size: 41601
+    cloud:
+      storage:
+        etag: 0892f0f1c1b29092031001
+        version_id: '1768578013231122'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_149_0000.nii.gz
+    md5: 659162e821bbda2041c6d1d52f330526
+    size: 42221
+    cloud:
+      storage:
+        etag: 08f3c992c2b29092031001
+        version_id: '1768578013766899'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_150_0000.nii.gz
+    md5: fea9614755b300ad3692207b0b4e1709
+    size: 50080
+    cloud:
+      storage:
+        etag: 08f4eb89c2b29092031001
+        version_id: '1768578013623796'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_152_0000.nii.gz
+    md5: e039eb5107c35badfa5e3eea5bc3356d
+    size: 58188
+    cloud:
+      storage:
+        etag: 08cfe1a6c2b29092031001
+        version_id: '1768578014097615'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_154_0000.nii.gz
+    md5: fc5f458d672bc85f24d9b179cdbadafa
+    size: 53286
+    cloud:
+      storage:
+        etag: 0883c48ec2b29092031001
+        version_id: '1768578013700611'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_155_0000.nii.gz
+    md5: 04de993514accd98613d155a66d66462
+    size: 78297
+    cloud:
+      storage:
+        etag: 08ebb798c2b29092031001
+        version_id: '1768578013862891'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_156_0000.nii.gz
+    md5: 4c6659d7593bfe9677f9ec73c193d64e
+    size: 78891
+    cloud:
+      storage:
+        etag: 089ffaecc1b29092031001
+        version_id: '1768578013150495'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_157_0000.nii.gz
+    md5: 01f65c55bc0d5b94dd04a648363ee535
+    size: 83327
+    cloud:
+      storage:
+        etag: 08add0afc2b29092031001
+        version_id: '1768578014242861'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_158_0000.nii.gz
+    md5: b4e1fbe492da49346c0fd266a4ad5aa1
+    size: 92626
+    cloud:
+      storage:
+        etag: 088aecf6c1b29092031001
+        version_id: '1768578013312522'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_160_0000.nii.gz
+    md5: ed6d9c6ad66a71160f69250ca7f38ac1
+    size: 56705
+    cloud:
+      storage:
+        etag: 088debb4c2b29092031001
+        version_id: '1768578014328205'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_161_0000.nii.gz
+    md5: d4b22cd3ab9788d259d8844b23f0ea93
+    size: 51736
+    cloud:
+      storage:
+        etag: 08e187e5c1b29092031001
+        version_id: '1768578013021153'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_162_0000.nii.gz
+    md5: 8a7a5e3c2889fd69a2345219e30ebfb1
+    size: 57297
+    cloud:
+      storage:
+        etag: 0883cbbbc2b29092031001
+        version_id: '1768578014438787'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_163_0000.nii.gz
+    md5: 4f4d1a8fc71f40586bd6aa202aef440e
+    size: 60077
+    cloud:
+      storage:
+        etag: 08dbe1a9c2b29092031001
+        version_id: '1768578014146779'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_164_0000.nii.gz
+    md5: ef46e9f4abe1cda3f9ba3976d6aa2284
+    size: 74082
+    cloud:
+      storage:
+        etag: 08d0f5f4c1b29092031001
+        version_id: '1768578013280976'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_165_0000.nii.gz
+    md5: 4fde84530c73d121dd2110c6467464c2
+    size: 39560
+    cloud:
+      storage:
+        etag: 08b1abfac1b29092031001
+        version_id: '1768578013369777'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_166_0000.nii.gz
+    md5: 7a6acce3fd62f6453ba1628b06fb791a
+    size: 44447
+    cloud:
+      storage:
+        etag: 08b7838dc2b29092031001
+        version_id: '1768578013675959'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_169_0000.nii.gz
+    md5: 229dad6f32e645bc88ee3536a8c4365c
+    size: 77495
+    cloud:
+      storage:
+        etag: 08f0f4d8c2b29092031001
+        version_id: '1768578014919280'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_170_0000.nii.gz
+    md5: aa032c8f01e27406c0a6564991d5c3af
+    size: 79899
+    cloud:
+      storage:
+        etag: 0898f0ebc1b29092031001
+        version_id: '1768578013132824'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_171_0000.nii.gz
+    md5: 06a005e73e35f4f8cd208d9a9559dce1
+    size: 43104
+    cloud:
+      storage:
+        etag: 08f4f992c2b29092031001
+        version_id: '1768578013773044'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_172_0000.nii.gz
+    md5: c3afade70445559ce155aeec6fc2c122
+    size: 46527
+    cloud:
+      storage:
+        etag: 08acfe9bc2b29092031001
+        version_id: '1768578013921068'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_173_0000.nii.gz
+    md5: b39407dd18dd3b21d6f876ceb9c79293
+    size: 47527
+    cloud:
+      storage:
+        etag: 08f8b8fcc1b29092031001
+        version_id: '1768578013404280'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_174_0000.nii.gz
+    md5: 1412c939eb34d896b3717f331fba132b
+    size: 55018
+    cloud:
+      storage:
+        etag: 08adec89c2b29092031001
+        version_id: '1768578013623853'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_175_0000.nii.gz
+    md5: 3aa2a9111488ad712e7e7887f846ba4d
+    size: 68736
+    cloud:
+      storage:
+        etag: 08e386b3c2b29092031001
+        version_id: '1768578014298979'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_176_0000.nii.gz
+    md5: 94c538a42c045076228050caff1dc6d4
+    size: 79455
+    cloud:
+      storage:
+        etag: 08d1cbeec1b29092031001
+        version_id: '1768578013177297'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_177_0000.nii.gz
+    md5: 17a829ad6f64d18cb046f14e49366b88
+    size: 45334
+    cloud:
+      storage:
+        etag: 08efc3edc1b29092031001
+        version_id: '1768578013159919'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_178_0000.nii.gz
+    md5: 26b4671686337c98d9ac5e2944cbdbdf
+    size: 50018
+    cloud:
+      storage:
+        etag: 0881a386c2b29092031001
+        version_id: '1768578013565313'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_180_0000.nii.gz
+    md5: 2c9c5fb38543d8e38bd012598b74a4f2
+    size: 75789
+    cloud:
+      storage:
+        etag: 0896a8a6c2b29092031001
+        version_id: '1768578014090262'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_181_0000.nii.gz
+    md5: 01b66ffb7c989661089dcb566070424a
+    size: 76289
+    cloud:
+      storage:
+        etag: 08b883adc2b29092031001
+        version_id: '1768578014200248'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_184_0000.nii.gz
+    md5: fafd9ac44b3e2466547156095b81ec69
+    size: 77733
+    cloud:
+      storage:
+        etag: 08d8a1f0c1b29092031001
+        version_id: '1768578013204696'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_185_0000.nii.gz
+    md5: 0d1ad5332c4e2ecb4ff5368d6782da32
+    size: 68032
+    cloud:
+      storage:
+        etag: 089aeae6c1b29092031001
+        version_id: '1768578013050138'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_188_0000.nii.gz
+    md5: 0c5a12ad932476f74ea1402ffd8db7fb
+    size: 91538
+    cloud:
+      storage:
+        etag: 08b0f784c2b29092031001
+        version_id: '1768578013543344'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_189_0000.nii.gz
+    md5: 5718abc6b3ded425c3292a8bef36ce82
+    size: 69811
+    cloud:
+      storage:
+        etag: 08d0fef6c1b29092031001
+        version_id: '1768578013314896'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_190_0000.nii.gz
+    md5: 5cdd81d3010908fb49104f9bab50beb2
+    size: 72292
+    cloud:
+      storage:
+        etag: 08ef8684c2b29092031001
+        version_id: '1768578013528943'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_193_0000.nii.gz
+    md5: 72f21bdf583ab182a3dc7c5089cb390b
+    size: 60529
+    cloud:
+      storage:
+        etag: 0894cfebc1b29092031001
+        version_id: '1768578013128596'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_194_0000.nii.gz
+    md5: 60e3ebdd933f5dfc13b85d19ee3d20a0
+    size: 66252
+    cloud:
+      storage:
+        etag: 088aaafac1b29092031001
+        version_id: '1768578013369610'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_195_0000.nii.gz
+    md5: 699eb799e6914018434cb1fdd1421a79
+    size: 63837
+    cloud:
+      storage:
+        etag: 08fdf083c2b29092031001
+        version_id: '1768578013526141'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_197_0000.nii.gz
+    md5: a0019232f9dee7f6f9d65f83e3213945
+    size: 49439
+    cloud:
+      storage:
+        etag: 089de285c2b29092031001
+        version_id: '1768578013557021'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_199_0000.nii.gz
+    md5: ca0d2763af9d0c24c3713a9c2d99113b
+    size: 66381
+    cloud:
+      storage:
+        etag: 08bf83b9c2b29092031001
+        version_id: '1768578014396863'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_203_0000.nii.gz
+    md5: 1fb40a6cec0e8ee8a6fb81e37cd1797f
+    size: 80261
+    cloud:
+      storage:
+        etag: 08bdbcc5c2b29092031001
+        version_id: '1768578014600765'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_204_0000.nii.gz
+    md5: 251a029bff93176ba97aa7d17f33767c
+    size: 85266
+    cloud:
+      storage:
+        etag: 08e4f19cc2b29092031001
+        version_id: '1768578013935844'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_205_0000.nii.gz
+    md5: 16625fc4a5529c6db8a061854585fb64
+    size: 61987
+    cloud:
+      storage:
+        etag: 08a1cf9dc2b29092031001
+        version_id: '1768578013947809'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_207_0000.nii.gz
+    md5: 75fb251a3981ff7306a25baca8b50fb3
+    size: 74781
+    cloud:
+      storage:
+        etag: 08aac4bdc2b29092031001
+        version_id: '1768578014470698'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_210_0000.nii.gz
+    md5: f24debab120b581d2df559d6bd45c134
+    size: 82267
+    cloud:
+      storage:
+        etag: 08a6f8bcc2b29092031001
+        version_id: '1768578014460966'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_212_0000.nii.gz
+    md5: c758ee039c3bbe3f0e6a1ea4700767d4
+    size: 85400
+    cloud:
+      storage:
+        etag: 08e6a893c2b29092031001
+        version_id: '1768578013779046'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_215_0000.nii.gz
+    md5: e05e6daf8f6a513f70e13bb1b1e9b566
+    size: 66560
+    cloud:
+      storage:
+        etag: 08e5acbac2b29092031001
+        version_id: '1768578014418533'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_216_0000.nii.gz
+    md5: 5e389fb75b8c1dc93b0e5746d3d03c5d
+    size: 66445
+    cloud:
+      storage:
+        etag: 08d1aab6c2b29092031001
+        version_id: '1768578014352721'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_217_0000.nii.gz
+    md5: 7035b74ac3f84c8334b1b2b60c3aa65d
+    size: 69860
+    cloud:
+      storage:
+        etag: 08a7cd9fc2b29092031001
+        version_id: '1768578013980327'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_219_0000.nii.gz
+    md5: 622a7a7a049053e38a8c917123b6f768
+    size: 52638
+    cloud:
+      storage:
+        etag: 08b6e7a2c2b29092031001
+        version_id: '1768578014032822'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_220_0000.nii.gz
+    md5: fc92158503c3ab3a568adcc254afebc1
+    size: 56414
+    cloud:
+      storage:
+        etag: 08f2c9b1c2b29092031001
+        version_id: '1768578014274802'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_221_0000.nii.gz
+    md5: 515a053d35e290a52f851caaad27a14c
+    size: 42117
+    cloud:
+      storage:
+        etag: 088e95e2c1b29092031001
+        version_id: '1768578012973710'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_222_0000.nii.gz
+    md5: 8bb6eccd10efd6a9c05790b323c4eb5d
+    size: 49029
+    cloud:
+      storage:
+        etag: 08e7e0b0c2b29092031001
+        version_id: '1768578014261351'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_223_0000.nii.gz
+    md5: e9d8d89ded63f000c29e01c296bfdcef
+    size: 83769
+    cloud:
+      storage:
+        etag: 08c6cb91c2b29092031001
+        version_id: '1768578013750726'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_224_0000.nii.gz
+    md5: 1dd907b5e5673e26c80412488923f3de
+    size: 80924
+    cloud:
+      storage:
+        etag: 08ade885c2b29092031001
+        version_id: '1768578013557805'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_225_0000.nii.gz
+    md5: bcf5eca99784eb79862da41fe1279a1d
+    size: 56479
+    cloud:
+      storage:
+        etag: 08f4b5a9c2b29092031001
+        version_id: '1768578014141172'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_226_0000.nii.gz
+    md5: a56daded09c735920c5d2654e6de32e0
+    size: 56702
+    cloud:
+      storage:
+        etag: 08a49295c2b29092031001
+        version_id: '1768578013808932'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_227_0000.nii.gz
+    md5: 0dcc73562523b03ad5858ac2ad9dcdf5
+    size: 72820
+    cloud:
+      storage:
+        etag: 088587c6c2b29092031001
+        version_id: '1768578014610309'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_228_0000.nii.gz
+    md5: b3af3b33ae4f025765285cc92669a3db
+    size: 77195
+    cloud:
+      storage:
+        etag: 08d682bcc2b29092031001
+        version_id: '1768578014445910'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_229_0000.nii.gz
+    md5: def0f974db4abbec4f54d6907a2de915
+    size: 74467
+    cloud:
+      storage:
+        etag: 08fef6d7c1b29092031001
+        version_id: '1768578012806014'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_230_0000.nii.gz
+    md5: d5ff4e0fe1edcc0c65bd69710cb086a2
+    size: 78929
+    cloud:
+      storage:
+        etag: 08cb988ec2b29092031001
+        version_id: '1768578013695051'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_231_0000.nii.gz
+    md5: 4ac6a370ab648413397f457786486b01
+    size: 79416
+    cloud:
+      storage:
+        etag: 08a6cdf4c1b29092031001
+        version_id: '1768578013275814'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_232_0000.nii.gz
+    md5: c4cb3265668096d8ee03bae580f1d228
+    size: 82746
+    cloud:
+      storage:
+        etag: 08f194f6c1b29092031001
+        version_id: '1768578013301361'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_233_0000.nii.gz
+    md5: 1dacd9eb1be8cbb5837c449e08a439bf
+    size: 77141
+    cloud:
+      storage:
+        etag: 08b8b499c2b29092031001
+        version_id: '1768578013878840'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_234_0000.nii.gz
+    md5: c081280c9adcefbb8659b79a3a4d5f60
+    size: 81985
+    cloud:
+      storage:
+        etag: 08b48fd5c1b29092031001
+        version_id: '1768578012759988'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_235_0000.nii.gz
+    md5: 7ec7060e96115e1fd8e24e4387274dca
+    size: 88850
+    cloud:
+      storage:
+        etag: 08c2dda8c2b29092031001
+        version_id: '1768578014129858'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_236_0000.nii.gz
+    md5: e8ec319fca485d109dc6633dceddf7c9
+    size: 88622
+    cloud:
+      storage:
+        etag: 08fcf5cbc1b29092031001
+        version_id: '1768578012609276'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_238_0000.nii.gz
+    md5: b35a466fb2cf8e87c4bf77569fc88fce
+    size: 95052
+    cloud:
+      storage:
+        etag: 089195e2c1b29092031001
+        version_id: '1768578012973713'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_242_0000.nii.gz
+    md5: 36a1818b39e9de7a81f0969210dd180d
+    size: 55293
+    cloud:
+      storage:
+        etag: 08ae90b1c2b29092031001
+        version_id: '1768578014267438'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_243_0000.nii.gz
+    md5: b36e08d1a56026ba5edb4132a9df4a23
+    size: 54951
+    cloud:
+      storage:
+        etag: 08d288acc2b29092031001
+        version_id: '1768578014184530'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_244_0000.nii.gz
+    md5: 5a2d329d17324be7b75a074f5a270dc6
+    size: 75832
+    cloud:
+      storage:
+        etag: 089c9786c2b29092031001
+        version_id: '1768578013563804'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_245_0000.nii.gz
+    md5: 58b6e48e9ba759cb31b87c5816f3a6b9
+    size: 85635
+    cloud:
+      storage:
+        etag: 08a0989ec2b29092031001
+        version_id: '1768578013957152'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_248_0000.nii.gz
+    md5: 17edf67d53a3e46b3eb78cf17a5a1353
+    size: 82936
+    cloud:
+      storage:
+        etag: 08ecf2a1c2b29092031001
+        version_id: '1768578014017900'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_249_0000.nii.gz
+    md5: c7a34d60e316b0544a9a72781f348d99
+    size: 73022
+    cloud:
+      storage:
+        etag: 088390fec1b29092031001
+        version_id: '1768578013431811'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_250_0000.nii.gz
+    md5: 7b3c44315545cc4912f34736de5450d3
+    size: 82804
+    cloud:
+      storage:
+        etag: 08dffdafc2b29092031001
+        version_id: '1768578014248671'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_251_0000.nii.gz
+    md5: ebc0266d9755713a043548b890dce1fe
+    size: 49495
+    cloud:
+      storage:
+        etag: 08d7c397c2b29092031001
+        version_id: '1768578013848023'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_252_0000.nii.gz
+    md5: fa6abd4d9e560c2e0fd1370df9b9fc09
+    size: 44660
+    cloud:
+      storage:
+        etag: 08e3cac0c2b29092031001
+        version_id: '1768578014520675'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_253_0000.nii.gz
+    md5: 21ba689bb16d42bfb8506e95c96ebe7f
+    size: 67704
+    cloud:
+      storage:
+        etag: 08fddaaac2b29092031001
+        version_id: '1768578014162301'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_257_0000.nii.gz
+    md5: 2181dbb5f36d076a5c933fa8fba4fced
+    size: 66819
+    cloud:
+      storage:
+        etag: 08fcaa99c2b29092031001
+        version_id: '1768578013877628'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_259_0000.nii.gz
+    md5: 393833a4e5be7fbdd083f82f654f7192
+    size: 57813
+    cloud:
+      storage:
+        etag: 08c7e9b4c2b29092031001
+        version_id: '1768578014328007'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_260_0000.nii.gz
+    md5: 69f64278bda598cc7c9daf49b739f11b
+    size: 65417
+    cloud:
+      storage:
+        etag: 08f7c2b4c2b29092031001
+        version_id: '1768578014323063'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_261_0000.nii.gz
+    md5: b8e81abb53c675f22ff6fb4a6c32766e
+    size: 84741
+    cloud:
+      storage:
+        etag: 08fdeca8c2b29092031001
+        version_id: '1768578014131837'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_263_0000.nii.gz
+    md5: 5be784afbdc6ad00d6a704933115be59
+    size: 51866
+    cloud:
+      storage:
+        etag: 088ad88cc2b29092031001
+        version_id: '1768578013670410'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_264_0000.nii.gz
+    md5: eda6bee7941ab958d843656ad6a87182
+    size: 58254
+    cloud:
+      storage:
+        etag: 0893e185c2b29092031001
+        version_id: '1768578013556883'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_265_0000.nii.gz
+    md5: aee987ed8ea50a8926352ceab31842cf
+    size: 73617
+    cloud:
+      storage:
+        etag: 08e9cbedc1b29092031001
+        version_id: '1768578013160937'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_268_0000.nii.gz
+    md5: 8ccba6c0626467687e3ef7e49dd30506
+    size: 79541
+    cloud:
+      storage:
+        etag: 08c4e185c2b29092031001
+        version_id: '1768578013556932'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_269_0000.nii.gz
+    md5: 2dfa934e7aacd70a11bcef311dba767b
+    size: 79868
+    cloud:
+      storage:
+        etag: 0895e3e6c2b29092031001
+        version_id: '1768578015146389'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_274_0000.nii.gz
+    md5: 0487931d5a74a20b7210de109ffee75e
+    size: 70246
+    cloud:
+      storage:
+        etag: 08bf92aec2b29092031001
+        version_id: '1768578014218559'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_276_0000.nii.gz
+    md5: 1b1deb5720efe45d70258cb25e080eb4
+    size: 72924
+    cloud:
+      storage:
+        etag: 0890a8adc2b29092031001
+        version_id: '1768578014204944'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_277_0000.nii.gz
+    md5: 22f8472e53c3e580114084d628d7ad8c
+    size: 69916
+    cloud:
+      storage:
+        etag: 08d783e8c1b29092031001
+        version_id: '1768578013069783'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_279_0000.nii.gz
+    md5: 27fd440e46c0ff23bce6e019129537b3
+    size: 66494
+    cloud:
+      storage:
+        etag: 088695e6c1b29092031001
+        version_id: '1768578013039238'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_280_0000.nii.gz
+    md5: 916ac07772e6e93e992b899806da33df
+    size: 69702
+    cloud:
+      storage:
+        etag: 0882ccabc2b29092031001
+        version_id: '1768578014176770'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_282_0000.nii.gz
+    md5: 24a0051ce19af838e24721ae7d97f643
+    size: 76204
+    cloud:
+      storage:
+        etag: 08b6bf99c2b29092031001
+        version_id: '1768578013880246'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_286_0000.nii.gz
+    md5: 85f0f96144abd725148091e65fe0826a
+    size: 59377
+    cloud:
+      storage:
+        etag: 089feb83c2b29092031001
+        version_id: '1768578013525407'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_287_0000.nii.gz
+    md5: 770b57ffde1cbd97ecf4437cffbd2ef8
+    size: 92964
+    cloud:
+      storage:
+        etag: 08dd9e9ec2b29092031001
+        version_id: '1768578013957981'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_288_0000.nii.gz
+    md5: d58447ce10272ec742b70b70189a335c
+    size: 102120
+    cloud:
+      storage:
+        etag: 089efbbbc2b29092031001
+        version_id: '1768578014444958'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_289_0000.nii.gz
+    md5: eeac911808f3a0218ddc8a00ff123f15
+    size: 73932
+    cloud:
+      storage:
+        etag: 089890b2c2b29092031001
+        version_id: '1768578014283800'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_290_0000.nii.gz
+    md5: 23b0eb125546d70d63a0da22e8c24486
+    size: 82322
+    cloud:
+      storage:
+        etag: 08ae839bc2b29092031001
+        version_id: '1768578013905326'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_292_0000.nii.gz
+    md5: e0dcedc826a4daef0ebe6583e7f1b63a
+    size: 79305
+    cloud:
+      storage:
+        etag: 08ecf682c2b29092031001
+        version_id: '1768578013510508'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_294_0000.nii.gz
+    md5: 34e1a642e7200df2e827a0308e1bc5f9
+    size: 85109
+    cloud:
+      storage:
+        etag: 08d392c6c2b29092031001
+        version_id: '1768578014611795'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_295_0000.nii.gz
+    md5: 8482a5fecb8ecf4867ec8c1ccd2319ef
+    size: 78712
+    cloud:
+      storage:
+        etag: 08fc8e8cc2b29092031001
+        version_id: '1768578013661052'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_296_0000.nii.gz
+    md5: cc2dbd1d006c8a47828cf876658746ec
+    size: 78089
+    cloud:
+      storage:
+        etag: 08ee9b8fc2b29092031001
+        version_id: '1768578013711854'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_297_0000.nii.gz
+    md5: 3b9b140d0dbe6508d08a5e16262779a1
+    size: 64892
+    cloud:
+      storage:
+        etag: 08cf86a4c2b29092031001
+        version_id: '1768578014053199'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_298_0000.nii.gz
+    md5: 5f551e44d708b037b9e71a3fadcb741f
+    size: 76946
+    cloud:
+      storage:
+        etag: 088c9da3c2b29092031001
+        version_id: '1768578014039692'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_299_0000.nii.gz
+    md5: 64cee4c6f3498f01f4ffa63b496c11c4
+    size: 73671
+    cloud:
+      storage:
+        etag: 089d9ff8c1b29092031001
+        version_id: '1768578013335453'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_300_0000.nii.gz
+    md5: b1e683cbfd6f9fe15b960bae23f05de3
+    size: 79319
+    cloud:
+      storage:
+        etag: 08e5e087c2b29092031001
+        version_id: '1768578013589605'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_301_0000.nii.gz
+    md5: 65e87a733a61841b3197ead5b2503416
+    size: 70441
+    cloud:
+      storage:
+        etag: 08ff83b3c2b29092031001
+        version_id: '1768578014298623'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_302_0000.nii.gz
+    md5: ed324c1a5ff011853b86b3bad5df174d
+    size: 79119
+    cloud:
+      storage:
+        etag: 08999698c2b29092031001
+        version_id: '1768578013858585'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_303_0000.nii.gz
+    md5: 9e9d80d491ae48e1151fed7395bd19d2
+    size: 76699
+    cloud:
+      storage:
+        etag: 0886aaa5c2b29092031001
+        version_id: '1768578014074118'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_304_0000.nii.gz
+    md5: 3d1d58d9b5f9c2b7edb62047c0ffab74
+    size: 79147
+    cloud:
+      storage:
+        etag: 08d0a6a2c2b29092031001
+        version_id: '1768578014024528'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_305_0000.nii.gz
+    md5: 592bf293e29f0dfb60d1d8c182b17300
+    size: 62059
+    cloud:
+      storage:
+        etag: 08b7d6e3c1b29092031001
+        version_id: '1768578012998455'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_308_0000.nii.gz
+    md5: a9462f6f16582f65a1a66ac2e1665773
+    size: 58442
+    cloud:
+      storage:
+        etag: 08e19680c2b29092031001
+        version_id: '1768578013465441'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_309_0000.nii.gz
+    md5: 9e8db27e0eadd8eae3b213f495ccf7d4
+    size: 83902
+    cloud:
+      storage:
+        etag: 0889d78fc2b29092031001
+        version_id: '1768578013719433'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_310_0000.nii.gz
+    md5: 848e15f638141dd198fc96303cd772f5
+    size: 86751
+    cloud:
+      storage:
+        etag: 08c5c2adc2b29092031001
+        version_id: '1768578014208325'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_311_0000.nii.gz
+    md5: eb874fcecd6a2fe5e0754296f18431af
+    size: 84518
+    cloud:
+      storage:
+        etag: 08b49dc2c2b29092031001
+        version_id: '1768578014547636'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_314_0000.nii.gz
+    md5: b7655cf04d900c943799565ecc36fa64
+    size: 75527
+    cloud:
+      storage:
+        etag: 088ed69bc2b29092031001
+        version_id: '1768578013915918'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_316_0000.nii.gz
+    md5: d9a56208f3c5fb143f7e46c9a663bb33
+    size: 75921
+    cloud:
+      storage:
+        etag: 08b1f88fc2b29092031001
+        version_id: '1768578013723697'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_317_0000.nii.gz
+    md5: a4089f0b10c14a89a19ed4f59c2311ba
+    size: 70337
+    cloud:
+      storage:
+        etag: 0893c382c2b29092031001
+        version_id: '1768578013503891'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_318_0000.nii.gz
+    md5: 2d72df0be5256e4dd82dd21a66e22435
+    size: 77634
+    cloud:
+      storage:
+        etag: 08d9a08fc2b29092031001
+        version_id: '1768578013712473'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_319_0000.nii.gz
+    md5: 8c64f66992ab86884a140448fe3c97b6
+    size: 42423
+    cloud:
+      storage:
+        etag: 08c0f995c2b29092031001
+        version_id: '1768578013822144'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_320_0000.nii.gz
+    md5: 3dc0fb176890bb1b27d1d91a7f02aabe
+    size: 41843
+    cloud:
+      storage:
+        etag: 088affaec2b29092031001
+        version_id: '1768578014232458'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_321_0000.nii.gz
+    md5: e99ee1cccbcb69a5e0d26be1ae73769b
+    size: 63444
+    cloud:
+      storage:
+        etag: 089fbd96c2b29092031001
+        version_id: '1768578013830815'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_322_0000.nii.gz
+    md5: 1ccd8dd3cdcebac486867f813f60fb80
+    size: 80250
+    cloud:
+      storage:
+        etag: 08aa9399c2b29092031001
+        version_id: '1768578013874602'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_325_0000.nii.gz
+    md5: 8e8c5a80ebe13d82154e1d25a525bc45
+    size: 88940
+    cloud:
+      storage:
+        etag: 08f6fb8ac2b29092031001
+        version_id: '1768578013642230'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_326_0000.nii.gz
+    md5: 59d34222f441310ef04198ef6f9558c9
+    size: 90345
+    cloud:
+      storage:
+        etag: 08a88b96c2b29092031001
+        version_id: '1768578013824424'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_327_0000.nii.gz
+    md5: a9ad5cb072877b9ccae695be20906cc7
+    size: 60448
+    cloud:
+      storage:
+        etag: 08ec8caec2b29092031001
+        version_id: '1768578014217836'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_328_0000.nii.gz
+    md5: bba5c9c5d72fb93782446ed642adb045
+    size: 70756
+    cloud:
+      storage:
+        etag: 08afdbffc1b29092031001
+        version_id: '1768578013457839'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_329_0000.nii.gz
+    md5: 1047e7917366a4e1d6b619e53332b11b
+    size: 74375
+    cloud:
+      storage:
+        etag: 08cec2f7c1b29092031001
+        version_id: '1768578013323598'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_330_0000.nii.gz
+    md5: a4fd41b5f4b8dd890a9e06c23ccd7f10
+    size: 82223
+    cloud:
+      storage:
+        etag: 089390b0c2b29092031001
+        version_id: '1768578014251027'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_331_0000.nii.gz
+    md5: e36a10ab0a4e6ea3463e07d34f61ce9c
+    size: 72845
+    cloud:
+      storage:
+        etag: 08c38cffc1b29092031001
+        version_id: '1768578013447747'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_332_0000.nii.gz
+    md5: 019daf3ce01af679be7e2cad0be51676
+    size: 72921
+    cloud:
+      storage:
+        etag: 08bcf8bac2b29092031001
+        version_id: '1768578014428220'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_333_0000.nii.gz
+    md5: ec3b9e627e445b823060eeaa529f0ba1
+    size: 77677
+    cloud:
+      storage:
+        etag: 088f86a8c2b29092031001
+        version_id: '1768578014118671'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_334_0000.nii.gz
+    md5: 4157703bef7f024d2739130fa97278c6
+    size: 76388
+    cloud:
+      storage:
+        etag: 08aae5aac2b29092031001
+        version_id: '1768578014163626'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_335_0000.nii.gz
+    md5: 1d0d993fc7db07d976674216a16fcefe
+    size: 73953
+    cloud:
+      storage:
+        etag: 08f8f8a5c2b29092031001
+        version_id: '1768578014084216'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_336_0000.nii.gz
+    md5: ae499a58e7990a58187a91db7e468153
+    size: 83984
+    cloud:
+      storage:
+        etag: 08e484afc2b29092031001
+        version_id: '1768578014233188'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_337_0000.nii.gz
+    md5: b0027c7e28936e137a79b7de2351487e
+    size: 74321
+    cloud:
+      storage:
+        etag: 08ebc389c2b29092031001
+        version_id: '1768578013618667'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_338_0000.nii.gz
+    md5: 57e37a0ca0d80ed5c147faf929ad9f61
+    size: 84101
+    cloud:
+      storage:
+        etag: 08eba6e5c1b29092031001
+        version_id: '1768578013025131'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_340_0000.nii.gz
+    md5: fc6acec3fe3b7ecb38b81cd09d9bae0b
+    size: 71481
+    cloud:
+      storage:
+        etag: 08a2b1a9c2b29092031001
+        version_id: '1768578014140578'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_341_0000.nii.gz
+    md5: bcf9a7be02be7af43a595da006c3c708
+    size: 74559
+    cloud:
+      storage:
+        etag: 08b0dbfac1b29092031001
+        version_id: '1768578013375920'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_343_0000.nii.gz
+    md5: 6a25b705cf45ed59819d05ff42504360
+    size: 67738
+    cloud:
+      storage:
+        etag: 08fab8dfc1b29092031001
+        version_id: '1768578012929146'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_345_0000.nii.gz
+    md5: 021e8c8bb2f2f67ac4028a62ce1c850c
+    size: 59121
+    cloud:
+      storage:
+        etag: 0894ff9fc2b29092031001
+        version_id: '1768578013986708'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_349_0000.nii.gz
+    md5: 14ac3f0e3efcadadbe13a0c0fef88435
+    size: 71098
+    cloud:
+      storage:
+        etag: 08fe91b3c2b29092031001
+        version_id: '1768578014300414'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_350_0000.nii.gz
+    md5: 8c141f3a2d7b8a68cd13ba98a9ac2914
+    size: 71551
+    cloud:
+      storage:
+        etag: 08caa5b5c2b29092031001
+        version_id: '1768578014335690'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_351_0000.nii.gz
+    md5: 7f23310559352a1834d4c4969479bf2b
+    size: 48825
+    cloud:
+      storage:
+        etag: 08a2f689c2b29092031001
+        version_id: '1768578013625122'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_352_0000.nii.gz
+    md5: 5fc1f4bbd606c2a906f638002d7d5f32
+    size: 53358
+    cloud:
+      storage:
+        etag: 089fb1a8c2b29092031001
+        version_id: '1768578014124191'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_353_0000.nii.gz
+    md5: d28655b8b66fe956cafcb9cb02d175aa
+    size: 61813
+    cloud:
+      storage:
+        etag: 08d5cbf6c1b29092031001
+        version_id: '1768578013308373'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_354_0000.nii.gz
+    md5: e015db298fc3b844ace64c0664677585
+    size: 70254
+    cloud:
+      storage:
+        etag: 08a3efa2c2b29092031001
+        version_id: '1768578014033827'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_355_0000.nii.gz
+    md5: 9b6aa04ee81bb39a6fce8715a54483fb
+    size: 76132
+    cloud:
+      storage:
+        etag: 08f1a7a2c2b29092031001
+        version_id: '1768578014024689'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_356_0000.nii.gz
+    md5: 519ec19605738a7311df22efe246a520
+    size: 87478
+    cloud:
+      storage:
+        etag: 08f4a196c2b29092031001
+        version_id: '1768578013827316'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_358_0000.nii.gz
+    md5: bba2ddd2fc21d1ee592b3eb5aa18e18e
+    size: 71464
+    cloud:
+      storage:
+        etag: 08b2ee92c2b29092031001
+        version_id: '1768578013771570'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_359_0000.nii.gz
+    md5: 3e2a4b5c8dc2cbee6b1b9deb0a5f5f9d
+    size: 75448
+    cloud:
+      storage:
+        etag: 08e2ebf4c1b29092031001
+        version_id: '1768578013279714'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_360_0000.nii.gz
+    md5: 0dd217f77fbc0739a7370373046fcd71
+    size: 76439
+    cloud:
+      storage:
+        etag: 08b0e79dc2b29092031001
+        version_id: '1768578013950896'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_361_0000.nii.gz
+    md5: ce5d197739e5a137ad72900084fa292f
+    size: 78260
+    cloud:
+      storage:
+        etag: 08f1b1cfc2b29092031001
+        version_id: '1768578014763249'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_363_0000.nii.gz
+    md5: 1fb7ee4854ba4e0eaca0624e072393b9
+    size: 85213
+    cloud:
+      storage:
+        etag: 08c2c9b6c2b29092031001
+        version_id: '1768578014356674'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_366_0000.nii.gz
+    md5: 8c0624325681e2ed2ecd9533ff8f7941
+    size: 74051
+    cloud:
+      storage:
+        etag: 08e9d18fc2b29092031001
+        version_id: '1768578013718761'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_367_0000.nii.gz
+    md5: b90dc268d6d886177195c53542b62f4d
+    size: 92968
+    cloud:
+      storage:
+        etag: 08a5ab9ac2b29092031001
+        version_id: '1768578013894053'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_368_0000.nii.gz
+    md5: 1f669a0cd7562f5ced6eb939af56d67f
+    size: 102612
+    cloud:
+      storage:
+        etag: 08d1f4aac2b29092031001
+        version_id: '1768578014165585'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_370_0000.nii.gz
+    md5: c89b22db8d875ad9d3364431efa8f5ff
+    size: 82091
+    cloud:
+      storage:
+        etag: 08ddbf94c2b29092031001
+        version_id: '1768578013798365'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_372_0000.nii.gz
+    md5: 00d6854825a437876cc84c66ba357034
+    size: 73066
+    cloud:
+      storage:
+        etag: 08b3e2fcc1b29092031001
+        version_id: '1768578013409587'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_373_0000.nii.gz
+    md5: 99294ef402467d82c72799fba1899d65
+    size: 72761
+    cloud:
+      storage:
+        etag: 0889ff8cc2b29092031001
+        version_id: '1768578013675401'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_374_0000.nii.gz
+    md5: a891b66cb2516a2adb220fb49cf56eca
+    size: 87280
+    cloud:
+      storage:
+        etag: 08c9989ec2b29092031001
+        version_id: '1768578013957193'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_375_0000.nii.gz
+    md5: bb232f407b072208f9ab740c8804b198
+    size: 72649
+    cloud:
+      storage:
+        etag: 08ebb2c0c2b29092031001
+        version_id: '1768578014517611'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_376_0000.nii.gz
+    md5: c9f246aef36c000766ad0d9550008b37
+    size: 87545
+    cloud:
+      storage:
+        etag: 0883dea8c2b29092031001
+        version_id: '1768578014129923'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_378_0000.nii.gz
+    md5: 625b5e97b36d9786593e79a67ba6b065
+    size: 75069
+    cloud:
+      storage:
+        etag: 08ba8aacc2b29092031001
+        version_id: '1768578014184762'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_380_0000.nii.gz
+    md5: 50ebede7f82218d01b9c9192869d6b1c
+    size: 88716
+    cloud:
+      storage:
+        etag: 08bba79ac2b29092031001
+        version_id: '1768578013893563'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_381_0000.nii.gz
+    md5: b2984411c8355076a0957327eb5ee9a5
+    size: 75718
+    cloud:
+      storage:
+        etag: 08afe9d8c1b29092031001
+        version_id: '1768578012820655'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_383_0000.nii.gz
+    md5: e153ad970d2e474bb6d13cd6356a0102
+    size: 64512
+    cloud:
+      storage:
+        etag: 08d5f699c2b29092031001
+        version_id: '1768578013887317'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_385_0000.nii.gz
+    md5: feadee400966581f26198dddd70128bf
+    size: 85740
+    cloud:
+      storage:
+        etag: 089b99c1c2b29092031001
+        version_id: '1768578014530715'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_386_0000.nii.gz
+    md5: 02e107dea4f854d6d034e58760e3b2d5
+    size: 85333
+    cloud:
+      storage:
+        etag: 08e5a4aac2b29092031001
+        version_id: '1768578014155365'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_387_0000.nii.gz
+    md5: 0636cf3f0191f5e3856df776aa0b5e12
+    size: 66075
+    cloud:
+      storage:
+        etag: 08fca7f5c1b29092031001
+        version_id: '1768578013287420'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_389_0000.nii.gz
+    md5: 57b631a8480ba53b6a23f083f072e527
+    size: 70932
+    cloud:
+      storage:
+        etag: 08c8bdcec2b29092031001
+        version_id: '1768578014748360'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_390_0000.nii.gz
+    md5: 289ea9b00eef5af07c35ea09dcf77e1c
+    size: 85654
+    cloud:
+      storage:
+        etag: 08e4c081c2b29092031001
+        version_id: '1768578013487204'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_393_0000.nii.gz
+    md5: 4d26b316f20acfa02f894aa6f5c5c16b
+    size: 68560
+    cloud:
+      storage:
+        etag: 0893cd8fc2b29092031001
+        version_id: '1768578013718163'
+  - relpath: Dataset621_Hippocampus/imagesTr/hippocampus_394_0000.nii.gz
+    md5: 2fa995c3d49903631e423e54662c4a27
+    size: 73383
+    cloud:
+      storage:
+        etag: 08cfd199c2b29092031001
+        version_id: '1768578013882575'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_002_0000.nii.gz
+    md5: ad3bf9b22decccd0f29bd2d2ffeda450
+    size: 52128
+    cloud:
+      storage:
+        etag: 08a1b9c8c2b29092031001
+        version_id: '1768578014649505'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_005_0000.nii.gz
+    md5: 16b6f45d164dba8cdbc2d6d8ea4cbc61
+    size: 75007
+    cloud:
+      storage:
+        etag: 08d4e1d8c2b29092031001
+        version_id: '1768578014916820'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_009_0000.nii.gz
+    md5: a29e807a5c79bd36b3b3ff211e28b959
+    size: 62657
+    cloud:
+      storage:
+        etag: 08a998e0c2b29092031001
+        version_id: '1768578015038505'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_010_0000.nii.gz
+    md5: d26962bf4a9f8651c0b656aff709bf78
+    size: 59836
+    cloud:
+      storage:
+        etag: 08fed8c3c2b29092031001
+        version_id: '1768578014571646'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_012_0000.nii.gz
+    md5: 9a295b5373b5b3565e1591fe3204fbd5
+    size: 70003
+    cloud:
+      storage:
+        etag: 089cb4e2c2b29092031001
+        version_id: '1768578015074844'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_013_0000.nii.gz
+    md5: 4902b0be8c13f630800b0edd99c089c6
+    size: 87414
+    cloud:
+      storage:
+        etag: 08f988e5c2b29092031001
+        version_id: '1768578015118457'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_016_0000.nii.gz
+    md5: d10b5f441e732da2b761d1af7fe347f9
+    size: 69687
+    cloud:
+      storage:
+        etag: 08d7d2d5c2b29092031001
+        version_id: '1768578014865751'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_018_0000.nii.gz
+    md5: 8ac22e277736adf3ab0e927016913b49
+    size: 71924
+    cloud:
+      storage:
+        etag: 0893b6dec2b29092031001
+        version_id: '1768578015009555'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_021_0000.nii.gz
+    md5: b8a28cb1b24f04eaa805561bb6a14b6d
+    size: 48261
+    cloud:
+      storage:
+        etag: 089ab4cdc2b29092031001
+        version_id: '1768578014730778'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_022_0000.nii.gz
+    md5: f685521e803f4377128ed4598953bb3a
+    size: 54944
+    cloud:
+      storage:
+        etag: 08ee97e1c2b29092031001
+        version_id: '1768578015054830'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_027_0000.nii.gz
+    md5: 27d344c8fe51856161863d27bebedb8c
+    size: 83942
+    cloud:
+      storage:
+        etag: 0899bfc5c2b29092031001
+        version_id: '1768578014601113'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_028_0000.nii.gz
+    md5: a7447d5dee6135a7a592bc2d6843bfbb
+    size: 88365
+    cloud:
+      storage:
+        etag: 08cdd9d1c2b29092031001
+        version_id: '1768578014801101'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_029_0000.nii.gz
+    md5: d1743d17cda2a7817e82012f590b82d8
+    size: 86538
+    cloud:
+      storage:
+        etag: 08cca2d4c2b29092031001
+        version_id: '1768578014843212'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_030_0000.nii.gz
+    md5: 63d4dcb4424fbffaa9c8c9d1f2126098
+    size: 90979
+    cloud:
+      storage:
+        etag: 08dadad6c2b29092031001
+        version_id: '1768578014883162'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_043_0000.nii.gz
+    md5: 70be75d6c37d2a6e0b35614d54323fa3
+    size: 70333
+    cloud:
+      storage:
+        etag: 08e2f4e1c2b29092031001
+        version_id: '1768578015066722'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_047_0000.nii.gz
+    md5: d28bd3b979b841cd813980540fcd3a52
+    size: 70344
+    cloud:
+      storage:
+        etag: 08c1aad3c2b29092031001
+        version_id: '1768578014827841'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_054_0000.nii.gz
+    md5: 2cac4ebc2fca1006f72bb3970f6f4e4e
+    size: 93501
+    cloud:
+      storage:
+        etag: 0887fad1c2b29092031001
+        version_id: '1768578014805255'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_055_0000.nii.gz
+    md5: 48c2e839d2ed6eaf7a7cc0630edea190
+    size: 97316
+    cloud:
+      storage:
+        etag: 08cb85d5c2b29092031001
+        version_id: '1768578014855883'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_059_0000.nii.gz
+    md5: f7a6e0c496c9de3cc43c35e1908b6818
+    size: 70500
+    cloud:
+      storage:
+        etag: 08e8b5d3c2b29092031001
+        version_id: '1768578014829288'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_061_0000.nii.gz
+    md5: d459a2946eefcd37672aa4d39296358f
+    size: 52511
+    cloud:
+      storage:
+        etag: 08dd87c1c2b29092031001
+        version_id: '1768578014528477'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_062_0000.nii.gz
+    md5: 0a6174edecdd5096b515e5c39b804d4b
+    size: 54944
+    cloud:
+      storage:
+        etag: 08f682dfc2b29092031001
+        version_id: '1768578015019382'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_063_0000.nii.gz
+    md5: 0425d0a9fd2fc677f0382108a1339987
+    size: 72277
+    cloud:
+      storage:
+        etag: 08f6d7ddc2b29092031001
+        version_id: '1768578014997494'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_066_0000.nii.gz
+    md5: 752c875d95cfcd41e1c577fbf45d0365
+    size: 57967
+    cloud:
+      storage:
+        etag: 08f5ade8c2b29092031001
+        version_id: '1768578015172341'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_069_0000.nii.gz
+    md5: a189b8a233da907ec7b2744f9d902a1b
+    size: 57301
+    cloud:
+      storage:
+        etag: 08a2cdd5c2b29092031001
+        version_id: '1768578014865058'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_071_0000.nii.gz
+    md5: 8ffd7f1116c82fb48aa69b9dcde387b5
+    size: 65707
+    cloud:
+      storage:
+        etag: 089bc8e2c2b29092031001
+        version_id: '1768578015077403'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_072_0000.nii.gz
+    md5: f0b79b5e763e503b82fc25449ad9f067
+    size: 76446
+    cloud:
+      storage:
+        etag: 08b5c8dec2b29092031001
+        version_id: '1768578015011893'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_073_0000.nii.gz
+    md5: 2e2dd640ee91ab489df0005e42746f85
+    size: 78848
+    cloud:
+      storage:
+        etag: 08ad94c6c2b29092031001
+        version_id: '1768578014612013'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_076_0000.nii.gz
+    md5: 044ab7225831adba99fcf0737f5fe5c6
+    size: 54209
+    cloud:
+      storage:
+        etag: 08a2cddec2b29092031001
+        version_id: '1768578015012514'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_078_0000.nii.gz
+    md5: 1b6eb014e4be11d5f532fe055f4305de
+    size: 93176
+    cloud:
+      storage:
+        etag: 08a5f1e0c2b29092031001
+        version_id: '1768578015049893'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_079_0000.nii.gz
+    md5: 9d844350d2210e906c84207185b22bce
+    size: 79749
+    cloud:
+      storage:
+        etag: 088ba6ddc2b29092031001
+        version_id: '1768578014991115'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_080_0000.nii.gz
+    md5: 60e30ec4f7f805f5ca802077256f5730
+    size: 79252
+    cloud:
+      storage:
+        etag: 08b79dc0c2b29092031001
+        version_id: '1768578014514871'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_081_0000.nii.gz
+    md5: 14587954d57a2154ba9dcaf9406bc204
+    size: 77495
+    cloud:
+      storage:
+        etag: 08e989cac2b29092031001
+        version_id: '1768578014676201'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_082_0000.nii.gz
+    md5: ab9edeeb0b3ae344a166bffb20f28b0f
+    size: 87289
+    cloud:
+      storage:
+        etag: 08aafcdcc2b29092031001
+        version_id: '1768578014985770'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_100_0000.nii.gz
+    md5: cc42e76bffa885ba148de6f7ec407414
+    size: 64726
+    cloud:
+      storage:
+        etag: 08b180c3c2b29092031001
+        version_id: '1768578014560305'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_103_0000.nii.gz
+    md5: e9939ac188ebaec422d741fe2da4a4a4
+    size: 81620
+    cloud:
+      storage:
+        etag: 08e9d1ddc2b29092031001
+        version_id: '1768578014996713'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_110_0000.nii.gz
+    md5: ecd15c364b2d0d57041a556e1d0a45eb
+    size: 54955
+    cloud:
+      storage:
+        etag: 08a3ced4c2b29092031001
+        version_id: '1768578014848803'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_111_0000.nii.gz
+    md5: ef64b207f4124f67910729fa064b7efd
+    size: 49978
+    cloud:
+      storage:
+        etag: 08ccfbc0c2b29092031001
+        version_id: '1768578014526924'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_112_0000.nii.gz
+    md5: f9cecd715d4e2120b7c9f9ea5e382d5a
+    size: 52872
+    cloud:
+      storage:
+        etag: 08bbf5c2c2b29092031001
+        version_id: '1768578014558907'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_113_0000.nii.gz
+    md5: 72d4f63fa3a753829b597c80dcab46b9
+    size: 57715
+    cloud:
+      storage:
+        etag: 089286cfc2b29092031001
+        version_id: '1768578014757650'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_115_0000.nii.gz
+    md5: bd6c0e0519e3284a66bf2dfee23eaddd
+    size: 49536
+    cloud:
+      storage:
+        etag: 08deadcdc2b29092031001
+        version_id: '1768578014729950'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_116_0000.nii.gz
+    md5: c0e5e7fdfa535d66d3ab8ae7ec3fd7e4
+    size: 54496
+    cloud:
+      storage:
+        etag: 0894c0cdc2b29092031001
+        version_id: '1768578014732308'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_117_0000.nii.gz
+    md5: 755c04d30ce1213f3b29369f05b7a732
+    size: 48369
+    cloud:
+      storage:
+        etag: 0889fcddc2b29092031001
+        version_id: '1768578015002121'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_118_0000.nii.gz
+    md5: e4430f468e85110e598ee71d05987b09
+    size: 50906
+    cloud:
+      storage:
+        etag: 08b1aeb5c2b29092031001
+        version_id: '1768578014336817'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_119_0000.nii.gz
+    md5: f8aa7780e9c45fb121ad752c3c32edde
+    size: 38494
+    cloud:
+      storage:
+        etag: 08bdbdd0c2b29092031001
+        version_id: '1768578014781117'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_120_0000.nii.gz
+    md5: f833c5bb34f04d1eff22b20cd05a7847
+    size: 47990
+    cloud:
+      storage:
+        etag: 08dbc6bbc2b29092031001
+        version_id: '1768578014438235'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_121_0000.nii.gz
+    md5: 6d966bbf6de2a690eda40f6fdce5c809
+    size: 46806
+    cloud:
+      storage:
+        etag: 08e5c7cac2b29092031001
+        version_id: '1768578014684133'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_122_0000.nii.gz
+    md5: 9de6e3a77496c3c52a817ac5fab6e8ae
+    size: 48776
+    cloud:
+      storage:
+        etag: 0896d2cec2b29092031001
+        version_id: '1768578014750998'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_128_0000.nii.gz
+    md5: dfc3bb73dd9ce48d8962728f9e9d73e9
+    size: 60256
+    cloud:
+      storage:
+        etag: 08f98bc3c2b29092031001
+        version_id: '1768578014561785'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_129_0000.nii.gz
+    md5: 36d47d6d85b0eea1822eaac97ec1bb84
+    size: 56700
+    cloud:
+      storage:
+        etag: 08dcffe1c2b29092031001
+        version_id: '1768578015068124'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_131_0000.nii.gz
+    md5: 88192b34b9b57aa65e08f28135463022
+    size: 44667
+    cloud:
+      storage:
+        etag: 08d8f7e3c2b29092031001
+        version_id: '1768578015099864'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_134_0000.nii.gz
+    md5: 726e01dc3b0b13851c47c3c6f8dbdfb4
+    size: 56841
+    cloud:
+      storage:
+        etag: 08d8c4e4c2b29092031001
+        version_id: '1768578015109720'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_137_0000.nii.gz
+    md5: 77db63f83c0f6bc4208c6fb6b813c03b
+    size: 65966
+    cloud:
+      storage:
+        etag: 08a293c1c2b29092031001
+        version_id: '1768578014529954'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_139_0000.nii.gz
+    md5: b3c0e215843b2d3f12fe91645bae4abc
+    size: 52465
+    cloud:
+      storage:
+        etag: 08b0cdcfc2b29092031001
+        version_id: '1768578014766768'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_140_0000.nii.gz
+    md5: 637c84801851bed0fccf1ea861034e92
+    size: 50347
+    cloud:
+      storage:
+        etag: 08a8f3c8c2b29092031001
+        version_id: '1768578014656936'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_147_0000.nii.gz
+    md5: 1911a43759a3465847cadfd92101249f
+    size: 34816
+    cloud:
+      storage:
+        etag: 08a5c7c6c2b29092031001
+        version_id: '1768578014618533'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_151_0000.nii.gz
+    md5: 9a53cfc6435f31cc6174ab106dad757f
+    size: 57070
+    cloud:
+      storage:
+        etag: 08a6a0c1c2b29092031001
+        version_id: '1768578014531622'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_153_0000.nii.gz
+    md5: d3f724158313a30e7dd41a736aa1c8f1
+    size: 45808
+    cloud:
+      storage:
+        etag: 088c80dac2b29092031001
+        version_id: '1768578014937100'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_159_0000.nii.gz
+    md5: e0388891b2bff18998c98ab677355f3e
+    size: 72052
+    cloud:
+      storage:
+        etag: 08c3f8d6c2b29092031001
+        version_id: '1768578014886979'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_167_0000.nii.gz
+    md5: 4d7cca67ccdc9182f68f01cf001066dc
+    size: 43125
+    cloud:
+      storage:
+        etag: 08f3f5bac2b29092031001
+        version_id: '1768578014427891'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_168_0000.nii.gz
+    md5: bcdf3acc77231a446f295e3d6ffecf78
+    size: 44896
+    cloud:
+      storage:
+        etag: 08c4e4c0c2b29092031001
+        version_id: '1768578014523972'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_179_0000.nii.gz
+    md5: f6e5e5bf97f581ed46950e15270f24f9
+    size: 65773
+    cloud:
+      storage:
+        etag: 08c284c7c2b29092031001
+        version_id: '1768578014626370'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_182_0000.nii.gz
+    md5: 4e819711cb8688d7e951ad6b6a6d2289
+    size: 83820
+    cloud:
+      storage:
+        etag: 08dea0e6c2b29092031001
+        version_id: '1768578015137886'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_183_0000.nii.gz
+    md5: 9ff410a600d7daec4f44999084f3561d
+    size: 75795
+    cloud:
+      storage:
+        etag: 08a68dc9c2b29092031001
+        version_id: '1768578014660262'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_186_0000.nii.gz
+    md5: 3bf70031bba851db37c9b644e9610194
+    size: 73824
+    cloud:
+      storage:
+        etag: 08cf92dbc2b29092031001
+        version_id: '1768578014955855'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_187_0000.nii.gz
+    md5: fbcbe12b3a404c6be628ac2c5f299827
+    size: 77070
+    cloud:
+      storage:
+        etag: 0899f7dfc2b29092031001
+        version_id: '1768578015034265'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_191_0000.nii.gz
+    md5: edb8d7a7b156028540557865db8c9d86
+    size: 76589
+    cloud:
+      storage:
+        etag: 088493dcc2b29092031001
+        version_id: '1768578014972292'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_192_0000.nii.gz
+    md5: 67c923041b89d9fb08a5d4b4d2215515
+    size: 79310
+    cloud:
+      storage:
+        etag: 08eeb2c0c2b29092031001
+        version_id: '1768578014517614'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_196_0000.nii.gz
+    md5: bbcebe9a0eb1a0f05c9ed0da8502d8be
+    size: 74933
+    cloud:
+      storage:
+        etag: 08afc6c6c2b29092031001
+        version_id: '1768578014618415'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_198_0000.nii.gz
+    md5: 10a2583d268f7ef5d9c31db720cda9f2
+    size: 48536
+    cloud:
+      storage:
+        etag: 08f9e2e0c2b29092031001
+        version_id: '1768578015048057'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_200_0000.nii.gz
+    md5: 5ee4e543300055aa417edf1c355b67d0
+    size: 71341
+    cloud:
+      storage:
+        etag: 08bcc8d0c2b29092031001
+        version_id: '1768578014782524'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_201_0000.nii.gz
+    md5: f809a007900d91343a8fb613af52fa6a
+    size: 71359
+    cloud:
+      storage:
+        etag: 08c29edec2b29092031001
+        version_id: '1768578015006530'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_202_0000.nii.gz
+    md5: 9c77fc5a5bf09b477d6f3e25cb0352c1
+    size: 82778
+    cloud:
+      storage:
+        etag: 08b8c3d7c2b29092031001
+        version_id: '1768578014896568'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_206_0000.nii.gz
+    md5: 17beeddfcbffa9559c865b620e71b311
+    size: 62932
+    cloud:
+      storage:
+        etag: 08ec86c8c2b29092031001
+        version_id: '1768578014643052'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_208_0000.nii.gz
+    md5: 90fe3881ea1d2aad41e704777e9885b9
+    size: 80663
+    cloud:
+      storage:
+        etag: 08d9b9c6c2b29092031001
+        version_id: '1768578014616793'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_209_0000.nii.gz
+    md5: d5333afd6be399d4553e81fc32fee16e
+    size: 79293
+    cloud:
+      storage:
+        etag: 08d79fe2c2b29092031001
+        version_id: '1768578015072215'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_211_0000.nii.gz
+    md5: c534d4efb2120845a4ae9485a47ecc16
+    size: 80720
+    cloud:
+      storage:
+        etag: 088ac0c9c2b29092031001
+        version_id: '1768578014666762'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_213_0000.nii.gz
+    md5: 2ff1872c1d08a86a05c3b6f85e8a5e94
+    size: 69776
+    cloud:
+      storage:
+        etag: 0898c4dbc2b29092031001
+        version_id: '1768578014962200'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_214_0000.nii.gz
+    md5: 8ee1d4067d339e895cdaae278dfdac38
+    size: 77066
+    cloud:
+      storage:
+        etag: 08e2abd1c2b29092031001
+        version_id: '1768578014795234'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_218_0000.nii.gz
+    md5: 395bc5a30ebf355740bf653fb700d3bf
+    size: 69664
+    cloud:
+      storage:
+        etag: 08f6a9d3c2b29092031001
+        version_id: '1768578014827766'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_237_0000.nii.gz
+    md5: b7b29e7a57e64668950418a0274a8bdc
+    size: 84566
+    cloud:
+      storage:
+        etag: 08c8f7d0c2b29092031001
+        version_id: '1768578014788552'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_239_0000.nii.gz
+    md5: 80120ae929b94ec2a79bc4e8e6934fea
+    size: 75019
+    cloud:
+      storage:
+        etag: 08f9b4ebc2b29092031001
+        version_id: '1768578015222393'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_240_0000.nii.gz
+    md5: 501bb8f2836ebdd8d6bf056f85a74066
+    size: 81255
+    cloud:
+      storage:
+        etag: 0885f9cac2b29092031001
+        version_id: '1768578014690437'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_241_0000.nii.gz
+    md5: 9d7d9cf0a8730f5f266de58747b621c4
+    size: 49868
+    cloud:
+      storage:
+        etag: 0891aec2c2b29092031001
+        version_id: '1768578014549777'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_246_0000.nii.gz
+    md5: f48a8edbfd4176c2b77dd9b8fe8f614d
+    size: 85912
+    cloud:
+      storage:
+        etag: 08e3dcb7c2b29092031001
+        version_id: '1768578014375523'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_247_0000.nii.gz
+    md5: 8a8a1700ea1b2ee1766044d591b825f5
+    size: 78917
+    cloud:
+      storage:
+        etag: 0887bfd9c2b29092031001
+        version_id: '1768578014928775'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_254_0000.nii.gz
+    md5: a1d5bd3ae293be8bdca647711716fd10
+    size: 74058
+    cloud:
+      storage:
+        etag: 08fcd8dbc2b29092031001
+        version_id: '1768578014964860'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_255_0000.nii.gz
+    md5: 859d7f9c790128f3dfd2065da840ec7f
+    size: 71707
+    cloud:
+      storage:
+        etag: 08ecefe7c2b29092031001
+        version_id: '1768578015164396'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_256_0000.nii.gz
+    md5: cff2ead62ac4897844c7ff06a27a45d0
+    size: 82029
+    cloud:
+      storage:
+        etag: 08a9f9b5c2b29092031001
+        version_id: '1768578014346409'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_258_0000.nii.gz
+    md5: eceb1e92ade6c7c758e75a023d33a628
+    size: 83477
+    cloud:
+      storage:
+        etag: 089484c4c2b29092031001
+        version_id: '1768578014577172'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_262_0000.nii.gz
+    md5: 2e0f17380cf511dc6d80ef686d2ad035
+    size: 85142
+    cloud:
+      storage:
+        etag: 08e08fd7c2b29092031001
+        version_id: '1768578014889952'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_266_0000.nii.gz
+    md5: 9ea29d7ce66a639603a6362be2b02a34
+    size: 79654
+    cloud:
+      storage:
+        etag: 088adfd6c2b29092031001
+        version_id: '1768578014883722'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_267_0000.nii.gz
+    md5: 38b9aa9b1ddc4e9ea11cf5b6ecb5805f
+    size: 71261
+    cloud:
+      storage:
+        etag: 08d8cccac2b29092031001
+        version_id: '1768578014684760'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_270_0000.nii.gz
+    md5: 89870741e812dae7bf6b5dd78a5c5781
+    size: 99227
+    cloud:
+      storage:
+        etag: 08f9cccfc2b29092031001
+        version_id: '1768578014766713'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_271_0000.nii.gz
+    md5: b0051ad6d8e7b7c74f6ddd1085e16f4e
+    size: 48795
+    cloud:
+      storage:
+        etag: 08e8bebfc2b29092031001
+        version_id: '1768578014502760'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_272_0000.nii.gz
+    md5: 9aa684653fb1e453c02cf2428f4cd3b7
+    size: 53253
+    cloud:
+      storage:
+        etag: 08cbe0dbc2b29092031001
+        version_id: '1768578014965835'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_273_0000.nii.gz
+    md5: 099403a8335df6cbb710ad02eee9659e
+    size: 67687
+    cloud:
+      storage:
+        etag: 089481e2c2b29092031001
+        version_id: '1768578015068308'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_275_0000.nii.gz
+    md5: 73272a22d89c590f354b40c18f400344
+    size: 70902
+    cloud:
+      storage:
+        etag: 08919be3c2b29092031001
+        version_id: '1768578015088017'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_278_0000.nii.gz
+    md5: f7c8261db04dba29dbf9a69cb7bf9857
+    size: 76010
+    cloud:
+      storage:
+        etag: 0883ced2c2b29092031001
+        version_id: '1768578014816003'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_281_0000.nii.gz
+    md5: 5387142c74e9675b1d6b6011eb5c5f3d
+    size: 70622
+    cloud:
+      storage:
+        etag: 08aff4dac2b29092031001
+        version_id: '1768578014951983'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_283_0000.nii.gz
+    md5: 9c6b3ffc5ce10a513800a76d1fb9b90a
+    size: 68615
+    cloud:
+      storage:
+        etag: 08b0b9bbc2b29092031001
+        version_id: '1768578014436528'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_284_0000.nii.gz
+    md5: f435854b4c564ef8ef06c22d4e20db52
+    size: 66195
+    cloud:
+      storage:
+        etag: 08eb86e5c2b29092031001
+        version_id: '1768578015118187'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_285_0000.nii.gz
+    md5: 780ea47485d4b404f486f135419e35f7
+    size: 50323
+    cloud:
+      storage:
+        etag: 08b4fed5c2b29092031001
+        version_id: '1768578014871348'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_291_0000.nii.gz
+    md5: 0cf6c6ae393bb48e61d28e75b161e74e
+    size: 70327
+    cloud:
+      storage:
+        etag: 08f38dd2c2b29092031001
+        version_id: '1768578014807795'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_293_0000.nii.gz
+    md5: 4698bac3e6e1054e74682c6f0789b7ee
+    size: 79098
+    cloud:
+      storage:
+        etag: 08f0c7d7c2b29092031001
+        version_id: '1768578014897136'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_306_0000.nii.gz
+    md5: 606c7dbd24f1bbce74725831de673bb4
+    size: 67893
+    cloud:
+      storage:
+        etag: 08caf7d0c2b29092031001
+        version_id: '1768578014788554'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_307_0000.nii.gz
+    md5: 2d5c4efb3fe7e1f3952db14d75da0b23
+    size: 53918
+    cloud:
+      storage:
+        etag: 088efad2c2b29092031001
+        version_id: '1768578014821646'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_312_0000.nii.gz
+    md5: b89db337187897d1c6855b72a9977ff1
+    size: 88509
+    cloud:
+      storage:
+        etag: 08e0ffdfc2b29092031001
+        version_id: '1768578015035360'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_313_0000.nii.gz
+    md5: 47e18c07871844c4be38cc61784c4841
+    size: 60621
+    cloud:
+      storage:
+        etag: 08f9f2d8c2b29092031001
+        version_id: '1768578014919033'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_315_0000.nii.gz
+    md5: f044ce0345ffb02bcedbae851953434f
+    size: 70831
+    cloud:
+      storage:
+        etag: 08d0c0c2c2b29092031001
+        version_id: '1768578014552144'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_323_0000.nii.gz
+    md5: 87be9afbbdf4b5def8dc05918aab37cf
+    size: 66104
+    cloud:
+      storage:
+        etag: 0896f0d9c2b29092031001
+        version_id: '1768578014935062'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_324_0000.nii.gz
+    md5: 50fa419836c2b0198c10f3b010c57e00
+    size: 76539
+    cloud:
+      storage:
+        etag: 08acf9c6c2b29092031001
+        version_id: '1768578014624940'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_339_0000.nii.gz
+    md5: e19e842043bd96bd7d3097a55126e3a6
+    size: 71102
+    cloud:
+      storage:
+        etag: 089fd0c1c2b29092031001
+        version_id: '1768578014537759'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_342_0000.nii.gz
+    md5: a164d5bcf361109feae45a2e468e58e2
+    size: 80254
+    cloud:
+      storage:
+        etag: 08ebb7e3c2b29092031001
+        version_id: '1768578015091691'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_344_0000.nii.gz
+    md5: 721c0eb820a56b21e9d6a3c8fcf5cdf9
+    size: 72628
+    cloud:
+      storage:
+        etag: 08d3fce4c2b29092031001
+        version_id: '1768578015116883'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_346_0000.nii.gz
+    md5: 45d375ab1d9839de8b8a3ec13fc268ee
+    size: 64672
+    cloud:
+      storage:
+        etag: 08cd93cfc2b29092031001
+        version_id: '1768578014759373'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_347_0000.nii.gz
+    md5: f292987cec2a790aeefdf1598b98e4f0
+    size: 70097
+    cloud:
+      storage:
+        etag: 08f0dee5c2b29092031001
+        version_id: '1768578015129456'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_348_0000.nii.gz
+    md5: addb5fc5b57072336ba4c36e8a571a05
+    size: 67807
+    cloud:
+      storage:
+        etag: 08a8c8dbc2b29092031001
+        version_id: '1768578014962728'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_357_0000.nii.gz
+    md5: 1f7d9c58524583e7676464eb554f4698
+    size: 63808
+    cloud:
+      storage:
+        etag: 08e780e0c2b29092031001
+        version_id: '1768578015035495'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_362_0000.nii.gz
+    md5: def27c99fb6edf2eb221fa93e0eb3712
+    size: 80967
+    cloud:
+      storage:
+        etag: 089bbec8c2b29092031001
+        version_id: '1768578014650139'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_364_0000.nii.gz
+    md5: f4e186d2d0b02b3caca9b5ff4528280d
+    size: 84821
+    cloud:
+      storage:
+        etag: 08c3abc3c2b29092031001
+        version_id: '1768578014565827'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_365_0000.nii.gz
+    md5: c347f2963008afe603aa8f60a856a74b
+    size: 70318
+    cloud:
+      storage:
+        etag: 0885ddd1c2b29092031001
+        version_id: '1768578014801541'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_369_0000.nii.gz
+    md5: e64f9d495e6ff917e033b2665238fe24
+    size: 86375
+    cloud:
+      storage:
+        etag: 08c88ed2c2b29092031001
+        version_id: '1768578014807880'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_371_0000.nii.gz
+    md5: d86f62c981636d9c10220c3bfa5c09ac
+    size: 72337
+    cloud:
+      storage:
+        etag: 08d5edbfc2b29092031001
+        version_id: '1768578014508757'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_377_0000.nii.gz
+    md5: 2e57baddd82fde53ca45e299a934c7cd
+    size: 67231
+    cloud:
+      storage:
+        etag: 08f397dcc2b29092031001
+        version_id: '1768578014972915'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_379_0000.nii.gz
+    md5: a4aa534d4d7d7eab6e2261f0cfee84f8
+    size: 85802
+    cloud:
+      storage:
+        etag: 0896b3dec2b29092031001
+        version_id: '1768578015009174'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_382_0000.nii.gz
+    md5: 7b0de92ebc11aaaa60463717dd176aea
+    size: 83415
+    cloud:
+      storage:
+        etag: 08dbbfdac2b29092031001
+        version_id: '1768578014945243'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_384_0000.nii.gz
+    md5: c501299f1b9fbf5fd32f3a1decc42cfe
+    size: 65087
+    cloud:
+      storage:
+        etag: 0888dfbec2b29092031001
+        version_id: '1768578014490504'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_388_0000.nii.gz
+    md5: 195d2eaded9c084bcbe0ab70f15aaee4
+    size: 66183
+    cloud:
+      storage:
+        etag: 08e4e2cdc2b29092031001
+        version_id: '1768578014736740'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_391_0000.nii.gz
+    md5: ab3266cf26ca08a0df5add128a3c37f5
+    size: 68197
+    cloud:
+      storage:
+        etag: 08f4e8cec2b29092031001
+        version_id: '1768578014753908'
+  - relpath: Dataset621_Hippocampus/imagesTs/hippocampus_392_0000.nii.gz
+    md5: 5d3cfe85e98a89f5ae04557e588c76fa
+    size: 70227
+    cloud:
+      storage:
+        etag: 08bea7cfc2b29092031001
+        version_id: '1768578014761918'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_001.nii.gz
+    md5: 040b8b9e000b25fcde401ab35af27536
+    size: 803
+    cloud:
+      storage:
+        etag: 08e0cf86c3b29092031001
+        version_id: '1768578015668192'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_003.nii.gz
+    md5: 0430d5213b48bed4f7026bec9a72443e
+    size: 1432
+    cloud:
+      storage:
+        etag: 089186e9c2b29092031001
+        version_id: '1768578015183633'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_004.nii.gz
+    md5: 8574e3fa1b00c0f73dca54a3b857dac2
+    size: 1057
+    cloud:
+      storage:
+        etag: 0896a181c3b29092031001
+        version_id: '1768578015580310'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_006.nii.gz
+    md5: aa847a880e818f3d66c3cfd2cfa00909
+    size: 1046
+    cloud:
+      storage:
+        etag: 08daae80c3b29092031001
+        version_id: '1768578015565658'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_007.nii.gz
+    md5: 03d30edeaf7eaa39400ac96b63f218e0
+    size: 929
+    cloud:
+      storage:
+        etag: 08a3abffc2b29092031001
+        version_id: '1768578015548835'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_008.nii.gz
+    md5: 2b3de0d18006f5b96d283aee972daf15
+    size: 919
+    cloud:
+      storage:
+        etag: 08c891efc2b29092031001
+        version_id: '1768578015283400'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_011.nii.gz
+    md5: f189b0d0e305524a61542ae104f9364e
+    size: 851
+    cloud:
+      storage:
+        etag: 08d78dfec2b29092031001
+        version_id: '1768578015528663'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_014.nii.gz
+    md5: 013f7441a9a03c4a6f0977f182d3a91a
+    size: 1124
+    cloud:
+      storage:
+        etag: 08e989e9c2b29092031001
+        version_id: '1768578015184105'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_015.nii.gz
+    md5: 4a0bd39311cb2f4baf166d8fff91870d
+    size: 890
+    cloud:
+      storage:
+        etag: 08e69286c3b29092031001
+        version_id: '1768578015660390'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_017.nii.gz
+    md5: 9b4b86275ad6bd8952ed5ed3cfdfcb8e
+    size: 867
+    cloud:
+      storage:
+        etag: 08c9deedc2b29092031001
+        version_id: '1768578015260489'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_019.nii.gz
+    md5: 33bda18b36a660b5315a869304b9a1c7
+    size: 1041
+    cloud:
+      storage:
+        etag: 08f0a8efc2b29092031001
+        version_id: '1768578015286384'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_020.nii.gz
+    md5: 37379c72f0a8aaf83fc0b96458d8aeb6
+    size: 1079
+    cloud:
+      storage:
+        etag: 08acfafdc2b29092031001
+        version_id: '1768578015526188'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_023.nii.gz
+    md5: 0163af22e2f80ef5b134efd3ce2e361b
+    size: 1029
+    cloud:
+      storage:
+        etag: 0896fbe7c2b29092031001
+        version_id: '1768578015165846'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_024.nii.gz
+    md5: 2b5226dae0f88a8e7bbc3742edc7f0d5
+    size: 999
+    cloud:
+      storage:
+        etag: 08bce287c3b29092031001
+        version_id: '1768578015686972'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_025.nii.gz
+    md5: db6c8160d97808bc9031dcb05c0638aa
+    size: 968
+    cloud:
+      storage:
+        etag: 08d5d2f2c2b29092031001
+        version_id: '1768578015340885'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_026.nii.gz
+    md5: bc9b9f8804bb139e2b33210e2e764f22
+    size: 1013
+    cloud:
+      storage:
+        etag: 0881dff3c2b29092031001
+        version_id: '1768578015358849'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_033.nii.gz
+    md5: d57e4504cc4f0a09c562a375c7e61e8e
+    size: 951
+    cloud:
+      storage:
+        etag: 08df81dfc2b29092031001
+        version_id: '1768578015019231'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_034.nii.gz
+    md5: 879bf1c85e7dcdc9e91d02e22f4ad41c
+    size: 972
+    cloud:
+      storage:
+        etag: 0882f6e3c2b29092031001
+        version_id: '1768578015099650'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_035.nii.gz
+    md5: dd7185c3eb5e6c22b89125e0c01285fb
+    size: 964
+    cloud:
+      storage:
+        etag: 08afb6efc2b29092031001
+        version_id: '1768578015288111'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_036.nii.gz
+    md5: 5b4af87c1b8ae9efc0d421510e1edf55
+    size: 960
+    cloud:
+      storage:
+        etag: 0895d381c3b29092031001
+        version_id: '1768578015586709'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_037.nii.gz
+    md5: acfc137b0eb4d0f054275e04f5b5ab31
+    size: 925
+    cloud:
+      storage:
+        etag: 08b7bae2c2b29092031001
+        version_id: '1768578015075639'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_038.nii.gz
+    md5: 1d44835b1ead642cfb1a99c865f59959
+    size: 1035
+    cloud:
+      storage:
+        etag: 08bca2f7c2b29092031001
+        version_id: '1768578015416636'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_039.nii.gz
+    md5: cf2a98f763708d7d132754069f373d76
+    size: 1010
+    cloud:
+      storage:
+        etag: 08a6cdfec2b29092031001
+        version_id: '1768578015536806'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_040.nii.gz
+    md5: 4838b5b0bd49e822fa991529775635b0
+    size: 974
+    cloud:
+      storage:
+        etag: 08c5c2f9c2b29092031001
+        version_id: '1768578015453509'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_041.nii.gz
+    md5: 7fc2ff444a4cbc7b0b9a7a13efb6a1bc
+    size: 984
+    cloud:
+      storage:
+        etag: 08bdecddc2b29092031001
+        version_id: '1768578015000125'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_042.nii.gz
+    md5: 04eb4dbcc97d09011d7b7a4a73b63891
+    size: 950
+    cloud:
+      storage:
+        etag: 08b2a88bc3b29092031001
+        version_id: '1768578015745074'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_044.nii.gz
+    md5: c0f9ccbe8338096cefe2c276c59a2378
+    size: 819
+    cloud:
+      storage:
+        etag: 08d1cff2c2b29092031001
+        version_id: '1768578015340497'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_045.nii.gz
+    md5: 3881219d966d5ba7203eff50dd483da2
+    size: 948
+    cloud:
+      storage:
+        etag: 08b5bbf5c2b29092031001
+        version_id: '1768578015387061'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_046.nii.gz
+    md5: f643921354a0a93aa040210abe10b1ab
+    size: 1012
+    cloud:
+      storage:
+        etag: 08d28af3c2b29092031001
+        version_id: '1768578015348050'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_048.nii.gz
+    md5: 76e11fa47d234a766e963cdc8392226b
+    size: 887
+    cloud:
+      storage:
+        etag: 08cbf3efc2b29092031001
+        version_id: '1768578015295947'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_049.nii.gz
+    md5: 475f5c8ac7f0fe2b4e5c0ae0f33b9243
+    size: 943
+    cloud:
+      storage:
+        etag: 08b9ddf2c2b29092031001
+        version_id: '1768578015342265'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_050.nii.gz
+    md5: 8e2423180c7df5c0eb8640ac9862f613
+    size: 947
+    cloud:
+      storage:
+        etag: 08a788fec2b29092031001
+        version_id: '1768578015527975'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_051.nii.gz
+    md5: 8845c7578ab30f78d813cf58b31c3a00
+    size: 925
+    cloud:
+      storage:
+        etag: 08b1d8eac2b29092031001
+        version_id: '1768578015210545'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_052.nii.gz
+    md5: f50ad594e2f9c1faf977ff77e76d89f1
+    size: 953
+    cloud:
+      storage:
+        etag: 08d6ddeac2b29092031001
+        version_id: '1768578015211222'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_053.nii.gz
+    md5: 46726c068892d614d1b439e67b485de8
+    size: 955
+    cloud:
+      storage:
+        etag: 08f9cfedc2b29092031001
+        version_id: '1768578015258617'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_056.nii.gz
+    md5: 62962aa08b53b03dde74a1b6d99c13cb
+    size: 992
+    cloud:
+      storage:
+        etag: 08ddc7f8c2b29092031001
+        version_id: '1768578015437789'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_057.nii.gz
+    md5: d606d7efa5e69c31bda48ab4cabe35d0
+    size: 814
+    cloud:
+      storage:
+        etag: 08c0cb86c3b29092031001
+        version_id: '1768578015667648'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_058.nii.gz
+    md5: ade8628e064e6e1e456947207b2be049
+    size: 859
+    cloud:
+      storage:
+        etag: 08e0e0fac2b29092031001
+        version_id: '1768578015473760'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_060.nii.gz
+    md5: 5f560f83e30383e170cac42186ef5d67
+    size: 850
+    cloud:
+      storage:
+        etag: 08fce3e9c2b29092031001
+        version_id: '1768578015195644'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_064.nii.gz
+    md5: 0ecaa0aad06c54c65a3aa089efdfc81b
+    size: 981
+    cloud:
+      storage:
+        etag: 08b396f3c2b29092031001
+        version_id: '1768578015349555'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_065.nii.gz
+    md5: 3a55dd89ae9e9cd03b10987209102817
+    size: 844
+    cloud:
+      storage:
+        etag: 0895d082c3b29092031001
+        version_id: '1768578015602709'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_067.nii.gz
+    md5: 4b3fa692bee80f94fc09263fa0bbd058
+    size: 832
+    cloud:
+      storage:
+        etag: 0899b182c3b29092031001
+        version_id: '1768578015598745'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_068.nii.gz
+    md5: 403fe191122a8351d757c62e575cf8e8
+    size: 903
+    cloud:
+      storage:
+        etag: 08a59e81c3b29092031001
+        version_id: '1768578015579941'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_070.nii.gz
+    md5: ac522fb8166b9814d4ba644565112a28
+    size: 884
+    cloud:
+      storage:
+        etag: 08f49ef9c2b29092031001
+        version_id: '1768578015448948'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_074.nii.gz
+    md5: 160554c4cb10997450d64687dbfeeb47
+    size: 900
+    cloud:
+      storage:
+        etag: 08ddddeec2b29092031001
+        version_id: '1768578015276765'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_075.nii.gz
+    md5: 56a7cecb9e8fe2c565d02612ff67b2e1
+    size: 829
+    cloud:
+      storage:
+        etag: 08a78581c3b29092031001
+        version_id: '1768578015576743'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_077.nii.gz
+    md5: a3913b8f1569f6946920544fa2b7ab84
+    size: 1061
+    cloud:
+      storage:
+        etag: 08e8c0fbc2b29092031001
+        version_id: '1768578015486056'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_083.nii.gz
+    md5: f5b555897735246c9a034a127c985557
+    size: 901
+    cloud:
+      storage:
+        etag: 08a6defdc2b29092031001
+        version_id: '1768578015522598'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_084.nii.gz
+    md5: 40d2d69a16ae5972cd95a0d433eeb057
+    size: 886
+    cloud:
+      storage:
+        etag: 08b5e7e3c2b29092031001
+        version_id: '1768578015097781'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_087.nii.gz
+    md5: 6b48207f52b1956ab5a203ffb1942831
+    size: 901
+    cloud:
+      storage:
+        etag: 08f88af5c2b29092031001
+        version_id: '1768578015380856'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_088.nii.gz
+    md5: c59ade687086864bb2c60775d130d70e
+    size: 915
+    cloud:
+      storage:
+        etag: 08978e81c3b29092031001
+        version_id: '1768578015577879'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_089.nii.gz
+    md5: 31e1442242d7e45bb7a675fbd1e8a356
+    size: 949
+    cloud:
+      storage:
+        etag: 08e9def2c2b29092031001
+        version_id: '1768578015342441'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_090.nii.gz
+    md5: bf5b766985761cb1ccaea3a2cd38f4b6
+    size: 1012
+    cloud:
+      storage:
+        etag: 08e9b4efc2b29092031001
+        version_id: '1768578015287913'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_091.nii.gz
+    md5: b743501481cf1fd43eecc2225c634b05
+    size: 800
+    cloud:
+      storage:
+        etag: 08e3adf1c2b29092031001
+        version_id: '1768578015319779'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_092.nii.gz
+    md5: 19f3b834dcd9b6871ace7270851c5872
+    size: 778
+    cloud:
+      storage:
+        etag: 08f0a3ecc2b29092031001
+        version_id: '1768578015236592'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_093.nii.gz
+    md5: 8d935dab06799f2d349ab5946fc148ea
+    size: 976
+    cloud:
+      storage:
+        etag: 08e7e3e3c2b29092031001
+        version_id: '1768578015097319'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_094.nii.gz
+    md5: 6ca42f2098c4cf9342bee64becb1dfbd
+    size: 1006
+    cloud:
+      storage:
+        etag: 0894abf9c2b29092031001
+        version_id: '1768578015450516'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_095.nii.gz
+    md5: 7a9d0d54f56a009ce7f7c8b431c20b20
+    size: 998
+    cloud:
+      storage:
+        etag: 088bbeeec2b29092031001
+        version_id: '1768578015272715'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_096.nii.gz
+    md5: c347f39a614e9b95471624a97271505f
+    size: 898
+    cloud:
+      storage:
+        etag: 0881f4e0c2b29092031001
+        version_id: '1768578015050241'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_097.nii.gz
+    md5: f687c6262ed5907a41de0c9e405692b2
+    size: 808
+    cloud:
+      storage:
+        etag: 08bcba86c3b29092031001
+        version_id: '1768578015665468'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_098.nii.gz
+    md5: 0b6ff3b91e0b66e8be13ad794c49a546
+    size: 866
+    cloud:
+      storage:
+        etag: 0887f6dec2b29092031001
+        version_id: '1768578015017735'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_099.nii.gz
+    md5: 51a4e708f246cfeb79a03435615b912a
+    size: 727
+    cloud:
+      storage:
+        etag: 088e9a86c3b29092031001
+        version_id: '1768578015661326'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_101.nii.gz
+    md5: 626e9034fb58f463065ada0a84fb92ba
+    size: 929
+    cloud:
+      storage:
+        etag: 08e58b86c3b29092031001
+        version_id: '1768578015659493'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_102.nii.gz
+    md5: 04f4ac97a6e7706daa5d0f1d54fca38a
+    size: 1001
+    cloud:
+      storage:
+        etag: 08c2d7fbc2b29092031001
+        version_id: '1768578015488962'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_104.nii.gz
+    md5: 3bc291c361d733c276a53213de065625
+    size: 1019
+    cloud:
+      storage:
+        etag: 08b8ff82c3b29092031001
+        version_id: '1768578015608760'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_105.nii.gz
+    md5: c163bde3aee117ee507cd2885ed70cfb
+    size: 863
+    cloud:
+      storage:
+        etag: 08e789e7c2b29092031001
+        version_id: '1768578015151335'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_106.nii.gz
+    md5: c9222a830433d337f41844525df67e89
+    size: 853
+    cloud:
+      storage:
+        etag: 08e1a3f6c2b29092031001
+        version_id: '1768578015400417'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_107.nii.gz
+    md5: 60087ee186aad21b1a759d9b02f49784
+    size: 987
+    cloud:
+      storage:
+        etag: 08f9b382c3b29092031001
+        version_id: '1768578015599097'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_108.nii.gz
+    md5: b19ce96617a3acd869750de1c6db3c79
+    size: 986
+    cloud:
+      storage:
+        etag: 08c5ce81c3b29092031001
+        version_id: '1768578015586117'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_109.nii.gz
+    md5: 2a3076cc4e952fad664e9ac60bceb001
+    size: 817
+    cloud:
+      storage:
+        etag: 08c8ccf4c2b29092031001
+        version_id: '1768578015372872'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_114.nii.gz
+    md5: d6460166c16912ba4c8c73eeda5af224
+    size: 966
+    cloud:
+      storage:
+        etag: 08fadcecc2b29092031001
+        version_id: '1768578015243898'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_123.nii.gz
+    md5: 57c1040623b2512ef9f35e1a59292d18
+    size: 866
+    cloud:
+      storage:
+        etag: 088cef85c3b29092031001
+        version_id: '1768578015655820'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_124.nii.gz
+    md5: b1477bcd178e503dc972eff9eff013a6
+    size: 880
+    cloud:
+      storage:
+        etag: 088289f1c2b29092031001
+        version_id: '1768578015315074'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_125.nii.gz
+    md5: 018cc9d290ab4f0792d85d2a43f8d741
+    size: 777
+    cloud:
+      storage:
+        etag: 08e5bc80c3b29092031001
+        version_id: '1768578015567461'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_126.nii.gz
+    md5: cc9c4f9ec02e14c248c10c250595e32d
+    size: 840
+    cloud:
+      storage:
+        etag: 08c99ce4c2b29092031001
+        version_id: '1768578015104585'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_127.nii.gz
+    md5: 2c5be0fab4d547d6190e9ab300868971
+    size: 910
+    cloud:
+      storage:
+        etag: 08da9e82c3b29092031001
+        version_id: '1768578015596378'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_130.nii.gz
+    md5: 59afe01147f0b58fcea0442bcf7584e1
+    size: 926
+    cloud:
+      storage:
+        etag: 08c2cafbc2b29092031001
+        version_id: '1768578015487298'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_132.nii.gz
+    md5: 4f675efb60a474844d6910e7c0b835fa
+    size: 885
+    cloud:
+      storage:
+        etag: 088cf6f9c2b29092031001
+        version_id: '1768578015460108'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_133.nii.gz
+    md5: 2fab172e6b04d81876d174424197b9cb
+    size: 900
+    cloud:
+      storage:
+        etag: 08fce1fcc2b29092031001
+        version_id: '1768578015506684'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_135.nii.gz
+    md5: a29ae107d687859a641726bd86a770d9
+    size: 794
+    cloud:
+      storage:
+        etag: 08df96e9c2b29092031001
+        version_id: '1768578015185759'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_136.nii.gz
+    md5: 7b360bec16f2a94241af957eb9eec2d8
+    size: 891
+    cloud:
+      storage:
+        etag: 08a8acf9c2b29092031001
+        version_id: '1768578015450664'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_138.nii.gz
+    md5: 1e26a91f787e14ad677a38463283fe7e
+    size: 754
+    cloud:
+      storage:
+        etag: 08dceeeec2b29092031001
+        version_id: '1768578015278940'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_141.nii.gz
+    md5: 3fda0b2a1cfc1808821bf4e919f252a1
+    size: 795
+    cloud:
+      storage:
+        etag: 08c691f5c2b29092031001
+        version_id: '1768578015381702'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_142.nii.gz
+    md5: 141fa04966fa37dc795842af9d196edf
+    size: 749
+    cloud:
+      storage:
+        etag: 08bb90fdc2b29092031001
+        version_id: '1768578015512635'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_143.nii.gz
+    md5: 27003f697484343134eb6c5fb66b8aeb
+    size: 748
+    cloud:
+      storage:
+        etag: 0889ebeec2b29092031001
+        version_id: '1768578015278473'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_144.nii.gz
+    md5: 7c68c56d0007e78de7240f8f1126213d
+    size: 782
+    cloud:
+      storage:
+        etag: 08eb85e3c2b29092031001
+        version_id: '1768578015085291'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_145.nii.gz
+    md5: 3a841e6b95987a09f164b9777b52f15b
+    size: 888
+    cloud:
+      storage:
+        etag: 08aeb2e1c2b29092031001
+        version_id: '1768578015058222'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_146.nii.gz
+    md5: 5258475190aabd35b2ea1cffc5a81c57
+    size: 885
+    cloud:
+      storage:
+        etag: 08abebfcc2b29092031001
+        version_id: '1768578015507883'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_148.nii.gz
+    md5: 8ff6efa9a7a90fbb756cbc385b4af796
+    size: 799
+    cloud:
+      storage:
+        etag: 08c8b4f0c2b29092031001
+        version_id: '1768578015304264'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_149.nii.gz
+    md5: 137e3b073755672370aac22c0c8654a4
+    size: 752
+    cloud:
+      storage:
+        etag: 08e39383c3b29092031001
+        version_id: '1768578015611363'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_150.nii.gz
+    md5: 3637180f9f8b4d42d2c474e8bf7f3da6
+    size: 766
+    cloud:
+      storage:
+        etag: 08b6efe2c2b29092031001
+        version_id: '1768578015082422'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_152.nii.gz
+    md5: 42750233da453f242b3bd15a094253f6
+    size: 946
+    cloud:
+      storage:
+        etag: 08f3e9f0c2b29092031001
+        version_id: '1768578015311091'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_154.nii.gz
+    md5: 523f5fd409dc912881429c34e91e78df
+    size: 837
+    cloud:
+      storage:
+        etag: 08b9aee3c2b29092031001
+        version_id: '1768578015090489'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_155.nii.gz
+    md5: 645bea45e0bc8c4ab5bd14e01e42fe73
+    size: 947
+    cloud:
+      storage:
+        etag: 08fd8980c3b29092031001
+        version_id: '1768578015560957'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_156.nii.gz
+    md5: 154a95dc528a0fbc2ea73131206bdc64
+    size: 957
+    cloud:
+      storage:
+        etag: 08d5e680c3b29092031001
+        version_id: '1768578015572821'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_157.nii.gz
+    md5: 2c941de68594e998e5ac98d76a71919f
+    size: 929
+    cloud:
+      storage:
+        etag: 088de3f1c2b29092031001
+        version_id: '1768578015326605'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_158.nii.gz
+    md5: 7458246bc1ce47fc80a86ee60447389d
+    size: 948
+    cloud:
+      storage:
+        etag: 08c4d1fdc2b29092031001
+        version_id: '1768578015520964'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_160.nii.gz
+    md5: 700adb48c19a0c6fcdad597179584d6f
+    size: 825
+    cloud:
+      storage:
+        etag: 08dff6f9c2b29092031001
+        version_id: '1768578015460191'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_161.nii.gz
+    md5: da058578ed230d5113d7d9ea47e90881
+    size: 899
+    cloud:
+      storage:
+        etag: 08b895f8c2b29092031001
+        version_id: '1768578015431352'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_162.nii.gz
+    md5: 62f538415c98913f620470171e990891
+    size: 855
+    cloud:
+      storage:
+        etag: 08fcbd84c3b29092031001
+        version_id: '1768578015633148'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_163.nii.gz
+    md5: e524f4df372a6c673b2cbfa0283891e2
+    size: 969
+    cloud:
+      storage:
+        etag: 08e2e2ebc2b29092031001
+        version_id: '1768578015228258'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_164.nii.gz
+    md5: b7ea221ddb6eb90a5f2c00bc159c8a7e
+    size: 1062
+    cloud:
+      storage:
+        etag: 08e5a8f0c2b29092031001
+        version_id: '1768578015302757'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_165.nii.gz
+    md5: 18ff8529e0bc22e0d791a271e246611a
+    size: 791
+    cloud:
+      storage:
+        etag: 08eac2f5c2b29092031001
+        version_id: '1768578015388010'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_166.nii.gz
+    md5: f5c1819cb90835205042d13c3d556de3
+    size: 783
+    cloud:
+      storage:
+        etag: 08c79ce7c2b29092031001
+        version_id: '1768578015153735'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_169.nii.gz
+    md5: 63f5007e6e8024d675ad127153a05643
+    size: 824
+    cloud:
+      storage:
+        etag: 088db4e6c2b29092031001
+        version_id: '1768578015140365'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_170.nii.gz
+    md5: 412a4cad92ddb6633ddd69e28e2112c6
+    size: 853
+    cloud:
+      storage:
+        etag: 08b9ec85c3b29092031001
+        version_id: '1768578015655481'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_171.nii.gz
+    md5: 39fb64ba04f53de31e4f4369c68e86ca
+    size: 805
+    cloud:
+      storage:
+        etag: 08f4f7dec2b29092031001
+        version_id: '1768578015017972'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_172.nii.gz
+    md5: a04ca9415f6acb58f869af201068461e
+    size: 892
+    cloud:
+      storage:
+        etag: 08beb8f6c2b29092031001
+        version_id: '1768578015403070'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_173.nii.gz
+    md5: 2347a58de88a043d9736d60de56d1d50
+    size: 836
+    cloud:
+      storage:
+        etag: 08d0a8fec2b29092031001
+        version_id: '1768578015532112'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_174.nii.gz
+    md5: 57428635520c94265fc8dffdaeb4a7ec
+    size: 901
+    cloud:
+      storage:
+        etag: 0881f684c3b29092031001
+        version_id: '1768578015640321'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_175.nii.gz
+    md5: 5d3623a637a591e771cb7e5225bb19c6
+    size: 809
+    cloud:
+      storage:
+        etag: 08c1fee7c2b29092031001
+        version_id: '1768578015166273'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_176.nii.gz
+    md5: 62133ab5b87f5277aaffa47618b0ce0e
+    size: 860
+    cloud:
+      storage:
+        etag: 08fef7ebc2b29092031001
+        version_id: '1768578015230974'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_177.nii.gz
+    md5: b580bf4c3d7eca972e82fff056b2aea3
+    size: 764
+    cloud:
+      storage:
+        etag: 08b6b485c3b29092031001
+        version_id: '1768578015648310'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_178.nii.gz
+    md5: f55844d0b94b74f016d3d7eb11118d6c
+    size: 782
+    cloud:
+      storage:
+        etag: 08858580c3b29092031001
+        version_id: '1768578015560325'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_180.nii.gz
+    md5: c563b151d6d2a6aa5f9a8074a4687959
+    size: 800
+    cloud:
+      storage:
+        etag: 0885c2ecc2b29092031001
+        version_id: '1768578015240453'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_181.nii.gz
+    md5: b9962f7f7d266ffde70ecd18ef419d49
+    size: 974
+    cloud:
+      storage:
+        etag: 08dabde8c2b29092031001
+        version_id: '1768578015174362'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_184.nii.gz
+    md5: 416e5649f7a6e6e530f2acfcdda261d1
+    size: 847
+    cloud:
+      storage:
+        etag: 0898f2e4c2b29092031001
+        version_id: '1768578015115544'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_185.nii.gz
+    md5: 8d7628da1663c01efcb69ea6951de350
+    size: 825
+    cloud:
+      storage:
+        etag: 08eddafdc2b29092031001
+        version_id: '1768578015522157'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_188.nii.gz
+    md5: fac64a8980b3e0c769e0ea4ac81e4972
+    size: 899
+    cloud:
+      storage:
+        etag: 088588eec2b29092031001
+        version_id: '1768578015265797'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_189.nii.gz
+    md5: 0de08ceffb3016edd711335b3fe1fd58
+    size: 852
+    cloud:
+      storage:
+        etag: 08d1ceebc2b29092031001
+        version_id: '1768578015225681'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_190.nii.gz
+    md5: 464eae9ef7edb43e480dd731fd8b70c1
+    size: 872
+    cloud:
+      storage:
+        etag: 08fdce86c3b29092031001
+        version_id: '1768578015668093'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_193.nii.gz
+    md5: 323f49e906ef5c3ebf27bcd143acf37e
+    size: 721
+    cloud:
+      storage:
+        etag: 08ea94f1c2b29092031001
+        version_id: '1768578015316586'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_194.nii.gz
+    md5: 7a299aafa7e396336c55f204de900705
+    size: 763
+    cloud:
+      storage:
+        etag: 0882b0eec2b29092031001
+        version_id: '1768578015270914'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_195.nii.gz
+    md5: f5f4aa6817fd27ed1e83823523c777ff
+    size: 863
+    cloud:
+      storage:
+        etag: 08bcd4e3c2b29092031001
+        version_id: '1768578015095356'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_197.nii.gz
+    md5: d2f5f4d56b3a1667f8d4ddc0579af8d6
+    size: 832
+    cloud:
+      storage:
+        etag: 08cecb86c3b29092031001
+        version_id: '1768578015667662'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_199.nii.gz
+    md5: a810c95e078e7b49a49f8e37d19ff81d
+    size: 724
+    cloud:
+      storage:
+        etag: 08f281f5c2b29092031001
+        version_id: '1768578015379698'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_203.nii.gz
+    md5: 15c7a605cafa9f6a625d5f1ff8eb14cb
+    size: 821
+    cloud:
+      storage:
+        etag: 08f393efc2b29092031001
+        version_id: '1768578015283699'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_204.nii.gz
+    md5: 5f81e52c636775c3255f84646362ba54
+    size: 886
+    cloud:
+      storage:
+        etag: 08f883fcc2b29092031001
+        version_id: '1768578015494648'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_205.nii.gz
+    md5: 3433bfc3a4ba17f27bedacb82851791f
+    size: 826
+    cloud:
+      storage:
+        etag: 08dec8efc2b29092031001
+        version_id: '1768578015290462'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_207.nii.gz
+    md5: 6db3c3ff96cc9eb6775e8ab5c02a2bd2
+    size: 979
+    cloud:
+      storage:
+        etag: 0886aee7c2b29092031001
+        version_id: '1768578015155974'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_210.nii.gz
+    md5: 3d57af0433601de97689067a0810e6da
+    size: 806
+    cloud:
+      storage:
+        etag: 08bc93e9c2b29092031001
+        version_id: '1768578015185340'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_212.nii.gz
+    md5: 8618ab2e27641695e664ddb6aeb03bf6
+    size: 937
+    cloud:
+      storage:
+        etag: 08c195fbc2b29092031001
+        version_id: '1768578015480513'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_215.nii.gz
+    md5: fe2651363da3fceca152b38825247936
+    size: 891
+    cloud:
+      storage:
+        etag: 08bf8f84c3b29092031001
+        version_id: '1768578015627199'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_216.nii.gz
+    md5: de2a6dd3a283b9ee6280576945975137
+    size: 882
+    cloud:
+      storage:
+        etag: 08efebf3c2b29092031001
+        version_id: '1768578015360495'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_217.nii.gz
+    md5: f5bf44efcd2fdb0b02c5418ec5de16fc
+    size: 770
+    cloud:
+      storage:
+        etag: 0895cef4c2b29092031001
+        version_id: '1768578015373077'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_219.nii.gz
+    md5: c45decbe83318bd33ffe8be60e2d1d66
+    size: 789
+    cloud:
+      storage:
+        etag: 08dafbf5c2b29092031001
+        version_id: '1768578015395290'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_220.nii.gz
+    md5: 2f07068c51e7efe21fa534e2ccc8d6ee
+    size: 839
+    cloud:
+      storage:
+        etag: 0885b1f7c2b29092031001
+        version_id: '1768578015418501'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_221.nii.gz
+    md5: bc54729df10634590cf86d3536f007b5
+    size: 782
+    cloud:
+      storage:
+        etag: 08c18ceec2b29092031001
+        version_id: '1768578015266369'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_222.nii.gz
+    md5: 332119a022df9ae4c8a596a637f087d7
+    size: 803
+    cloud:
+      storage:
+        etag: 08ef83fcc2b29092031001
+        version_id: '1768578015494639'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_223.nii.gz
+    md5: c45dfa897b4dcd5d77fd98b4f52c714c
+    size: 1039
+    cloud:
+      storage:
+        etag: 089bff82c3b29092031001
+        version_id: '1768578015608731'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_224.nii.gz
+    md5: 4bca7594d3cec57002b6cb2f249b8252
+    size: 1018
+    cloud:
+      storage:
+        etag: 08eadaecc2b29092031001
+        version_id: '1768578015243626'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_225.nii.gz
+    md5: c3eca780f09ff406d10c84c19b48057d
+    size: 744
+    cloud:
+      storage:
+        etag: 08a1cef7c2b29092031001
+        version_id: '1768578015422241'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_226.nii.gz
+    md5: fdeab78175a6647442fb7beca454c714
+    size: 786
+    cloud:
+      storage:
+        etag: 08ccdfe9c2b29092031001
+        version_id: '1768578015195084'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_227.nii.gz
+    md5: a1c2d57bb27aa2dcc76b736fa5fb4f38
+    size: 934
+    cloud:
+      storage:
+        etag: 089fa4ecc2b29092031001
+        version_id: '1768578015236639'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_228.nii.gz
+    md5: 245e19ab203b275f0549ef604eb5705f
+    size: 990
+    cloud:
+      storage:
+        etag: 08aadeeac2b29092031001
+        version_id: '1768578015211306'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_229.nii.gz
+    md5: a4e73e3f42c6dba6649c49c4f522d03d
+    size: 794
+    cloud:
+      storage:
+        etag: 08ade283c3b29092031001
+        version_id: '1768578015621421'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_230.nii.gz
+    md5: 89971afc54aebefc18714c7d046fc53c
+    size: 870
+    cloud:
+      storage:
+        etag: 08e7f5e9c2b29092031001
+        version_id: '1768578015197927'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_231.nii.gz
+    md5: bdd76f14f2c3f701eb4001aee20ed920
+    size: 903
+    cloud:
+      storage:
+        etag: 08ca9bdfc2b29092031001
+        version_id: '1768578015022538'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_232.nii.gz
+    md5: 3c8cf45bdc7233ca204cc85fa77d8b6f
+    size: 908
+    cloud:
+      storage:
+        etag: 08e2eeeec2b29092031001
+        version_id: '1768578015278946'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_233.nii.gz
+    md5: 920408f4e7a363f84b43c6784e0219ea
+    size: 950
+    cloud:
+      storage:
+        etag: 08b0dcedc2b29092031001
+        version_id: '1768578015260208'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_234.nii.gz
+    md5: e56b2b2855a337514861a88caa59bef5
+    size: 940
+    cloud:
+      storage:
+        etag: 0887e3e7c2b29092031001
+        version_id: '1768578015162759'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_235.nii.gz
+    md5: a961618fa9dfa5d0e6460b46e87439fe
+    size: 893
+    cloud:
+      storage:
+        etag: 089c85f3c2b29092031001
+        version_id: '1768578015347356'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_236.nii.gz
+    md5: 1c294fd815f22e03e33e226d4b1f04bd
+    size: 935
+    cloud:
+      storage:
+        etag: 08eeeae4c2b29092031001
+        version_id: '1768578015114606'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_238.nii.gz
+    md5: ee84c05bdcbb44371a0db9b1cd53f42a
+    size: 1029
+    cloud:
+      storage:
+        etag: 08f6abf3c2b29092031001
+        version_id: '1768578015352310'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_242.nii.gz
+    md5: 6b47471416784cc9185257dc2e91f6d4
+    size: 985
+    cloud:
+      storage:
+        etag: 08a2b583c3b29092031001
+        version_id: '1768578015615650'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_243.nii.gz
+    md5: 92689f3643b793c25481dc43ea97835b
+    size: 1228
+    cloud:
+      storage:
+        etag: 088bfdfbc2b29092031001
+        version_id: '1768578015493771'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_244.nii.gz
+    md5: 9b031b2e7d36841f14ae394dd2192b8b
+    size: 1006
+    cloud:
+      storage:
+        etag: 08f8fcedc2b29092031001
+        version_id: '1768578015264376'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_245.nii.gz
+    md5: bdaaa339d52e558eec6a531fa796a81c
+    size: 970
+    cloud:
+      storage:
+        etag: 08a39082c3b29092031001
+        version_id: '1768578015594531'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_248.nii.gz
+    md5: 7fb8bcd4368613b08c04b0aa428b2305
+    size: 1046
+    cloud:
+      storage:
+        etag: 08a0c8dec2b29092031001
+        version_id: '1768578015011872'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_249.nii.gz
+    md5: 09f13bb3c13782b2a984975d8581dd3e
+    size: 861
+    cloud:
+      storage:
+        etag: 08d1a2f7c2b29092031001
+        version_id: '1768578015416657'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_250.nii.gz
+    md5: c3cd2aad5a5657d6a3887f5b7ec16cd2
+    size: 936
+    cloud:
+      storage:
+        etag: 08ca86e6c2b29092031001
+        version_id: '1768578015134538'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_251.nii.gz
+    md5: 576b33bffe5a9d5b5dfd34ab49da3a95
+    size: 819
+    cloud:
+      storage:
+        etag: 08f3e8e6c2b29092031001
+        version_id: '1768578015147123'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_252.nii.gz
+    md5: d5594a3fa67a10ae4f59a43128ee9074
+    size: 814
+    cloud:
+      storage:
+        etag: 08defc83c3b29092031001
+        version_id: '1768578015624798'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_253.nii.gz
+    md5: a625515ea9c1edbec2987046fba3c310
+    size: 937
+    cloud:
+      storage:
+        etag: 08b6aef1c2b29092031001
+        version_id: '1768578015319862'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_257.nii.gz
+    md5: acff85d18e9ac135ea9122d7af47367a
+    size: 877
+    cloud:
+      storage:
+        etag: 08b4c5f8c2b29092031001
+        version_id: '1768578015437492'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_259.nii.gz
+    md5: d7a4169439bf484b09d5d712beb5910a
+    size: 789
+    cloud:
+      storage:
+        etag: 08bc96f3c2b29092031001
+        version_id: '1768578015349564'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_260.nii.gz
+    md5: 97dd78665189079d672161fdadc87943
+    size: 818
+    cloud:
+      storage:
+        etag: 08f3edeec2b29092031001
+        version_id: '1768578015278835'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_261.nii.gz
+    md5: 4369d8779ffa89db824dd8de6750ebba
+    size: 1083
+    cloud:
+      storage:
+        etag: 08fcc785c3b29092031001
+        version_id: '1768578015650812'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_263.nii.gz
+    md5: e0938ad5ae6e479f92f64d23634b4e1d
+    size: 847
+    cloud:
+      storage:
+        etag: 0892f5f0c2b29092031001
+        version_id: '1768578015312530'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_264.nii.gz
+    md5: 695b72a1c63b7a503eb63fb347d80813
+    size: 966
+    cloud:
+      storage:
+        etag: 0889c7fcc2b29092031001
+        version_id: '1768578015503241'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_265.nii.gz
+    md5: 1977b5903865b26121fab90fe0a389fe
+    size: 963
+    cloud:
+      storage:
+        etag: 0882b8e3c2b29092031001
+        version_id: '1768578015091714'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_268.nii.gz
+    md5: 2c9b1f953307f4eb25899570640f5356
+    size: 987
+    cloud:
+      storage:
+        etag: 0890c6ffc2b29092031001
+        version_id: '1768578015552272'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_269.nii.gz
+    md5: 1b46b900e6f357929783ac6ff986eebd
+    size: 1077
+    cloud:
+      storage:
+        etag: 089693fbc2b29092031001
+        version_id: '1768578015480214'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_274.nii.gz
+    md5: 78289e508aacee11b57b6d43ac8bb31d
+    size: 868
+    cloud:
+      storage:
+        etag: 08e3bce1c2b29092031001
+        version_id: '1768578015059555'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_276.nii.gz
+    md5: a897c6787c26e59118e4d5cf4b8b32f5
+    size: 916
+    cloud:
+      storage:
+        etag: 08a7b9f7c2b29092031001
+        version_id: '1768578015419559'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_277.nii.gz
+    md5: b056506b71ed4e4add56e63d83ce4b28
+    size: 852
+    cloud:
+      storage:
+        etag: 0880cef4c2b29092031001
+        version_id: '1768578015373056'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_279.nii.gz
+    md5: b53caeade3fec9d1d2b33d21a8d8da77
+    size: 758
+    cloud:
+      storage:
+        etag: 089ad4e3c2b29092031001
+        version_id: '1768578015095322'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_280.nii.gz
+    md5: 66dffb7cb047919dac67ee0b56c38710
+    size: 907
+    cloud:
+      storage:
+        etag: 08fcc6e3c2b29092031001
+        version_id: '1768578015093628'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_282.nii.gz
+    md5: aa1bfcae37a96aa607bb859a96339ba4
+    size: 826
+    cloud:
+      storage:
+        etag: 08ffd8f4c2b29092031001
+        version_id: '1768578015374463'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_286.nii.gz
+    md5: e6ad13a312a85d4416cf11e1fad2309a
+    size: 906
+    cloud:
+      storage:
+        etag: 08c5a5fdc2b29092031001
+        version_id: '1768578015515333'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_287.nii.gz
+    md5: 9036c47106b0b03c87e61a5688076fae
+    size: 965
+    cloud:
+      storage:
+        etag: 08ef8481c3b29092031001
+        version_id: '1768578015576687'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_288.nii.gz
+    md5: 5d11c82891144101d5ea8d10b728518a
+    size: 1041
+    cloud:
+      storage:
+        etag: 08f4b9e9c2b29092031001
+        version_id: '1768578015190260'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_289.nii.gz
+    md5: d54e7050b750d49c9c289aab63846fa7
+    size: 857
+    cloud:
+      storage:
+        etag: 08f3ba86c3b29092031001
+        version_id: '1768578015665523'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_290.nii.gz
+    md5: d241eb5a2570917624c9a623b7b4fb57
+    size: 994
+    cloud:
+      storage:
+        etag: 08d1d2ecc2b29092031001
+        version_id: '1768578015242577'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_292.nii.gz
+    md5: 5af4bc1d6c10433c5c247d046f9fea3c
+    size: 962
+    cloud:
+      storage:
+        etag: 08e497edc2b29092031001
+        version_id: '1768578015251428'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_294.nii.gz
+    md5: b69136d93004ce495535acbe85dfa5e8
+    size: 932
+    cloud:
+      storage:
+        etag: 089f99e3c2b29092031001
+        version_id: '1768578015087775'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_295.nii.gz
+    md5: e4b4860a95eee4399ef29a610608851a
+    size: 1051
+    cloud:
+      storage:
+        etag: 08d899f9c2b29092031001
+        version_id: '1768578015448280'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_296.nii.gz
+    md5: 786bdb75180a97f2cac8a5764bd78f58
+    size: 1077
+    cloud:
+      storage:
+        etag: 08d38b87c3b29092031001
+        version_id: '1768578015675859'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_297.nii.gz
+    md5: 2a46f6fd26bdbc02199fe61510bf9210
+    size: 919
+    cloud:
+      storage:
+        etag: 08fde081c3b29092031001
+        version_id: '1768578015588477'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_298.nii.gz
+    md5: bf76f82257002c4c237077f2914f19c6
+    size: 924
+    cloud:
+      storage:
+        etag: 08b38185c3b29092031001
+        version_id: '1768578015641779'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_299.nii.gz
+    md5: 5442ca8dedc1e2f8102f82d0edcb6b6b
+    size: 1011
+    cloud:
+      storage:
+        etag: 08b0dde8c2b29092031001
+        version_id: '1768578015178416'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_300.nii.gz
+    md5: 9eccba525d2075322964933a67f07de3
+    size: 1061
+    cloud:
+      storage:
+        etag: 08d8f4dfc2b29092031001
+        version_id: '1768578015033944'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_301.nii.gz
+    md5: 252e62614db5ef9091d4bae3106d73e7
+    size: 921
+    cloud:
+      storage:
+        etag: 0889f381c3b29092031001
+        version_id: '1768578015590793'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_302.nii.gz
+    md5: a88ec63281fd61e02af56fe6b5288d35
+    size: 1016
+    cloud:
+      storage:
+        etag: 0886d1fac2b29092031001
+        version_id: '1768578015471750'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_303.nii.gz
+    md5: 59f02020cd7889634321036555bb435b
+    size: 953
+    cloud:
+      storage:
+        etag: 08d99ff2c2b29092031001
+        version_id: '1768578015334361'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_304.nii.gz
+    md5: 8baa7dd247e8d8d50aca4775eece7dd8
+    size: 1013
+    cloud:
+      storage:
+        etag: 088482dfc2b29092031001
+        version_id: '1768578015019268'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_305.nii.gz
+    md5: 5f932387fadddc470cfea9433fcae09a
+    size: 935
+    cloud:
+      storage:
+        etag: 08f68e82c3b29092031001
+        version_id: '1768578015594358'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_308.nii.gz
+    md5: 7b00f06bbab41dc1281a3b41448dc9be
+    size: 893
+    cloud:
+      storage:
+        etag: 088de4e7c2b29092031001
+        version_id: '1768578015162893'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_309.nii.gz
+    md5: 5299aa9db78b9a76898bfdf1716d5fd2
+    size: 1096
+    cloud:
+      storage:
+        etag: 08a9def1c2b29092031001
+        version_id: '1768578015325993'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_310.nii.gz
+    md5: bcb8edd2e763f24d6ddeea096cbbb357
+    size: 1159
+    cloud:
+      storage:
+        etag: 08d9b5e5c2b29092031001
+        version_id: '1768578015124185'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_311.nii.gz
+    md5: 9b0832a619ebb4c25a87bb8df22bb85d
+    size: 897
+    cloud:
+      storage:
+        etag: 08edb2fec2b29092031001
+        version_id: '1768578015533421'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_314.nii.gz
+    md5: 13e5e9db413c8993312b73f2502701d4
+    size: 900
+    cloud:
+      storage:
+        etag: 08c2d480c3b29092031001
+        version_id: '1768578015570498'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_316.nii.gz
+    md5: d2f1abfc445ca7f0fde31d8fbd1a62f1
+    size: 920
+    cloud:
+      storage:
+        etag: 08c3a8eac2b29092031001
+        version_id: '1768578015204419'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_317.nii.gz
+    md5: e0e28d7ad04afc42ba7bb51fa4ddcf76
+    size: 1001
+    cloud:
+      storage:
+        etag: 08f2deefc2b29092031001
+        version_id: '1768578015293298'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_318.nii.gz
+    md5: 149d556d4e6be23f5ffec14f80adb18d
+    size: 983
+    cloud:
+      storage:
+        etag: 08f6c0dfc2b29092031001
+        version_id: '1768578015027318'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_319.nii.gz
+    md5: e1a0314b9c269d50668bcf845fcd389c
+    size: 731
+    cloud:
+      storage:
+        etag: 08be9cffc2b29092031001
+        version_id: '1768578015546942'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_320.nii.gz
+    md5: 178a97e08c6b328cf86dba4dc2ee85cd
+    size: 748
+    cloud:
+      storage:
+        etag: 08b3d5ffc2b29092031001
+        version_id: '1768578015554227'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_321.nii.gz
+    md5: b18f7446b4ce8ec9fa93b01ec8caa201
+    size: 923
+    cloud:
+      storage:
+        etag: 0891bbefc2b29092031001
+        version_id: '1768578015288721'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_322.nii.gz
+    md5: 7b4832b17465d3e7c54055ca38c51dda
+    size: 1000
+    cloud:
+      storage:
+        etag: 08efabfbc2b29092031001
+        version_id: '1768578015483375'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_325.nii.gz
+    md5: 9840c6e2e571cd184c093ea623053fa6
+    size: 1026
+    cloud:
+      storage:
+        etag: 08e2eff6c2b29092031001
+        version_id: '1768578015410146'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_326.nii.gz
+    md5: e18372a1daabafa08d0ede122e39e54e
+    size: 1084
+    cloud:
+      storage:
+        etag: 08f9d6f3c2b29092031001
+        version_id: '1768578015357817'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_327.nii.gz
+    md5: 39e0cc765a6d344d4f4fb567331f207a
+    size: 775
+    cloud:
+      storage:
+        etag: 089ecdf6c2b29092031001
+        version_id: '1768578015405726'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_328.nii.gz
+    md5: 943dab04e88f5747eca6a3f627eef6b6
+    size: 932
+    cloud:
+      storage:
+        etag: 08e994e8c2b29092031001
+        version_id: '1768578015169129'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_329.nii.gz
+    md5: 113d988d68b88915f08d888a0400ad91
+    size: 899
+    cloud:
+      storage:
+        etag: 08f9dae7c2b29092031001
+        version_id: '1768578015161721'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_330.nii.gz
+    md5: b711b3385a8c5c52db6964968c830a85
+    size: 988
+    cloud:
+      storage:
+        etag: 08f2d1fdc2b29092031001
+        version_id: '1768578015521010'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_331.nii.gz
+    md5: 56fba4fab43384a1c74f62ce91f4ae2c
+    size: 951
+    cloud:
+      storage:
+        etag: 089eb7f5c2b29092031001
+        version_id: '1768578015386526'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_332.nii.gz
+    md5: 4e533fa0f26b7dcfb009da11f064917c
+    size: 980
+    cloud:
+      storage:
+        etag: 08d7caf0c2b29092031001
+        version_id: '1768578015307095'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_333.nii.gz
+    md5: 5278d6f3d837687030520d1983beb49e
+    size: 824
+    cloud:
+      storage:
+        etag: 08bf9ce8c2b29092031001
+        version_id: '1768578015170111'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_334.nii.gz
+    md5: a6dead0fcff472ae648b0475f65a8eb1
+    size: 860
+    cloud:
+      storage:
+        etag: 08d0b481c3b29092031001
+        version_id: '1768578015582800'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_335.nii.gz
+    md5: 87da16604e903a301b29c1d8024050ce
+    size: 888
+    cloud:
+      storage:
+        etag: 089abee1c2b29092031001
+        version_id: '1768578015059738'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_336.nii.gz
+    md5: 5946ecba9f93cd3a86f4ae9bd5b4a76b
+    size: 960
+    cloud:
+      storage:
+        etag: 0888f4f1c2b29092031001
+        version_id: '1768578015328776'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_337.nii.gz
+    md5: d072d9b2d32eb8ca043ddf03fcdd1728
+    size: 949
+    cloud:
+      storage:
+        etag: 089c8d88c3b29092031001
+        version_id: '1768578015692444'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_338.nii.gz
+    md5: 3d2370b659398c022bcc92a5c29d620e
+    size: 1076
+    cloud:
+      storage:
+        etag: 08cafbfac2b29092031001
+        version_id: '1768578015477194'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_340.nii.gz
+    md5: 08c03fb5d2ccae8d90285b3a2a975270
+    size: 1016
+    cloud:
+      storage:
+        etag: 08aea3fec2b29092031001
+        version_id: '1768578015531438'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_341.nii.gz
+    md5: b1ce4c87540d8acf53db9d7b6aa2b789
+    size: 855
+    cloud:
+      storage:
+        etag: 08aac4f0c2b29092031001
+        version_id: '1768578015306282'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_343.nii.gz
+    md5: f9e2ebe7f9d4f8ae9e3087a25d18e83f
+    size: 835
+    cloud:
+      storage:
+        etag: 088ff284c3b29092031001
+        version_id: '1768578015639823'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_345.nii.gz
+    md5: 2ab16399f4cf803d8f55f4481771bec3
+    size: 870
+    cloud:
+      storage:
+        etag: 08b9dfedc2b29092031001
+        version_id: '1768578015260601'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_349.nii.gz
+    md5: 2d5b41c425c227ea96c428356fe4ca81
+    size: 906
+    cloud:
+      storage:
+        etag: 08e6eef2c2b29092031001
+        version_id: '1768578015344486'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_350.nii.gz
+    md5: 96f4c97c8653c923a86edca7218f3be2
+    size: 942
+    cloud:
+      storage:
+        etag: 08bfe3f3c2b29092031001
+        version_id: '1768578015359423'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_351.nii.gz
+    md5: df710907950b3ca45c62734200ce0800
+    size: 920
+    cloud:
+      storage:
+        etag: 0880fbf4c2b29092031001
+        version_id: '1768578015378816'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_352.nii.gz
+    md5: 4ea728af68ec936803f6c880ff8afbe5
+    size: 962
+    cloud:
+      storage:
+        etag: 08d4e1f9c2b29092031001
+        version_id: '1768578015457492'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_353.nii.gz
+    md5: fd698fd3018da8f8e74579a3a14ed9c7
+    size: 868
+    cloud:
+      storage:
+        etag: 08edd1f2c2b29092031001
+        version_id: '1768578015340781'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_354.nii.gz
+    md5: 3138d9cfd2bf7bfda30514bc2631c4bf
+    size: 912
+    cloud:
+      storage:
+        etag: 08b18282c3b29092031001
+        version_id: '1768578015592753'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_355.nii.gz
+    md5: 80ae9af7fe898d124c0da523cf4d9090
+    size: 1008
+    cloud:
+      storage:
+        etag: 08ebb5f6c2b29092031001
+        version_id: '1768578015402731'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_356.nii.gz
+    md5: 10987bd1a9db8b58ea7229269f302eef
+    size: 1036
+    cloud:
+      storage:
+        etag: 08d0f4f0c2b29092031001
+        version_id: '1768578015312464'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_358.nii.gz
+    md5: ecca4d5c8325a0b29b6be4eb2171ee71
+    size: 934
+    cloud:
+      storage:
+        etag: 0882be84c3b29092031001
+        version_id: '1768578015633154'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_359.nii.gz
+    md5: 135bb66b99d226860a486616cceafffa
+    size: 865
+    cloud:
+      storage:
+        etag: 08d7d1e1c2b29092031001
+        version_id: '1768578015062231'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_360.nii.gz
+    md5: 46d864ae83a9372d9a2cb6be23d1a8c0
+    size: 889
+    cloud:
+      storage:
+        etag: 08acbef9c2b29092031001
+        version_id: '1768578015452972'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_361.nii.gz
+    md5: fbe1e213be0a771f984f193d2d1e95dd
+    size: 1003
+    cloud:
+      storage:
+        etag: 08d1f7fec2b29092031001
+        version_id: '1768578015542225'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_363.nii.gz
+    md5: 8b11c1e371461bbf76966b9a2be84952
+    size: 952
+    cloud:
+      storage:
+        etag: 08a09be3c2b29092031001
+        version_id: '1768578015088032'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_366.nii.gz
+    md5: e96e4b9f63ec50f9cec7a56e851433b6
+    size: 909
+    cloud:
+      storage:
+        etag: 0895a0e6c2b29092031001
+        version_id: '1768578015137813'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_367.nii.gz
+    md5: 086a1461bd75348f1993339f100cc0c7
+    size: 1161
+    cloud:
+      storage:
+        etag: 088880f8c2b29092031001
+        version_id: '1768578015428616'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_368.nii.gz
+    md5: 55cadb33160dab76342d9da5204e90f2
+    size: 1185
+    cloud:
+      storage:
+        etag: 08fbbffdc2b29092031001
+        version_id: '1768578015518715'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_370.nii.gz
+    md5: 2fdac80f7af0539723e9764fb7dae4c8
+    size: 967
+    cloud:
+      storage:
+        etag: 0889f8ddc2b29092031001
+        version_id: '1768578015001609'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_372.nii.gz
+    md5: 848bcfae55a1fc17583bf779cf42813d
+    size: 949
+    cloud:
+      storage:
+        etag: 08b6deffc2b29092031001
+        version_id: '1768578015555382'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_373.nii.gz
+    md5: f1f6959569fdc0fd832ae55c189f2abb
+    size: 979
+    cloud:
+      storage:
+        etag: 08aba5f0c2b29092031001
+        version_id: '1768578015302315'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_374.nii.gz
+    md5: 4fed31aab8525d1219238639339aa495
+    size: 990
+    cloud:
+      storage:
+        etag: 08dfbcf6c2b29092031001
+        version_id: '1768578015403615'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_375.nii.gz
+    md5: 80066df7d4f192a95f240c67eb7f9821
+    size: 959
+    cloud:
+      storage:
+        etag: 08e8bdeec2b29092031001
+        version_id: '1768578015272680'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_376.nii.gz
+    md5: e522eea6315c5d948645881743000169
+    size: 1154
+    cloud:
+      storage:
+        etag: 0894c4f8c2b29092031001
+        version_id: '1768578015437332'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_378.nii.gz
+    md5: 927d480526f0cd605854ca217d54446a
+    size: 838
+    cloud:
+      storage:
+        etag: 0882ceeac2b29092031001
+        version_id: '1768578015209218'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_380.nii.gz
+    md5: 99f81e20d061300e3d33ea226a2b4456
+    size: 958
+    cloud:
+      storage:
+        etag: 08aa8b87c3b29092031001
+        version_id: '1768578015675818'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_381.nii.gz
+    md5: 30c0383e77e9c1f5f26a4e806da44a8e
+    size: 862
+    cloud:
+      storage:
+        etag: 08f49df4c2b29092031001
+        version_id: '1768578015366900'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_383.nii.gz
+    md5: 4ecc59f42ce39aab42f5c6b63d8060dd
+    size: 889
+    cloud:
+      storage:
+        etag: 08c3e6f6c2b29092031001
+        version_id: '1768578015408963'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_385.nii.gz
+    md5: e3b93c17470f20a56906305022637f1f
+    size: 897
+    cloud:
+      storage:
+        etag: 089691dec2b29092031001
+        version_id: '1768578015004822'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_386.nii.gz
+    md5: 89b5ba900c543208b028d8c5892e4ecd
+    size: 917
+    cloud:
+      storage:
+        etag: 08ed8087c3b29092031001
+        version_id: '1768578015674477'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_387.nii.gz
+    md5: 3e54ce989be2ba55f9ab4473937ddbdb
+    size: 953
+    cloud:
+      storage:
+        etag: 08d1e9e2c2b29092031001
+        version_id: '1768578015081681'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_389.nii.gz
+    md5: c6c6786ebff78c2a3db0e8583b33b451
+    size: 906
+    cloud:
+      storage:
+        etag: 08cbda85c3b29092031001
+        version_id: '1768578015653195'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_390.nii.gz
+    md5: ee46fcb06cdfefa0ab7f4057e1f83293
+    size: 966
+    cloud:
+      storage:
+        etag: 0893f3f5c2b29092031001
+        version_id: '1768578015394195'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_393.nii.gz
+    md5: a6929c5d36936272d0bfb6c152be0db1
+    size: 1022
+    cloud:
+      storage:
+        etag: 08d9a9eac2b29092031001
+        version_id: '1768578015204569'
+  - relpath: Dataset621_Hippocampus/labelsTr/hippocampus_394.nii.gz
+    md5: 5fa8e6a45de26820766ce292af01ef24
+    size: 976
+    cloud:
+      storage:
+        etag: 08b5a2f2c2b29092031001
+        version_id: '1768578015334709'

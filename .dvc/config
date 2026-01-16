@@ -1,0 +1,5 @@
+[core]
+    remote = storage
+['remote "storage"']
+    url = gs://mlops-project-group65-data
+    version_aware = true
