@@ -25,3 +25,6 @@ wandb0.24.0
 
 # --- Utilities / data download ---
 gdown==5.2.0
+
+# --- Testing ---
+pytest==9.0.2
