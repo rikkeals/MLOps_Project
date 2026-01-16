@@ -35,5 +35,6 @@ jobs:
 
       - name: Run tests & coverage
         run: |
-          coverage run -m pytest tests/
+          coverage run --source=src/mlops_project -m pytest tests/
           coverage report -m
+
