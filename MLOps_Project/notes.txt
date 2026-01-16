@@ -1,8 +1,8 @@
 TO-DO:
-- docker files (Mejse, 15/1)
 - wandb (Mejse, 15/1)
 - logging / loguru (Lotte, 15/1)
 - unit test (Rikke, 16/1)
+- cloud / M21 (Mejse, 16/1)
 
 QUESTIONS:
 - Data version control? Is our ID enough or what do you recommend?
