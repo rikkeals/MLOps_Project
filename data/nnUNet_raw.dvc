@@ -1,0 +1,6 @@
+outs:
+- md5: e61f88ac9d1c67aa5d4715807d971389.dir
+  size: 27885921
+  nfiles: 651
+  hash: md5
+  path: nnUNet_raw
