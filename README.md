@@ -132,16 +132,17 @@ Prerequisites:
 - Your cd set to the repo root in the terminal
 
 Type in terminal:
-1. Set active GCP project: ```gcloud config set project mlops-project-group65```
-2. Create service account: ```gcloud iam service-accounts create dvc-sa-<yourname> \
+1. Authenticate: ```gcloud auth login```
+2. Set active GCP project: ```gcloud config set project mlops-project-group65```
+3. Create service account: ```gcloud iam service-accounts create dvc-sa-<yourname> \
   --display-name "DVC service account (<yourname>) ```
-3. Grant access to cloud storage: ```gcloud projects add-iam-policy-binding mlops-project-group65 \
+4. Grant access to cloud storage: ```gcloud projects add-iam-policy-binding mlops-project-group65 \
   --member="serviceAccount:dvc-sa-<yourname>@mlops-project-group65.iam.gserviceaccount.com" \
   --role="roles/storage.objectAdmin```
-4. Create a key file (OBS do NOT commit this file to Git): ```gcloud iam service-accounts keys create dvc-key.json \
+5. Create a key file (OBS do NOT commit this file to Git): ```gcloud iam service-accounts keys create dvc-key.json \
   --iam-account=dvc-sa-<yourname>@mlops-project-group65.iam.gserviceaccount.com```
-5. Authenticate locally: ```export GOOGLE_APPLICATION_CREDENTIALS="$(pwd)/dvc-key.json```
-3. Pull data from cloud: ```dvc pull```
+6. Authenticate locally: ```export GOOGLE_APPLICATION_CREDENTIALS="$(pwd)/dvc-key.json```
+7. Pull data from cloud: ```dvc pull```
 
 The datasets should be downloaded into data/ locally.
 
