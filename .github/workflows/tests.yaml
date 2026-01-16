@@ -35,6 +35,6 @@ jobs:
 
       - name: Run tests & coverage (exclude integration)
         run: |
-          coverage run --source=src/mlops_project -m pytest "not integration"
+          coverage run --source=src/mlops_project -m pytest -m "not integration"
           coverage report -m
 
