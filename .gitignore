@@ -179,3 +179,4 @@ cython_debug/
 # Data
 data/nnUNet_raw/
 data/nnUNet_preprocessed/
+data/original/
