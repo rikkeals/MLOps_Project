@@ -28,6 +28,7 @@ def cfg(project_root):
 #####################################################################
 # Tests
 #####################################################################
+@pytest.mark.integration
 def test_nnunet_raw_ready(data_root, cfg):
     path = data_root / "nnUNet_raw"
     assert path.exists(), "nnUNet_raw missing - Have you run the data.py script yet?"
@@ -37,6 +38,7 @@ def test_nnunet_raw_ready(data_root, cfg):
         "the name in config after download, they will mismatch."
     )
 
+@pytest.mark.integration
 def test_nnunet_raw_length(data_root, cfg):
     path_images = data_root / "nnUNet_raw" / cfg["dataset"]["name"] / "imagesTr"
     images = list(path_images.glob("*.nii.gz"))
