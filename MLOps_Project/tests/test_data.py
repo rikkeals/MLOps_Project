@@ -42,6 +42,15 @@ def test_nnunet_raw_length(data_root, cfg):
     assert len(images) == len(labels), "Number of images and labels do not match in nnUNet_raw - Is there a file starting with '._' in imagesTr or labelsTr? Then this should be deleted."
 
 
+def test_enviroment(data_root, cfg):
+    nnunet_raw = data_root / "nnUNet_raw"
+    nnunet_preprocessed = data_root / "nnUNet_preprocessed"
+    nnunet_results = data_root / "nnUNet_results"
+
+    assert os.environ.get("nnUNet_raw") == str(nnunet_raw), "nnUNet_raw env var not set correctly"
+    assert os.environ.get("nnUNet_preprocessed") == str(nnunet_preprocessed), "nnUNet_preprocessed env var not set correctly"
+    assert os.environ.get("nnUNet_results") == str(nnunet_results), "nnUNet_results env var not set correctly"
+
 
 
 
