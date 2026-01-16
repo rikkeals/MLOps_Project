@@ -98,9 +98,9 @@ python3 -m pip install -e .
 
 The project can also be run using Docker by building and and executing a Docker image from the Docker file train.dockerfile. You need to [install Docker](https://docs.docker.com/get-started/get-docker/) to do this. In the terminal write the following (and make sure that your current directory is /MLOps_Project, i.e. the root of the project):
 
-1. *Build a Docker image:* ```txt docker build -f dockerfiles/train.dockerfile . -t train:latest"```
-2. *Execute the Docker image:* ```txt docker run --rm --shm-size=2g -v $(pwd)/data:/data --name experiment1 train:latest ```
+1. *Build a Docker image:* ```docker build -f dockerfiles/train.dockerfile . -t train:latest```
+2. *Execute the Docker image:* ```docker run --rm --shm-size=2g -v $(pwd)/data:/data --name experiment1 train:latest```
 
-Note: ```txt --shm-size=2g``` sets the shared memory to 2GB in the Docker container (default is 64 MB). You can try without, but will most likely get the error message "No space left on device". This is because PyTorch and nnU-Net use multiprocessing and has workers that share large tensors. 
+Note: ```--shm-size=2g``` sets the shared memory to 2GB in the Docker container (default is 64 MB). You can try without, but will most likely get the error message "No space left on device". This is because PyTorch and nnU-Net use multiprocessing and has workers that share large tensors. 
 
 Note: [$(pwd) needs to change depending on your OS](https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10).
