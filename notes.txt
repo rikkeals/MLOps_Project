@@ -5,4 +5,4 @@ TO-DO:
 - cloud / M21 (Mejse, 16/1)
 
 QUESTIONS:
-- Data version control? Is our ID enough or what do you recommend?
+- Is the integration test (data) a unit test? 

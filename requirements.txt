@@ -28,6 +28,7 @@ gdown==5.2.0
 
 # --- Testing ---
 pytest==9.0.2
+coverage==7.4.4
 
 # --- Cloud storage interaction ---
 dvc==3.66.1

@@ -1,9 +1,11 @@
 import os
-from sys import path
-from torch.utils.data import Dataset
 from pathlib import Path
+from sys import path
+
 import pytest
 import yaml
+from torch.utils.data import Dataset
+
 
 ####################################################################
 # Fixtures
@@ -26,11 +28,17 @@ def cfg(project_root):
 #####################################################################
 # Tests
 #####################################################################
+@pytest.mark.integration
 def test_nnunet_raw_ready(data_root, cfg):
     path = data_root / "nnUNet_raw"
     assert path.exists(), "nnUNet_raw missing - Have you run the data.py script yet?"
-    assert (path / cfg["dataset"]["name"]).exists(), "Dataset folder missing - Option 1: Did you download the data yet by running the data.py script? Option 2: Is dataset_name correct in config.yaml? If you change the name in config after download; they will mismatch."
+    assert (path / cfg["dataset"]["name"]).exists(), (
+        "Dataset folder missing. Option 1: Did you download the data by running "
+        "data.py? Option 2: Is dataset_name correct in config.yaml? If you change "
+        "the name in config after download, they will mismatch."
+    )
 
+@pytest.mark.integration
 def test_nnunet_raw_length(data_root, cfg):
     path_images = data_root / "nnUNet_raw" / cfg["dataset"]["name"] / "imagesTr"
     images = list(path_images.glob("*.nii.gz"))
@@ -39,8 +47,11 @@ def test_nnunet_raw_length(data_root, cfg):
 
     assert len(images) > 0, "No training images found in nnUNet_raw/imagesTr - Have you run the data.py script yet?"
     assert len(labels) > 0, "No training labels found in nnUNet_raw/labelsTr - Have you run the data.py script yet?"
-    assert len(images) == len(labels), "Number of images and labels do not match in nnUNet_raw - Is there a file starting with '._' in imagesTr or labelsTr? Then this should be deleted."
-
+    assert len(images) == len(labels), (
+        "Number of images and labels do not match in nnUNet_raw. "
+        "Is there a file starting with '._' in imagesTr or labelsTr? "
+        "If so, delete it."
+    )
 
 def test_enviroment(data_root, cfg):
     nnunet_raw = data_root / "nnUNet_raw"
@@ -48,7 +59,9 @@ def test_enviroment(data_root, cfg):
     nnunet_results = data_root / "nnUNet_results"
 
     assert os.environ.get("nnUNet_raw") == str(nnunet_raw), "nnUNet_raw env var not set correctly"
-    assert os.environ.get("nnUNet_preprocessed") == str(nnunet_preprocessed), "nnUNet_preprocessed env var not set correctly"
+    assert os.environ.get("nnUNet_preprocessed") == str(
+        nnunet_preprocessed
+    ), "nnUNet_preprocessed env var not set correctly"
     assert os.environ.get("nnUNet_results") == str(nnunet_results), "nnUNet_results env var not set correctly"
 
 

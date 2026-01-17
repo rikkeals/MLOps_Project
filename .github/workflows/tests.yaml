@@ -33,7 +33,8 @@ jobs:
           pip list
 
 
-      - name: Run tests & coverage
+      - name: Run tests & coverage (exclude integration)
         run: |
-          coverage run -m pytest tests/
+          coverage run --source=src/mlops_project -m pytest -m "not integration"
           coverage report -m
+
