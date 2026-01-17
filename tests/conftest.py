@@ -33,21 +33,6 @@ def pytest_runtest_protocol(item, nextitem):
     # Returning None lets pytest continue with normal execution
     return None
 
-# ------------------------------------------------------------------
-# Set nnUNet env vars for the test session
-# ------------------------------------------------------------------
-
-@pytest.fixture(scope="session", autouse=True)
-def set_nnunet_env_for_tests(project_root: Path):
-    """
-    Ensure nnUNet env vars are set for the pytest process.
-    autouse=True -> runs automatically for the whole session.
-    """
-    data_dir = project_root / "data"
-
-    os.environ.setdefault("nnUNet_raw", str(data_dir / "nnUNet_raw"))
-    os.environ.setdefault("nnUNet_preprocessed", str(data_dir / "nnUNet_preprocessed"))
-    os.environ.setdefault("nnUNet_results", str(data_dir / "nnUNet_results"))
 
 
 # ------------------------------------------------------------------
