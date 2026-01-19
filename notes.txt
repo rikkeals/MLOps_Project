@@ -1,7 +1,7 @@
 TO-DO:
 - wandb (Mejse, 15/1)
 - logging / loguru (Lotte, 15/1)
-- unit test (Rikke, 16/1)
+- continous integration (Rikke 19/01)
 - cloud / M21 (Mejse, 16/1)
 
 QUESTIONS:
