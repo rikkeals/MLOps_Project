@@ -138,5 +138,11 @@ Type in terminal:
 
 The datasets should be downloaded into data/ locally.
 
+## Run tests on pipeline using Pytest
+1. Run "pip install -e ." in the project root.
+2. Run all tests by "pytest tests\"
+   - If you only want to test one part of the pipeline specify this by e.g. "pytest tests\test_data.py"
+ 
+
 
 
