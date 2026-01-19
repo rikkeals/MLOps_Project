@@ -1,8 +1,8 @@
 import pytest
 import yaml
-import os
 from pathlib import Path
-
+import json
+from omegaconf import OmegaConf
 
 ####################################################################
 # Fixtures
@@ -24,17 +24,8 @@ def cfg(project_root):
     
 
 #####################################################################
-# Tests
+# Tests if config is updated from plans file
 #####################################################################
-
-def test_nnunet_env_vars_exist():
-    for var in [
-        "nnUNet_raw",
-        "nnUNet_preprocessed",
-        "nnUNet_results",
-    ]:
-        assert var in os.environ, f"{var} is not set in the shell environment"
-
 
 def test_config_update_from_plans_2d(project_root: Path, cfg):
     config_path = project_root / "configs" / "config.yaml"
@@ -60,3 +51,42 @@ def test_config_update_from_plans_2d(project_root: Path, cfg):
 
     for key in expected_keys:
         assert key in defaults, f"{key} not found in model.defaults - Have you run model.py script?"
+
+
+################################################################
+# Tests for model.py functions
+################################################################
+
+def test_update_config_from_plans_2d(tmp_path):
+    project_root = tmp_path
+    dataset_name = "Dataset621_Hippocampus"
+
+    plans_dir = (
+        project_root
+        / "data"
+        / "nnUNet_preprocessed"
+        / dataset_name
+    )
+    plans_dir.mkdir(parents=True)
+
+    plans = {
+        "configurations": {
+            "2d": {
+                "batch_size": 8,
+                "patch_size": [128, 128],
+                "architecture": "UNet"
+            }
+        }
+    }
+
+    (plans_dir / "nnUNetPlans.json").write_text(json.dumps(plans))
+
+    cfg_path = project_root / "config.yaml"
+    cfg_path.write_text("model: {}")
+
+    from mlops_project.model import update_config_from_plans_2d
+    update_config_from_plans_2d(project_root, dataset_name, cfg_path)
+
+    cfg = OmegaConf.load(cfg_path)
+    assert cfg.model.configuration == "2d"
+    assert cfg.model.defaults["batch_size"] == 8

@@ -48,14 +48,14 @@ def pytest_sessionfinish(session, exitstatus):
     print("\n ALL REQUESTED TESTS PASSED\n")
 
     if any("test_data.py" in f for f in executed):
-        print("""Data tests passed successfully
-            You have the expected directories
-            and the same number of images and labels.""")
+        print("""Data tests passed successfully.
+✓ Expected directory structure is present.
+✓ Image and label counts are consistent.
+✓ nnU-Net v2 preprocessing utilities behave as expected.
+""")
 
     if any("test_model.py" in f for f in executed):
-        print("Model tests passed successfully")
-
-    if any("test_training.py" in f for f in executed):
-        print("Training tests passed successfully")
+        print("""Model tests passed successfully
+              You have updated the config from the plans file""")
 
     print("")

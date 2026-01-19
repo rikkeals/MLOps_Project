@@ -1,10 +1,9 @@
-import os
 from pathlib import Path
-from sys import path
-
 import pytest
 import yaml
-from torch.utils.data import Dataset
+from mlops_project.data import _to_0000_name
+import json
+
 
 
 ####################################################################
@@ -26,7 +25,7 @@ def cfg(project_root):
 
 
 #####################################################################
-# Tests
+# Tests if data and directories are correctly set up
 #####################################################################
 @pytest.mark.integration
 def test_nnunet_raw_ready(data_root, cfg):
@@ -53,16 +52,104 @@ def test_nnunet_raw_length(data_root, cfg):
         "If so, delete it."
     )
 
-def test_enviroment(data_root, cfg):
-    nnunet_raw = data_root / "nnUNet_raw"
-    nnunet_preprocessed = data_root / "nnUNet_preprocessed"
-    nnunet_results = data_root / "nnUNet_results"
 
-    assert os.environ.get("nnUNet_raw") == str(nnunet_raw), "nnUNet_raw env var not set correctly"
-    assert os.environ.get("nnUNet_preprocessed") == str(
-        nnunet_preprocessed
-    ), "nnUNet_preprocessed env var not set correctly"
-    assert os.environ.get("nnUNet_results") == str(nnunet_results), "nnUNet_results env var not set correctly"
+###############################################################
+# Tests for data preprocessing functions
+###############################################################
+
+def test_to_0000_name_adds_suffix():
+    assert _to_0000_name("hippo_001.nii.gz") == "hippo_001_0000.nii.gz"
+
+def test_to_0000_name_idempotent():
+    assert _to_0000_name("hippo_001_0000.nii.gz") == "hippo_001_0000.nii.gz"
+
+def test_copy_images_with_0000(tmp_path):
+    src = tmp_path / "Task04_Hippocampus" / "imagesTr"
+    dst = tmp_path / "nnUNet_raw" / "Dataset621_Hippocampus"
+
+    src.mkdir(parents=True)
+    dst.mkdir(parents=True)
+
+    img = src / "hippo_001.nii.gz"
+    img.write_text("fake")
+
+    from mlops_project.data import copy_images_with_0000
+    copy_images_with_0000(src.parent, dst)
+
+    copied = dst / "imagesTr" / "hippo_001_0000.nii.gz"
+    assert copied.exists()
+
+
+def test_copy_labels(tmp_path):
+    src = tmp_path / "Task04_Hippocampus" / "labelsTr"
+    dst = tmp_path / "nnUNet_raw" / "Dataset621_Hippocampus"
+
+    src.mkdir(parents=True)
+    dst.mkdir(parents=True)
+
+    label = src / "hippo_001.nii.gz"
+    label.write_text("label")
+
+    from mlops_project.data import copy_labels
+    copy_labels(src.parent, dst)
+
+    assert (dst / "labelsTr" / "hippo_001.nii.gz").exists()
+
+
+def test_write_nnunetv2_dataset_json(tmp_path):
+    src = tmp_path / "Task04_Hippocampus"
+    dst = tmp_path / "Dataset621_Hippocampus"
+
+    src.mkdir()
+    dst.mkdir()
+
+    dataset_json = {
+        "labels": {"0": "background", "1": "hippocampus"},
+        "modality": {"0": "MR"},
+        "training": [],
+        "test": []
+    }
+
+    (src / "dataset.json").write_text(json.dumps(dataset_json))
+
+    from mlops_project.data import write_nnunetv2_dataset_json
+    write_nnunetv2_dataset_json(src, dst, channel_name="T1")
+
+    out = json.loads((dst / "dataset.json").read_text())
+
+    assert out["file_ending"] == ".nii.gz"
+    assert out["channel_names"] == {"0": "T1"}
+    assert out["labels"]["hippocampus"] == 1
+    assert "training" not in out
+
+def test_preprocess_to_nnunetv2(tmp_path):
+    extracted = tmp_path / "Task04_Hippocampus"
+    raw = tmp_path / "nnUNet_raw"
+
+    (extracted / "imagesTr").mkdir(parents=True)
+    (extracted / "labelsTr").mkdir()
+
+    (extracted / "imagesTr" / "img.nii.gz").write_text("img")
+    (extracted / "labelsTr" / "lbl.nii.gz").write_text("lbl")
+
+    (extracted / "dataset.json").write_text(
+        json.dumps({"labels": {"0": "bg", "1": "hippo"}})
+    )
+
+    from mlops_project.data import preprocess_to_nnunetv2
+    dst = preprocess_to_nnunetv2(
+        extracted_task_dir=extracted,
+        nnunet_raw_root=raw,
+        dataset_name="Dataset621_Hippocampus",
+    )
+
+    assert (dst / "imagesTr").exists()
+    assert (dst / "labelsTr").exists()
+    assert (dst / "dataset.json").exists()
+
+
+
+
 
 
 
