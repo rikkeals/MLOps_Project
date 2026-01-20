@@ -18,12 +18,12 @@ CORE MODULES:
 - M14 
 - M16 - DONE
 - M17
-- M21 - halvt DONE
+- M21 - halvt DONE!
 - M22
 - M23
 - M24
 - M27
-- M29
+- M29 
 
 QUESTIONS:
 - Is the integration test (data) a unit test? 
