@@ -18,7 +18,7 @@ CORE MODULES:
 - M14 
 - M16 - DONE
 - M17
-- M21 - halvt DONE!
+- M21 - halvt DONE
 - M22
 - M23
 - M24
