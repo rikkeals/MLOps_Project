@@ -144,6 +144,8 @@ The datasets should be downloaded into data/ locally.
 2. Run all tests by "pytest tests\"
    - If you only want to test one part of the pipeline specify this by e.g. "pytest tests\test_data.py"
 
+## Run the FastAPI inference service
+Type in terminal:
+PYTHONPATH=src python -m uvicorn mlops_project.api:app --reload --port 8000
 
-
-
+The API will be available at: http://localhost:8000
