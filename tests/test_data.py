@@ -1,8 +1,9 @@
+from pathlib import Path
+import json
 import pytest
 import yaml
-import json
-from pathlib import Path
 from mlops_project.data import _to_0000_name
+
 
 
 ####################################################################
