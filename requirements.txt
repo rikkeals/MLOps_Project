@@ -33,3 +33,8 @@ coverage>=7.4.4
 # --- Cloud storage interaction ---
 dvc==3.66.1
 dvc-gs==3.0.2
+
+# --- Fast API server ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
