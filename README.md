@@ -128,6 +128,7 @@ Prerequisites:
 - A Google account
 - Access to the Google Cloud Platform (GCP) project ```mlops-project-group65```
 - Dependencies installed via ```requirements.txt```
+- ```gcloud``` installed ([installation guide](https://docs.cloud.google.com/sdk/docs/install-sdk))
 - This Git repo cloned locally
 - Your cd set to the repo root in the terminal
 
@@ -142,7 +143,7 @@ The datasets should be downloaded into data/ locally.
 1. Run "pip install -e ." in the project root.
 2. Run all tests by "pytest tests\"
    - If you only want to test one part of the pipeline specify this by e.g. "pytest tests\test_data.py"
- 
+
 
 
 
