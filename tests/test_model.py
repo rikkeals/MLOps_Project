@@ -1,7 +1,7 @@
+import json
+from pathlib import Path
 import pytest
 import yaml
-from pathlib import Path
-import json
 from omegaconf import OmegaConf
 
 ####################################################################
@@ -21,7 +21,7 @@ def cfg(project_root):
     config_path = project_root / "configs" / "config.yaml"
     with config_path.open("r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
-    
+
 
 #####################################################################
 # Tests if config is updated from plans file
