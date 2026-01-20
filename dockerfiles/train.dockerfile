@@ -16,7 +16,9 @@ COPY configs/ configs/
 WORKDIR /
 
 # Install dependencies and packages
-RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt --no-cache-dir
+#RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt --no-cache-dir 
+# The above does not work with Google Cloud Build yet, so we use the below as a workaround
+RUN pip install -r requirements.txt --no-cache-dir
 RUN pip install . --no-deps --no-cache-dir
 
 # Entry point (what should be run when image is executed)
