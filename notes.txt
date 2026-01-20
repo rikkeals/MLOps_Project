@@ -1,8 +1,33 @@
 TO-DO:
-- wandb (Mejse, 15/1)
 - logging / loguru (Lotte, 15/1)
-- continous integration (Rikke 19/01)
+- M22 (Lotte)
+
+- continous integration / M17 (Rikke, 20/1)
+
+- wandb (Mejse, 15/1)
 - cloud / M21 (Mejse, 16/1)
+- opdater cloud guide (Mejse)
+- dobbelttjek at container virker / M10 (Mejse)
+
+CORE MODULES:
+- M2 - DONE
+- M5 - DONE
+- M6 - DONE 
+- M8 - DONE
+- M10 - DONE (dobbelttjek)
+- M14 
+- M16 - DONE
+- M17
+- M21 - halvt DONE
+- M22
+- M23
+- M24
+- M27
+- M29
 
 QUESTIONS:
 - Is the integration test (data) a unit test? 
+
+NICE TO HAVE:
+- Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
+
