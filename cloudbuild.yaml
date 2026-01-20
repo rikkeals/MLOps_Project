@@ -1,0 +1,23 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'Build training image'
+  args:
+    [
+      'build',
+      '.',
+      '-t',
+      'europe-west1-docker.pkg.dev/$PROJECT_ID/mlops-project-group65-docker/train:latest',
+      '-f',
+      'dockerfiles/train.dockerfile'
+    ]
+
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'Push training image'
+  args:
+    [
+      'push',
+      'europe-west1-docker.pkg.dev/$PROJECT_ID/mlops-project-group65-docker/train:latest'
+    ]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
