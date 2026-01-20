@@ -6,22 +6,24 @@ TO-DO:
 
 - wandb (Mejse, 15/1)
 - cloud / M21 (Mejse, 16/1)
-- opdater cloud guide (Mejse)
 - dobbelttjek at container virker / M10 (Mejse)
 
 CORE MODULES:
+Week 1:
 - M2 - DONE
 - M5 - DONE
 - M6 - DONE 
 - M8 - DONE
 - M10 - DONE (dobbelttjek)
 - M14 
+Week 2:
 - M16 - DONE
 - M17
 - M21 - halvt DONE
 - M22
 - M23
 - M24
+Week 3:
 - M27
 - M29 
 
