@@ -1,9 +1,9 @@
 TO-DO:
 - Cloud deployment / M23 (Lotte)
 
-- continous integration / M17 (Rikke, 20/1)
+- API testing / M24 (Rikke)
 
-- Datadrifting / M21 (Mejse, 21/1)
+- Datadrifting / M27 (Mejse)
 - dobbelttjek container virker / M10 (Mejse)
 - dobbelttjek wandb virker / M14 (Mejse)
 - dobbelttjek loguru virker / M14 (Mejse)
@@ -18,7 +18,7 @@ Week 1:
 - M14 - DONE (to ud af tre. dobbelttjek)
 Week 2:
 - M16 - DONE
-- M17
+- M17 - DONE
 - M21 - DONE (to ud af tre) 
 - M22 - DONE
 - M23
