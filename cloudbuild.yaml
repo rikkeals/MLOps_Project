@@ -48,6 +48,15 @@ steps:
     - --platform
     - managed
     - --allow-unauthenticated
+    - --port
+    - "8080"
+    - --memory
+    - "4Gi"
 
 options:
   logging: CLOUD_LOGGING_ONLY
+
+substitutions:
+  _REGION: europe-west1
+  _REPO: mlops-project-group65-docker
+  _SERVICE: mlops-api
