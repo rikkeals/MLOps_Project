@@ -5,11 +5,9 @@ import tempfile
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, UploadFile, File, Query, HTTPException
+from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.responses import FileResponse
 from omegaconf import OmegaConf
-
-
 
 # Load project config
 CONFIG_PATH = Path("configs/config.yaml")

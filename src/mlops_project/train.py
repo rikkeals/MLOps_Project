@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import re
 import subprocess
 import sys
 import time
@@ -10,7 +11,6 @@ from typing import Optional
 
 import hydra
 from omegaconf import DictConfig
-import re
 
 
 def ensure_dir(p: Path) -> None:
