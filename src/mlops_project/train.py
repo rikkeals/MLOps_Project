@@ -8,12 +8,10 @@ import time
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
-from loguru import logger
 
 import hydra
+from loguru import logger
 from omegaconf import DictConfig
-
-
 
 
 def ensure_dir(p: Path) -> None:
@@ -183,7 +181,7 @@ def main(cfg: DictConfig) -> None:
             "-device",
             device,
         ]
-        
+
         logger.info(f"Starting nnU-Net training. Logs will be written to: {log_path}")
         logger.info(f"Executing command: {' '.join(cmd_train)}")
         subprocess.run(cmd_train, check=True, env=env)
