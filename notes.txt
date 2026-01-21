@@ -29,6 +29,7 @@ Week 3:
 - M29 
 
 HUSK! At opdatere evaluate.py filen med interferens 
+HUSK! At opdatere/gennemlæse README inkl. folder structure 
 
 QUESTIONS:
 - Is the integration test (data) a unit test? 
