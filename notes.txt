@@ -28,6 +28,8 @@ Week 3:
 - M27
 - M29 
 
+HUSK! At opdatere evaluate.py filen med interferens 
+
 QUESTIONS:
 - Is the integration test (data) a unit test? 
 
