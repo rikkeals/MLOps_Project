@@ -8,6 +8,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from loguru import logger
 
 import hydra
 from omegaconf import DictConfig
@@ -108,6 +109,16 @@ def set_nnunet_env_vars(env: dict[str, str], nnunet_raw: Path, nnunet_preprocess
     env["nnUNet_results"] = str(nnunet_results)
 
 
+def setup_logger(log_path: Path) -> None:
+    logger.remove()  # remove default stderr logger
+
+    # Console: user-facing info
+    logger.add(sys.stdout, level="INFO")
+
+    # File: full debug trace
+    logger.add(log_path, level="DEBUG", rotation="100 MB")
+
+
 @hydra.main(version_base=None, config_path="../../configs", config_name="config")
 def main(cfg: DictConfig) -> None:
     project_root = Path(hydra.utils.get_original_cwd())
@@ -136,21 +147,31 @@ def main(cfg: DictConfig) -> None:
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_path = logs_dir / f"nnunet_{dataset_id}_{nnunet_config}_fold{fold}_{timestamp}.log"
 
+    # --- setup logging ---
+    setup_logger(log_path)
+    wb_run = maybe_init_wandb(cfg, log_path)
+
+    logger.info("Initializing nnU-Net training")
+    logger.info(
+        f"Dataset={dataset_id}, config={nnunet_config}, fold={fold}, "
+        f"trainer={trainer}, device={device}"
+    )
+
     # --- env vars for nnUNet ---
     env = os.environ.copy()
     set_nnunet_env_vars(env, nnunet_raw, nnunet_preprocessed, nnunet_results)
 
-    print("nnU-Net environment variables set:")
-    print("  nnUNet_raw:", env["nnUNet_raw"])
-    print("  nnUNet_preprocessed:", env["nnUNet_preprocessed"])
-    print("  nnUNet_results:", env["nnUNet_results"])
+    logger.info("nnU-Net environment variables set")
+    logger.debug(f"nnUNet_raw={env['nnUNet_raw']}")
+    logger.debug(f"nnUNet_preprocessed={env['nnUNet_preprocessed']}")
+    logger.debug(f"nnUNet_results={env['nnUNet_results']}")
 
     # required dirs
     require_dir(nnunet_raw, "nnUNet_raw")
     require_dir(nnunet_preprocessed, "nnUNet_preprocessed")
 
-    wb_run = maybe_init_wandb(cfg, log_path)
-
+    # --- run training ---
+    logger.info("Launching nnU-Net training process")
     start = time.time()
     try:
         cmd_train = [
@@ -169,8 +190,9 @@ def main(cfg: DictConfig) -> None:
         run_and_tee(cmd_train, log_path, env)
 
         duration_s = time.time() - start
-        print(f"\nDone. Total duration: {duration_s:.1f}s")
-        print(f"Log written to: {log_path}")
+        logger.success(f"Done! Training finished in {duration_s:.1f}s")
+        logger.info(f"Log written to {log_path}")
+
 
         if wb_run is not None:
             import wandb  # type: ignore
@@ -191,7 +213,9 @@ def main(cfg: DictConfig) -> None:
             wandb.save(str(log_path), policy="now")
             wb_run.finish()
 
-    except Exception:
+    except Exception as e:
+        logger.exception("Training failed")
+
         if wb_run is not None:
             try:
                 import wandb  # type: ignore
