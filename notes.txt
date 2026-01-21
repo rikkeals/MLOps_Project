@@ -1,9 +1,10 @@
 TO-DO:
 - Cloud deployment / M23 (Lotte)
+- Datadrifting / M27 punkt 3 (Mejse)
 
 - API testing / M24 (Rikke)
 
-- Datadrifting / M27 (Mejse)
+- Datadrifting / M27 punkt 1+2 (Mejse)
 - dobbelttjek container virker / M10 (Mejse)
 - dobbelttjek wandb virker / M14 (Mejse)
 - dobbelttjek loguru virker / M14 (Mejse)
