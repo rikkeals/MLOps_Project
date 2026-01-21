@@ -40,13 +40,17 @@ def run_and_tee(cmd: list[str], log_path: Path, env: dict[str, str]) -> None:
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
-            env=env,
+            bufsize=1,              # line-buffered
+            universal_newlines=True,
+            env={**env, "PYTHONUNBUFFERED": "1"},
         )
 
         assert proc.stdout is not None
         for line in proc.stdout:
             sys.stdout.write(line)
+            sys.stdout.flush()
             f.write(line)
+            f.flush()
 
         rc = proc.wait()
         if rc != 0:
@@ -186,7 +190,6 @@ def main(cfg: DictConfig) -> None:
         
         logger.info(f"Starting nnU-Net training. Logs will be written to: {log_path}")
         logger.info(f"Executing command: {' '.join(cmd_train)}")
-        subprocess.run(cmd_train, check=True, env=env)
         run_and_tee(cmd_train, log_path, env)
 
         duration_s = time.time() - start
