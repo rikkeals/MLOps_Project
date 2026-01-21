@@ -7,7 +7,6 @@ TO-DO:
 - Datadrifting / M27 punkt 2 (Mejse)
 - dobbelttjek container virker / M10 (Mejse)
 - dobbelttjek wandb virker / M14 (Mejse)
-- dobbelttjek loguru virker / M14 (Mejse)
 
 CORE MODULES:
 Week 1:
