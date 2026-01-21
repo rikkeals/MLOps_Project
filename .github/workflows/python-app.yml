@@ -1,5 +1,3 @@
-# This workflow will install Python dependencies, pull DVC data (GCS), run tests
-
 name: Python application
 
 on:
@@ -12,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  test:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -34,17 +32,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # IMPORTANT for src-layout repos (if your package is in src/)
       - name: Make src importable
         run: echo "PYTHONPATH=$PWD/src" >> $GITHUB_ENV
 
-      - name: Authenticate to Google Cloud (GCS)
-        shell: bash
+      - name: Run unit tests
         run: |
-          echo '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}' > gcp-key.json
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/gcp-key.json" >> $GITHUB_ENV
-
-      - name: Pull data with DVC
-        run: dvc pull -v
-
-      - name: Test with pytest
-        run: pytest -q
+          pytest -q
