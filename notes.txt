@@ -1,13 +1,12 @@
 TO-DO:
-- logging / loguru / M14 (Lotte, 15/1)
-- M23 (Lotte)
+- Cloud deployment / M23 (Lotte)
 
 - continous integration / M17 (Rikke, 20/1)
-- Train.py 5 epochs (Rikke, 21/1)
 
-- wandb / M14 (Mejse, 15/1)
 - Datadrifting / M21 (Mejse, 21/1)
-- dobbelttjek at container virker / M10 (Mejse)
+- dobbelttjek container virker / M10 (Mejse)
+- dobbelttjek wandb virker / M14 (Mejse)
+- dobbelttjek loguru virker / M14 (Mejse)
 
 CORE MODULES:
 Week 1:
@@ -16,7 +15,7 @@ Week 1:
 - M6 - DONE 
 - M8 - DONE
 - M10 - DONE (dobbelttjek)
-- M14 
+- M14 - DONE (to ud af tre. dobbelttjek)
 Week 2:
 - M16 - DONE
 - M17
