@@ -11,14 +11,18 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
           cache: "pip"
 
       - name: Install dependencies
@@ -27,9 +31,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Make src importable
-        run: echo "PYTHONPATH=${{ github.workspace }}/src" >> $GITHUB_ENV
-
-      - name: Run unit tests with coverage
+        shell: bash
         run: |
-          coverage run --source=src/mlops_project -m pytest -m "not integration"
+          echo "PYTHONPATH=${GITHUB_WORKSPACE}/src" >> $GITHUB_ENV
+
+      - name: Run tests with coverage
+        run: |
+          coverage run --source=src/mlops_project -m pytest -m "not integration" -q
           coverage report -m
