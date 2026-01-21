@@ -1,108 +1,82 @@
 import json
 from pathlib import Path
 
-import pytest
-import yaml
-
-from mlops_project.data import _to_0000_name
-
-
-####################################################################
-# Fixtures
-####################################################################
-@pytest.fixture(scope="session")
-def project_root() -> Path:
-    return Path(__file__).resolve().parents[1]
-
-@pytest.fixture(scope="session")
-def data_root(project_root: Path) -> Path:
-    return project_root / "data"
-
-@pytest.fixture(scope="session")
-def cfg(project_root):
-    config_path = project_root / "configs" / "config.yaml"
-    with config_path.open("r", encoding="utf-8") as f:
-        return yaml.safe_load(f) or {}
-
-
-#####################################################################
-# Tests if data and directories are correctly set up
-#####################################################################
-@pytest.mark.integration
-def test_nnunet_raw_ready(data_root, cfg):
-    path = data_root / "nnUNet_raw"
-    assert path.exists(), "nnUNet_raw missing - Have you run the data.py script yet?"
-    assert (path / cfg["dataset"]["name"]).exists(), (
-        "Dataset folder missing. Option 1: Did you download the data by running "
-        "data.py? Option 2: Is dataset_name correct in config.yaml? If you change "
-        "the name in config after download, they will mismatch."
-    )
-
-@pytest.mark.integration
-def test_nnunet_raw_length(data_root, cfg):
-    path_images = data_root / "nnUNet_raw" / cfg["dataset"]["name"] / "imagesTr"
-    images = list(path_images.glob("*.nii.gz"))
-    path_labels = data_root / "nnUNet_raw" / cfg["dataset"]["name"] / "labelsTr"
-    labels = list(path_labels.glob("*.nii.gz"))
-
-    assert len(images) > 0, "No training images found in nnUNet_raw/imagesTr - Have you run the data.py script yet?"
-    assert len(labels) > 0, "No training labels found in nnUNet_raw/labelsTr - Have you run the data.py script yet?"
-    assert len(images) == len(labels), (
-        "Number of images and labels do not match in nnUNet_raw. "
-        "Is there a file starting with '._' in imagesTr or labelsTr? "
-        "If so, delete it."
-    )
-
+from mlops_project.data import (
+    _is_junk_file,
+    _to_0000_name,
+    copy_images_with_0000,
+    copy_labels,
+    preprocess_to_nnunetv2,
+    write_nnunetv2_dataset_json,
+)
 
 ###############################################################
-# Tests for data preprocessing functions
+# Pure unit tests (no network, no DVC, no real dataset required)
 ###############################################################
 
 def test_to_0000_name_adds_suffix():
     assert _to_0000_name("hippo_001.nii.gz") == "hippo_001_0000.nii.gz"
 
+
 def test_to_0000_name_idempotent():
     assert _to_0000_name("hippo_001_0000.nii.gz") == "hippo_001_0000.nii.gz"
 
-def test_copy_images_with_0000(tmp_path):
-    src = tmp_path / "Task04_Hippocampus" / "imagesTr"
-    dst = tmp_path / "nnUNet_raw" / "Dataset621_Hippocampus"
 
-    src.mkdir(parents=True)
-    dst.mkdir(parents=True)
-
-    img = src / "hippo_001.nii.gz"
-    img.write_text("fake")
-
-    from mlops_project.data import copy_images_with_0000
-    copy_images_with_0000(src.parent, dst)
-
-    copied = dst / "imagesTr" / "hippo_001_0000.nii.gz"
-    assert copied.exists()
+def test_to_0000_name_non_nii_unchanged():
+    assert _to_0000_name("notes.txt") == "notes.txt"
 
 
-def test_copy_labels(tmp_path):
-    src = tmp_path / "Task04_Hippocampus" / "labelsTr"
-    dst = tmp_path / "nnUNet_raw" / "Dataset621_Hippocampus"
-
-    src.mkdir(parents=True)
-    dst.mkdir(parents=True)
-
-    label = src / "hippo_001.nii.gz"
-    label.write_text("label")
-
-    from mlops_project.data import copy_labels
-    copy_labels(src.parent, dst)
-
-    assert (dst / "labelsTr" / "hippo_001.nii.gz").exists()
+def test_is_junk_file():
+    assert _is_junk_file(Path("._hippo_001.nii.gz"))
+    assert _is_junk_file(Path(".DS_Store"))
+    assert _is_junk_file(Path("Thumbs.db"))
+    assert not _is_junk_file(Path("hippo_001.nii.gz"))
 
 
-def test_write_nnunetv2_dataset_json(tmp_path):
-    src = tmp_path / "Task04_Hippocampus"
-    dst = tmp_path / "Dataset621_Hippocampus"
+def test_copy_images_with_0000_copies_and_renames(tmp_path: Path):
+    # Arrange
+    src_task = tmp_path / "Task04_Hippocampus"
+    (src_task / "imagesTr").mkdir(parents=True)
 
-    src.mkdir()
-    dst.mkdir()
+    dst_dataset = tmp_path / "nnUNet_raw" / "Dataset621_Hippocampus"
+    dst_dataset.mkdir(parents=True)
+
+    # one image + one junk file
+    (src_task / "imagesTr" / "hippo_001.nii.gz").write_bytes(b"fake")
+    (src_task / "imagesTr" / "._hippo_002.nii.gz").write_bytes(b"junk")
+
+    # Act
+    copy_images_with_0000(src_task, dst_dataset)
+
+    # Assert
+    assert (dst_dataset / "imagesTr" / "hippo_001_0000.nii.gz").exists()
+    assert not (dst_dataset / "imagesTr" / "._hippo_002_0000.nii.gz").exists()
+
+
+def test_copy_labels_copies_without_renaming(tmp_path: Path):
+    # Arrange
+    src_task = tmp_path / "Task04_Hippocampus"
+    (src_task / "labelsTr").mkdir(parents=True)
+
+    dst_dataset = tmp_path / "nnUNet_raw" / "Dataset621_Hippocampus"
+    dst_dataset.mkdir(parents=True)
+
+    (src_task / "labelsTr" / "hippo_001.nii.gz").write_bytes(b"label")
+
+    # Act
+    copy_labels(src_task, dst_dataset)
+
+    # Assert
+    assert (dst_dataset / "labelsTr" / "hippo_001.nii.gz").exists()
+    assert not (dst_dataset / "labelsTr" / "hippo_001_0000.nii.gz").exists()
+
+
+def test_write_nnunetv2_dataset_json_converts_fields(tmp_path: Path):
+    # Arrange
+    src_task = tmp_path / "Task04_Hippocampus"
+    dst_dataset = tmp_path / "Dataset621_Hippocampus"
+    src_task.mkdir()
+    dst_dataset.mkdir()
 
     dataset_json = {
         "labels": {"0": "background", "1": "hippocampus"},
@@ -110,50 +84,47 @@ def test_write_nnunetv2_dataset_json(tmp_path):
         "training": [],
         "test": []
     }
+    (src_task / "dataset.json").write_text(json.dumps(dataset_json), encoding="utf-8")
 
-    (src / "dataset.json").write_text(json.dumps(dataset_json))
+    # Act
+    write_nnunetv2_dataset_json(src_task, dst_dataset, channel_name="T1")
 
-    from mlops_project.data import write_nnunetv2_dataset_json
-    write_nnunetv2_dataset_json(src, dst, channel_name="T1")
-
-    out = json.loads((dst / "dataset.json").read_text())
-
+    # Assert
+    out = json.loads((dst_dataset / "dataset.json").read_text(encoding="utf-8"))
     assert out["file_ending"] == ".nii.gz"
     assert out["channel_names"] == {"0": "T1"}
-    assert out["labels"]["hippocampus"] == 1
+    assert out["labels"] == {"background": 0, "hippocampus": 1}
     assert "training" not in out
+    assert "test" not in out
+    assert "modality" not in out
 
-def test_preprocess_to_nnunetv2(tmp_path):
+
+def test_preprocess_to_nnunetv2_creates_expected_structure(tmp_path: Path):
+    # Arrange: minimal fake extracted dataset
     extracted = tmp_path / "Task04_Hippocampus"
-    raw = tmp_path / "nnUNet_raw"
-
     (extracted / "imagesTr").mkdir(parents=True)
-    (extracted / "labelsTr").mkdir()
+    (extracted / "labelsTr").mkdir(parents=True)
 
-    (extracted / "imagesTr" / "img.nii.gz").write_text("img")
-    (extracted / "labelsTr" / "lbl.nii.gz").write_text("lbl")
+    (extracted / "imagesTr" / "img_001.nii.gz").write_bytes(b"img")
+    (extracted / "labelsTr" / "img_001.nii.gz").write_bytes(b"lbl")
 
     (extracted / "dataset.json").write_text(
-        json.dumps({"labels": {"0": "bg", "1": "hippo"}})
+        json.dumps({"labels": {"0": "bg", "1": "hippo"}}),
+        encoding="utf-8",
     )
 
-    from mlops_project.data import preprocess_to_nnunetv2
+    nnunet_raw_root = tmp_path / "nnUNet_raw"
+
+    # Act
     dst = preprocess_to_nnunetv2(
         extracted_task_dir=extracted,
-        nnunet_raw_root=raw,
+        nnunet_raw_root=nnunet_raw_root,
         dataset_name="Dataset621_Hippocampus",
+        channel_name="T1",
     )
 
-    assert (dst / "imagesTr").exists()
-    assert (dst / "labelsTr").exists()
+    # Assert
+    assert dst.exists()
+    assert (dst / "imagesTr" / "img_001_0000.nii.gz").exists()
+    assert (dst / "labelsTr" / "img_001.nii.gz").exists()
     assert (dst / "dataset.json").exists()
-
-
-
-
-
-
-
-
-
-

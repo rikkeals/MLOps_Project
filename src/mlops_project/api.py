@@ -5,18 +5,9 @@ import tempfile
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, UploadFile, File, Query, HTTPException
+from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.responses import FileResponse
 from omegaconf import OmegaConf
-
-print("=== API STARTUP CHECK ===")
-print("CWD:", os.getcwd())
-print("PYTHONPATH:", os.environ.get("PYTHONPATH"))
-print("Files in /app:", list(Path("/app").iterdir()) if Path("/app").exists() else "NO /app")
-print("Files in /app/src:", list(Path("/app/src").iterdir()) if Path("/app/src").exists() else "NO /app/src")
-print("Files in /app/configs:", list(Path("/app/configs").iterdir()) if Path("/app/configs").exists() else "NO /app/configs")
-print("=========================")
-
 
 # Load project config
 CONFIG_PATH = Path("configs/config.yaml")

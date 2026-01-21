@@ -5,15 +5,12 @@ dataset:
   nnunet_raw_root: data/nnUNet_raw
   channel_name: T1
   gdrive_id: 1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C
-
 paths:
   nnunet_raw: data/nnUNet_raw
   nnunet_preprocessed: data/nnUNet_preprocessed
   nnunet_results: data/nnUNet_results
-
 logging:
   logs_dir: logs
-
 model:
   configuration: 2d
   defaults:
@@ -80,18 +77,15 @@ model:
       - dropout_op
       - nonlin
   override: {}
-
-
 wandb:
-  project: mlops_project
-  entity: mejsegk-technical-university-of-denmark
+  project: hippocampus-segmentation
+  entity: your_wandb_entity
   run_name: nnunetv2_fold0
-  job_type: train
 training:
   dataset_id: 621
   nnunet_config: 2d
   fold: 0
-  epochs: 5
+  epochs: 7
   trainer: nnUNetTrainer
   device: cpu
   plans: nnUNetPlans

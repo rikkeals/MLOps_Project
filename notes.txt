@@ -1,12 +1,13 @@
 TO-DO:
-- logging / loguru (Lotte, 15/1)
-- M22 (Lotte)
+- Cloud deployment / M23 (Lotte)
+- Datadrifting / M27 punkt 3 (Lotte)
 
-- continous integration / M17 (Rikke, 20/1)
+- API testing / M24 (Rikke)
 
-- wandb (Mejse, 15/1)
-- cloud / M21 (Mejse, 16/1)
-- dobbelttjek at container virker / M10 (Mejse)
+- Datadrifting / M27 punkt 1+2 (Mejse)
+- dobbelttjek container virker / M10 (Mejse)
+- dobbelttjek wandb virker / M14 (Mejse)
+- dobbelttjek loguru virker / M14 (Mejse)
 
 CORE MODULES:
 Week 1:
@@ -15,21 +16,36 @@ Week 1:
 - M6 - DONE 
 - M8 - DONE
 - M10 - DONE (dobbelttjek)
-- M14 
+- M14 - DONE (to ud af tre. dobbelttjek)
 Week 2:
 - M16 - DONE
-- M17
+- M17 - DONE
 - M21 - DONE (to ud af tre) 
-- M22
+- M22 - DONE
 - M23
 - M24
 Week 3:
 - M27
 - M29 
 
+HUSK! At opdatere evaluate.py filen med interferens 
+
 QUESTIONS:
 - Is the integration test (data) a unit test? 
 
 NICE TO HAVE:
 - Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
+
+PROJECT SPØRGSMÅL
+Questions we are ready to answer: Q1, Q2, Q3, Q4, Q5, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q17, Q19, Q20, Q21, Q23, Q24, Q25, Q27, Q28, Q30, Q31
+
+Questions we need to "solve"
+Q6: rules for code quality and format (vi kan komme ind under version control her)
+Q16: Have we used debugging
+Q18: (manglende punkt i M21)
+Q22: Train model in the cloud using Engine or Vertex AI
+Q26: (manglende punkt i M28) 
+Q29: Lav flow diagram
+
+
 
