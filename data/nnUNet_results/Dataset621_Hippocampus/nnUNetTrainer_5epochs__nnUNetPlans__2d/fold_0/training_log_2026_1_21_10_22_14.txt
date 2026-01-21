@@ -1,0 +1,11 @@
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+ 
+2026-01-21 10:22:14.304159: do_dummy_2d_data_aug: False 
+2026-01-21 10:22:14.311377: Using splits from existing split file: C:\Users\rikke\OneDrive - Danmarks Tekniske Universitet\Universitet\Kandidat - MMC\Machine Learning Operations\MLOps_Project\data\nnUNet_preprocessed\Dataset621_Hippocampus\splits_final.json 
+2026-01-21 10:22:14.342736: The split file contains 5 splits. 
+2026-01-21 10:22:14.374117: Desired fold for training: 0 
+2026-01-21 10:22:14.389809: This split has 208 training and 52 validation cases. 
