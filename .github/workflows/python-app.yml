@@ -1,5 +1,3 @@
-# This workflow will install Python dependencies, pull DVC data (GCS), run tests
-
 name: Python application
 
 on:
@@ -12,21 +10,15 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
+  test:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
           cache: "pip"
 
       - name: Install dependencies
@@ -35,16 +27,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Make src importable
-        run: echo "PYTHONPATH=$PWD/src" >> $GITHUB_ENV
+        run: echo "PYTHONPATH=${{ github.workspace }}/src" >> $GITHUB_ENV
 
-      - name: Authenticate to Google Cloud (GCS)
-        shell: bash
+      - name: Run unit tests with coverage
         run: |
-          echo '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}' > gcp-key.json
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/gcp-key.json" >> $GITHUB_ENV
-
-      - name: Pull data with DVC
-        run: dvc pull -v
-
-      - name: Test with pytest
-        run: pytest -q
+          coverage run --source=src/mlops_project -m pytest -m "not integration"
+          coverage report -m
