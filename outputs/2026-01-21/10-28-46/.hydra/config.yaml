@@ -5,15 +5,12 @@ dataset:
   nnunet_raw_root: data/nnUNet_raw
   channel_name: T1
   gdrive_id: 1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C
-
 paths:
   nnunet_raw: data/nnUNet_raw
   nnunet_preprocessed: data/nnUNet_preprocessed
   nnunet_results: data/nnUNet_results
-
 logging:
   logs_dir: logs
-
 model:
   configuration: 2d
   defaults:
@@ -80,8 +77,6 @@ model:
       - dropout_op
       - nonlin
   override: {}
-
-
 wandb:
   project: hippocampus-segmentation
   entity: your_wandb_entity
@@ -90,7 +85,7 @@ training:
   dataset_id: 621
   nnunet_config: 2d
   fold: 0
-  epochs: 5
+  epochs: 7
   trainer: nnUNetTrainer
   device: cpu
   plans: nnUNetPlans

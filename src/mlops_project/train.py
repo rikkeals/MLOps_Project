@@ -12,6 +12,8 @@ import hydra
 from omegaconf import DictConfig
 
 
+
+
 def ensure_dir(p: Path) -> None:
     p.mkdir(parents=True, exist_ok=True)
 
@@ -94,6 +96,12 @@ def main(cfg: DictConfig) -> None:
     fold = str(cfg.training.get("fold", 0))
     trainer = str(cfg.training.get("trainer", "nnUNetTrainer"))
     device = str(cfg.training.get("device", "cpu"))
+    epochs = cfg.training.get("epochs", None)
+
+    # map epochs → nnU-Net trainer variant
+    if epochs is not None and trainer.lower() in {"auto", "nnunettrainer"}:
+        trainer = f"nnUNetTrainer_{int(epochs)}epochs"
+
 
     # --- paths (configurable, default to repo layout if missing) ---
     nnunet_raw = project_root / str(cfg.paths.get("nnunet_raw", "data/nnUNet_raw"))
@@ -133,6 +141,9 @@ def main(cfg: DictConfig) -> None:
             "-device",
             device,
         ]
+        print(f"Starting nnU-Net training. Logs will be written to: {log_path}\n")
+        print(" ".join(cmd_train))
+        subprocess.run(cmd_train, check=True, env=env)
         run_and_tee(cmd_train, log_path, env)
 
         duration_s = time.time() - start
