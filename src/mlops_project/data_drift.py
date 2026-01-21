@@ -1,9 +1,10 @@
 from pathlib import Path
+
+import nibabel as nib
 import numpy as np
 import pandas as pd
-import nibabel as nib
-from evidently.legacy.report import Report
 from evidently.legacy.metrics import DataDriftTable
+from evidently.legacy.report import Report
 
 # --- Dataset paths ---
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
