@@ -10,6 +10,7 @@ from typing import Optional
 
 import hydra
 from omegaconf import DictConfig
+import re
 
 
 def ensure_dir(p: Path) -> None:
@@ -62,20 +63,41 @@ def maybe_init_wandb(cfg: DictConfig, log_path: Path) -> Optional[object]:
         ) from e
 
     run = wandb.init(
-        project=str(cfg.wandb.get("project", "mlops-nnunet")),
-        entity=cfg.wandb.get("entity", None),
-        name=cfg.wandb.get("run_name", None),
+        project=cfg.wandb.project,
+        entity=cfg.wandb.entity,
+        name=cfg.wandb.run_name,
+        job_type=cfg.wandb.job_type,
         config={
-            "dataset_id": int(cfg.dataset.dataset_id),
-            "nnunet_config": str(cfg.training.get("nnunet_config", "2d")),
-            "fold": str(cfg.training.get("fold", 0)),
-            "trainer": str(cfg.training.get("trainer", "nnUNetTrainer")),
-            "device": str(cfg.training.get("device", "cpu")),
+            "dataset_id": int(cfg.training.dataset_id),
+            "nnunet_config": cfg.training.nnunet_config,
+            "fold": cfg.training.fold,
+            "trainer": cfg.training.trainer,
+            "device": cfg.training.device,
         },
     )
 
     wandb.save(str(log_path), policy="now")
     return run
+
+
+def parse_final_dice(log_path: Path) -> float | None:
+    """
+    Try to extract a final Dice score from nnU-Net logs.
+    Returns None if not found.
+    """
+    dice_patterns = [
+        r"Mean Dice[:=]\s*([0-9]*\.?[0-9]+)",
+        r"Dice score[:=]\s*([0-9]*\.?[0-9]+)",
+    ]
+
+    text = log_path.read_text(errors="ignore")
+
+    for pattern in dice_patterns:
+        matches = re.findall(pattern, text)
+        if matches:
+            return float(matches[-1])  # use final value
+
+    return None
 
 
 def set_nnunet_env_vars(env: dict[str, str], nnunet_raw: Path, nnunet_preprocessed: Path, nnunet_results: Path) -> None:
@@ -141,7 +163,20 @@ def main(cfg: DictConfig) -> None:
 
         if wb_run is not None:
             import wandb  # type: ignore
-            wandb.log({"duration_seconds": duration_s})
+            metrics = {
+                "duration_seconds": duration_s,
+                "dataset_id": dataset_id,
+                "fold": fold,
+                "device": device,
+                "trainer": trainer,
+                "nnunet_config": nnunet_config,
+            }
+
+            final_dice = parse_final_dice(log_path)
+            if final_dice is not None:
+                metrics["final_mean_dice"] = final_dice
+
+            wandb.log(metrics)
             wandb.save(str(log_path), policy="now")
             wb_run.finish()
 
