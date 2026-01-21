@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  build:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -18,13 +18,11 @@ jobs:
         os: ["ubuntu-latest", "windows-latest", "macos-latest"]
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
           cache: "pip"
 
       - name: Install dependencies
@@ -34,8 +32,16 @@ jobs:
 
       # IMPORTANT for src-layout repos (if your package is in src/)
       - name: Make src importable
-        run: echo "PYTHONPATH=$PWD/src" >> $GITHUB_ENV
+        run: echo "PYTHONPATH=${{ github.workspace }}/src" >> $GITHUB_ENV
 
-      - name: Run unit tests
+      - name: Authenticate to Google Cloud (GCS)
+        shell: bash
         run: |
-          pytest -q
+          echo '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}' > gcp-key.json
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/gcp-key.json" >> $GITHUB_ENV
+
+      - name: Pull data with DVC
+        run: dvc pull -v
+
+      - name: Test with pytest
+        run: pytest -q
