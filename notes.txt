@@ -1,11 +1,12 @@
 TO-DO:
-- logging / loguru (Lotte, 15/1)
-- M22 (Lotte)
+- logging / loguru / M14 (Lotte, 15/1)
+- M23 (Lotte)
 
 - continous integration / M17 (Rikke, 20/1)
+- Train.py 5 epochs (Rikke, 21/1)
 
-- wandb (Mejse, 15/1)
-- cloud / M21 (Mejse, 16/1)
+- wandb / M14 (Mejse, 15/1)
+- Datadrifting / M21 (Mejse, 21/1)
 - dobbelttjek at container virker / M10 (Mejse)
 
 CORE MODULES:
