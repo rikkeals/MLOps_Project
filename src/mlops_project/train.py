@@ -171,7 +171,6 @@ def main(cfg: DictConfig) -> None:
     require_dir(nnunet_preprocessed, "nnUNet_preprocessed")
 
     # --- run training ---
-    logger.info("Launching nnU-Net training process")
     start = time.time()
     try:
         cmd_train = [
@@ -184,8 +183,9 @@ def main(cfg: DictConfig) -> None:
             "-device",
             device,
         ]
-        print(f"Starting nnU-Net training. Logs will be written to: {log_path}\n")
-        print(" ".join(cmd_train))
+        
+        logger.info(f"Starting nnU-Net training. Logs will be written to: {log_path}")
+        logger.info(f"Executing command: {' '.join(cmd_train)}")
         subprocess.run(cmd_train, check=True, env=env)
         run_and_tee(cmd_train, log_path, env)
 
