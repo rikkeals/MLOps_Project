@@ -1,6 +1,6 @@
 TO-DO:
 - Cloud deployment / M23 (Lotte)
-- Datadrifting / M27 punkt 3 (Mejse)
+- Datadrifting / M27 punkt 3 (Lotte)
 
 - API testing / M24 (Rikke)
 
