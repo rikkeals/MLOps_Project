@@ -83,9 +83,10 @@ model:
 
 
 wandb:
-  project: hippocampus-segmentation
-  entity: your_wandb_entity
+  project: mlops_project
+  entity: mejsegk-technical-university-of-denmark
   run_name: nnunetv2_fold0
+  job_type: train
 training:
   dataset_id: 621
   nnunet_config: 2d
