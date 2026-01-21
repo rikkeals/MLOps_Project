@@ -39,3 +39,8 @@ dvc-gs==3.0.2
 fastapi>=0.110
 uvicorn[standard]>=0.29
 python-multipart>=0.0.9
+
+# --- Data drifting ---
+evidently==0.7.20
+pandas==2.3.3
+
