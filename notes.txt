@@ -4,7 +4,7 @@ TO-DO:
 
 - API testing / M24 (Rikke)
 
-- Datadrifting / M27 punkt 1+2 (Mejse)
+- Datadrifting / M27 punkt 2 (Mejse)
 - dobbelttjek container virker / M10 (Mejse)
 - dobbelttjek wandb virker / M14 (Mejse)
 - dobbelttjek loguru virker / M14 (Mejse)
@@ -32,6 +32,7 @@ HUSK! At opdatere evaluate.py filen med interferens
 
 QUESTIONS:
 - Is the integration test (data) a unit test? 
+- Hvorfor virker vores cloud trigger ikke længere?
 
 NICE TO HAVE:
 - Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
