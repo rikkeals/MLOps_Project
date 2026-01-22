@@ -121,9 +121,28 @@ def setup_logger(log_path: Path) -> None:
     logger.add(log_path, level="DEBUG", rotation="100 MB")
 
 
+def set_seed(seed: int) -> None:
+    import random
+    import numpy as np
+    import torch
+
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+    # Ensures deterministic behavior (may reduce performance)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
 @hydra.main(version_base=None, config_path="../../configs", config_name="config")
 def main(cfg: DictConfig) -> None:
     project_root = Path(hydra.utils.get_original_cwd())
+
+    # --- seed ---
+    seed = int(cfg.reproducibility.seed)
+    set_seed(seed)
 
     # --- read config ---
     dataset_id = int(cfg.dataset.dataset_id)
@@ -153,6 +172,7 @@ def main(cfg: DictConfig) -> None:
     setup_logger(log_path)
     wb_run = maybe_init_wandb(cfg, log_path)
 
+    logger.info(f"Using seed: {seed}")
     logger.info("Initializing nnU-Net training")
     logger.info(
         f"Dataset={dataset_id}, config={nnunet_config}, fold={fold}, "

@@ -125,8 +125,13 @@ will check the repositories and the code to verify your answers.
 
 65
 
+
 ### Question 2
 > **Enter the study number for each member in the group**
+>
+> Example:
+>
+> *sXXXXXX, sXXXXXX, sXXXXXX*
 >
 > Answer:
 
@@ -158,7 +163,16 @@ We used nnU-Net as a third-party framework to support the development of a medic
 >
 > Answer:
 
---- question 4 fill here ---
+We used ```conda``` and ```pip``` to manage packages and environments. Each group member created their own local clean conda environment for the project to help keep track of which packages were used specifically for the project. We kept track of Python dependencies through ```requirements.txt``` and ```requirements_dev.txt```, where we listed all Python packages as well as versions used in the project. 
+
+If a new group member was to get an exact copy of our environment they would go through the following steps in the terminal:
+1. Create a fresh ```conda``` environment using Python version 3.12: ```conda create -n mlops_project python=3.12```
+2. Activate above environment: ```conda activate mlops_project```
+3. Install the dependencies and the project itself using the ```requirement.txt``` file:
+```txt 
+python3 -m pip install -r requirements.txt 
+python3 -m pip install -e .
+```
 
 ### Question 5
 
@@ -268,7 +282,11 @@ We implemented nine tests in total. Eight unit tests focus on the data preproces
 >
 > Answer:
 
---- question 9 fill here ---
+From the very beginning we used branches as a part of our workflow. This helped us work in parallel without accidently messing up each other's work. It also improved version control, since it is easier to pinpoint changes and exactly who made the changes. 
+
+Everytime a group member was working on a new task they created a new branch dedicated to this task. Thus, many branches were created during the project. Our philosophy was to always create a new branch to make sure that our starting point for a task was up to date with the main branch, and then to commit and push our changes regularly, so other group members would be up to date with our work. 
+
+For the first two weeks of the course we mostly merged our local branches with ```main``` locally and then pushed to ```main```, whereas in the last week we learned to use pull requests. With pull requests we could see if our changes failed or succeded the integrated GitHub tests before merging, and if needed we could request other group members to review the changes. 
 
 ### Question 10
 
@@ -283,7 +301,11 @@ We implemented nine tests in total. Eight unit tests focus on the data preproces
 >
 > Answer:
 
---- question 10 fill here ---
+We used Data Version Control (DVC) in the project through Google Cloud Platrform (GCP). We created a project called ```mlops-project-group65```, and in Google Cloud Storage (GCS) we added a bucket to store our data. We opted to store the original data downloaded from [Medical Segmentation Decathlon](http://medicaldecathlon.com/dataaws/) as well as the data in the folder ```nnUNet_raw```, which is processed to meet the input format for nnU-Net. With this we made sure that even if Medical Segmentation Decathlon changed the data on their website we still had the same version of our data in storage, which improves reproducibility. 
+
+We did not store the preprocessed data, which is preprocessed as a part of the nnU-Net pipeline, nor any results. These datasets can easily be reproduced from the original data. 
+
+The datasets tracked by DVC was ignored by Git, ie. not uploaded to GitHub. If a person wants to precisely replicate our project they need to both clone the Git repository and pull the data from GCS (access to the cloud project is required).
 
 ### Question 11
 
@@ -319,7 +341,7 @@ We implemented nine tests in total. Eight unit tests focus on the data preproces
 >
 > Answer:
 
---- question 12 fill here ---
+We made use of ```hydra``` and a ```config.yaml``` file to configure experiments. In ```config.yaml``` we specified datasets, paths, model/training configurations and hyperparameters, and Weights and Biases (W&B) settings. In our ```train.py``` we used ```hydra``` to configure the settings from ```config.yaml```. To run an experiment you simply write ```python src/mlops_project/train.py``` in the terminal from the repo root. If you need to change for instance the batch size you change ```batch_size``` inside ```config.yaml```, save the config file, and run the experiment again.
 
 ### Question 13
 
@@ -334,7 +356,13 @@ We implemented nine tests in total. Eight unit tests focus on the data preproces
 >
 > Answer:
 
---- question 13 fill here ---
+Each time an experiment is run an instance of how the ```config.yaml``` looked at runtime is saved. This ensures that all information about the configuration of the experiment is logged and can be used to reproduce the experiment with the exact same configurations. 
+
+In the config file we also defined a seed, which was set in ```train.py```, which improves reproducibility. 
+
+Furthermore, we used ```loguru``` and ```wandb``` (W&B) to log the experiments. Logging using ```loguru``` creates local logs whereas ```wandb``` logs the experiments online on [wandb.ai](https://wandb.ai/site/). The W&B website can also be used to visualize and compare experiments.
+
+Lastly, a log is created as part of the nnU-Net pipeline and saved together with nnU-Net results. 
 
 ### Question 14
 
