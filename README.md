@@ -70,6 +70,9 @@ The directory structure of the project looks like this:
 │   ├── mkdocs.yml
 │   └── source/
 │       └── index.md
+├── outputs/                  # Outputs from Hydra and Loguru
+│   └── folder with date/
+
 ├── reports/                  # Reports
 │   ├── figures /
 │   ├── drift_train_vs_test.html # Data drift summary
