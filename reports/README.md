@@ -479,7 +479,8 @@ The data folders in our data bucket: [figure](figures/data_bucket.png).
 >
 > Answer:
 
---- question 20 fill here ---
+Our GCP artifact registry: [figure](figures/artifact_registry.png).
+Docker images in our GCP artifact registry: [figure](figures/artifact_registry_docker.png).
 
 ### Question 21
 
