@@ -259,8 +259,6 @@ Everytime a group member was working on a new task they created a new branch ded
 
 For the first two weeks of the course we mostly merged our local branches with ```main``` locally and then pushed to ```main```, whereas in the last week we learned to use pull requests. With pull requests we could see if our changes failed or succeded the integrated GitHub tests before merging, and if needed we could request other group members to review the changes. 
 
-
-
 ### Question 10
 
 > **Did you use DVC for managing data in your project? If yes, then how did it improve your project to have version**
@@ -314,7 +312,7 @@ The datasets tracked by DVC was ignored by Git, ie. not uploaded to GitHub. If a
 >
 > Answer:
 
---- question 12 fill here ---
+We made use of ```hydra``` and a ```config.yaml``` file to configure experiments. In ```config.yaml``` we specified datasets, paths, model/training configurations and hyperparameters, and Weights and Biases (W&B) settings. In our ```train.py``` we used ```hydra``` to configure the settings from ```config.yaml```. To run an experiment you simply write ```python src/mlops_project/train.py``` in the terminal from the repo root. If you need to change for instance the batch size you change ```batch_size``` inside ```config.yaml```, save the config file, and run the experiment again.
 
 ### Question 13
 
