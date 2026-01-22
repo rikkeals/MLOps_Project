@@ -327,7 +327,13 @@ We made use of ```hydra``` and a ```config.yaml``` file to configure experiments
 >
 > Answer:
 
---- question 13 fill here ---
+Each time an experiment is run an instance of how the ```config.yaml``` looked at runtime is saved. This ensures that all information about the configuration of the experiment is logged and can be used to reproduce the experiment with the exact same configurations. 
+
+In the config file we also defined a seed, which was set in ```train.py```, which improves reproducibility. 
+
+Furthermore, we used ```loguru``` and ```wandb``` (W&B) to log the experiments. Logging using ```loguru``` creates local logs whereas ```wandb``` logs the experiments online on [wandb.ai](https://wandb.ai/site/). The W&B website can also be used to visualize and compare experiments.
+
+Lastly, a log is created as part of the nnU-Net pipeline and saved together with nnU-Net results. 
 
 ### Question 14
 
