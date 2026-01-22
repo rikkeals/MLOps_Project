@@ -273,7 +273,9 @@ We implemented nine tests in total. Eight unit tests focus on the data preproces
 >
 > Answer:
 
---- question 8 fill here ---
+The total code coverage of the project is 26%. This is because we did not write tests for all parts of the pipeline. In particular, the training code and the API code have 0% coverage, since no automated tests were created for these parts. The data processing code has a higher coverage of 73%, and the model code has a coverage of 45%, as these parts were easier to test with unit tests.
+
+Even if the code coverage was close to 100%, we would not expect the code to be completely free of errors. Code coverage only shows how much of the code is run during testing, not whether all possible cases are tested. The code may still fail when using different data, unusual inputs, or in real-world situations. However, a high code coverage is still a good sign, because it shows that much of the code has been tested and helps increase confidence that the code works as expected.
 
 ### Question 9
 
