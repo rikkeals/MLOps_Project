@@ -1,0 +1,28 @@
+{
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.12",
+  "startedAt": "2026-01-22T12:51:18.449529Z",
+  "program": "/home/mejse/dtu/MLOps_Project/src/mlops_project/train.py",
+  "codePath": "src/mlops_project/train.py",
+  "codePathLocal": "src/mlops_project/train.py",
+  "git": {
+    "remote": "https://github.com/rikkeals/MLOps_Project.git",
+    "commit": "5608bcc515d656e5cf3d2a5d0088d27da60da404"
+  },
+  "email": "s196050@dtu.dk",
+  "root": "/home/mejse/dtu/MLOps_Project",
+  "host": "Teis-Laptop",
+  "executable": "/home/mejse/miniconda3/envs/mlops_project/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "disk": {
+    "/": {
+      "total": "1081101176832",
+      "used": "25959714816"
+    }
+  },
+  "memory": {
+    "total": "7166169088"
+  },
+  "writerId": "n0cx0wfzge5awa91p2cedzbcdz4wu2eh"
+}
