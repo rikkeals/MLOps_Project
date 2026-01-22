@@ -121,20 +121,12 @@ will check the repositories and the code to verify your answers.
 ### Question 1
 > **Enter the group number you signed up on <learn.inside.dtu.dk>**
 >
-> Answer:
-
---- question 1 fill here ---
+> Answer: 65
 
 ### Question 2
 > **Enter the study number for each member in the group**
 >
-> Example:
->
-> *sXXXXXX, sXXXXXX, sXXXXXX*
->
-> Answer:
-
---- question 2 fill here ---
+> Answer: *s204297, s196050, s194693*
 
 ### Question 3
 > **Did you end up using any open-source frameworks/packages not covered in the course during your project? If so**
@@ -148,7 +140,7 @@ will check the repositories and the code to verify your answers.
 >
 > Answer:
 
---- question 3 fill here ---
+We used nnU-Net as a third-party framework because it provide good configurations of the hyperparameters. We used the datastructure and the pre-train configurations, the model and the inferens which is evaluation of the model. 
 
 ## Coding environment
 
