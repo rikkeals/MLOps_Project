@@ -86,7 +86,7 @@ training:
   nnunet_config: 2d
   fold: 0
   epochs: 5
-  trainer: nnUNetTrainer
+  trainer: nnUNetTrainer_5epochs
   device: cpu
   plans: nnUNetPlans
   preprocess: true

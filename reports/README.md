@@ -508,7 +508,11 @@ Lastly, a log is created as part of the nnU-Net pipeline and saved together with
 >
 > Answer:
 
---- question 23 fill here ---
+We managed to write a inference API using ```FastAPI```. The API loads our project settings from ```configs/config.yaml``` (via OmegaConf) so the dataset id (621), nnU-Net configuration (2d), fold, trainer, plans, and default device are controlled through one central config file instead of hardcoding. On startup we also set the required nnU-Net environment variables (nnUNet_raw, nnUNet_preprocessed, nnUNet_results) and create the directories if they do not exist.
+
+We added a health endpoint ```(GET /)``` that reports the active configuration and whether a trained model is available by checking for ```checkpoint_final.pth```. The prediction endpoint (POST /predict) accepts a ```.nii```/```.nii.gz``` upload, writes it to a temporary nnU-Net-compatible input folder ```(case_0000.nii.gz)```, runs nnUNetv2_predict via subprocess, and returns the resulting segmentation mask as a downloadable NIfTI file. The endpoint also supports choosing cpu/cuda/mps through a query parameter.
+
+Although the trained model was detected successfully, inference could not be completed due to package-level incompatibilities between PyTorch, NumPy, and nnU-Net in the local environment.
 
 ### Question 24
 
