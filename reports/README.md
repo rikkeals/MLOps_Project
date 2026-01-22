@@ -528,7 +528,13 @@ Although the trained model was detected successfully, inference could not be com
 >
 > Answer:
 
---- question 24 fill here ---
+We deployed our inference API both locally and in the cloud. Locally, the API was served using FastAPI and Uvicorn and could be accessed via ```localhost```, where the service exposed a health endpoint and interactive Swagger UI. This confirmed that the API started correctly and detected the trained nnU-Net checkpoint.
+
+For cloud deployment, the API was containerized using Docker and built and pushed via Google Cloud Build to Artifact Registry. The image was then deployed as a managed service on Google Cloud Run in the ```europe-west1``` region with public access enabled. The deployment succeeded, and the service was exposed through a public HTTP endpoint, verifying that the application started correctly in the cloud.
+
+The deployed service can be invoked by sending a POST request to the /predict endpoint with a NIfTI image, for example using: ```curl -X POST "<SERVICE_URL>/predict" \  -F "image=@example_image.nii.gz"```
+
+While the service was reachable both locally and in the cloud, full end-to-end inference could not be completed due to runtime dependency incompatibilities between ```PyTorch```, ```NumPy```, and ```nnU-Net```.
 
 ### Question 25
 
