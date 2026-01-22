@@ -468,7 +468,9 @@ Notes:
 >
 > Answer:
 
---- question 19 fill here ---
+Our GCP buckets: [figure](figures/buckets.png).
+The data folders in our data bucket: [figure](figures/data_bucket.png).
+
 
 ### Question 20
 
