@@ -255,9 +255,9 @@ python3 -m pip install -e .
 
 From the very beginning we used branches as a part of our workflow. This helped us work in parallel without accidently messing up each other's work. It also improved version control, since it is easier to pinpoint changes and exactly who made the changes. 
 
-Everytime a group member was working on a new task they created a new branch dedicated to this task. Thus, many branches was created during the project. Our philosophy was to always create a new branch to make sure that our starting point for a task was up to date with the main branch, and then to commit and push our changes regularly, so other group members would be up to date with our work. 
+Everytime a group member was working on a new task they created a new branch dedicated to this task. Thus, many branches were created during the project. Our philosophy was to always create a new branch to make sure that our starting point for a task was up to date with the main branch, and then to commit and push our changes regularly, so other group members would be up to date with our work. 
 
-For the first two weeks of the course we mostly merged our local branches with main locally and then pushed to main, whereas in the last week we learned to use pull requests. With pull requests we could see if our changes failed or succeded the integrated GitHub tests before merging, and if needed we could request other group members to review the changes. 
+For the first two weeks of the course we mostly merged our local branches with ```main``` locally and then pushed to ```main```, whereas in the last week we learned to use pull requests. With pull requests we could see if our changes failed or succeded the integrated GitHub tests before merging, and if needed we could request other group members to review the changes. 
 
 
 
@@ -274,7 +274,11 @@ For the first two weeks of the course we mostly merged our local branches with m
 >
 > Answer:
 
---- question 10 fill here ---
+We used Data Version Control (DVC) in the project through Google Cloud Platrform (GCP). We created a project called ```mlops-project-group65```, and in Google Cloud Storage (GCS) we added a bucket to store our data. We opted to store the original data downloaded from [Medical Segmentation Decathlon](http://medicaldecathlon.com/dataaws/) as well as the data in the folder ```nnUNet_raw```, which is processed to meet the input format for nnU-Net. With this we made sure that even if Medical Segmentation Decathlon changed the data on their website we still had the same version of our data in storage, which improves reproducibility. 
+
+We did not store the preprocessed data, which is preprocessed as a part of the nnU-Net pipeline, nor any results. These datasets can easily be reproduced from the original data. 
+
+The datasets tracked by DVC was ignored by Git, ie. not uploaded to GitHub. If a person wants to precisely replicate our project they need to both clone the Git repository and pull the data from GCS (access to the cloud project is required).
 
 ### Question 11
 
