@@ -189,7 +189,9 @@ We used nnU-Net as a third-party framework to support the development of a medic
 >
 > Answer:
 
---- question 6 fill here ---
+We implemented a linting step using ruff in the continous integration pipeline. This should check if the code has basic quality rules and is PEP8-compliant. If an error occured, we used the command ''ruff fix'' if possible or changing it manually. Hopefully this makes the code just a bit more readable, as this can be hard enough as is. 
+
+We did not talk about any specific rules for typing and documentation. This is clear in the commenting throughout the code that we have our own way of doing this. When starting a new larger project, a clear guideline of this would defiently be preferred so firstly it is the same throughout the scripts as well as everyone agrees on what needs to be written in order to understand the code.
 
 ## Version control
 
