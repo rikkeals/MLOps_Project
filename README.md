@@ -172,4 +172,27 @@ The datasets should be downloaded into data/ locally.
 Type in terminal:
 PYTHONPATH=src python -m uvicorn mlops_project.api:app --reload --port 8000
 
-The API will be available at: http://127.0.0.1:8000
+The API will be available locally at: http://127.0.0.1:8000
+
+Interactive API documentation (Swagger UI) is available at: http://127.0.0.1:8000/docs
+
+This opens the Swagger UI interface listing all available endpoints.
+
+Test the Health Endpoint
+
+1. Click **GET /** to expand the endpoint.
+2. Click **Try it out**.
+3. Click **Execute**.
+
+A JSON response will appear below, showing the active configuration and whether the trained model checkpoint was detected (`model_ready: true/false`).
+
+Run a Prediction
+
+1. Click **POST /predict** to expand the endpoint.
+2. Click **Try it out**.
+3. Click **Choose File** and select a `.nii` or `.nii.gz` image file.
+4. (Optional) In the `device` field, enter `cpu`, `cuda`, or `mps`.
+5. Click **Execute**.
+
+The request will run inference using nnU-Net. Once completed, the response will return the predicted segmentation mask as a downloadable file named:
+
