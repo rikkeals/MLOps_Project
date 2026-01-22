@@ -11,9 +11,6 @@ paths:
   nnunet_preprocessed: data/nnUNet_preprocessed
   nnunet_results: data/nnUNet_results
 
-logging:
-  logs_dir: logs
-
 reproducibility:
   seed: 42
 
@@ -84,13 +81,6 @@ model:
       - nonlin
   override: {}
 
-
-wandb:
-  project: mlops_project
-  entity: mejsegk-technical-university-of-denmark
-  run_name: nnunetv2_fold0
-  job_type: train
-
 training:
   dataset_id: 621
   nnunet_config: 2d
@@ -101,3 +91,11 @@ training:
   plans: nnUNetPlans
   preprocess: true
   num_processes: 8
+
+wandb:
+  enabled: true
+  project: mlops_project
+  entity: mejsegk-technical-university-of-denmark
+  run_name: nnunetv2_fold0
+  job_type: train
+
