@@ -123,6 +123,7 @@ def setup_logger(log_path: Path) -> None:
 
 def set_seed(seed: int) -> None:
     import random
+
     import numpy as np
     import torch
 
