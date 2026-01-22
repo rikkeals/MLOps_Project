@@ -12,6 +12,7 @@ from typing import Optional
 import hydra
 from loguru import logger
 from omegaconf import DictConfig
+from tests.test_model import project_root
 
 
 def ensure_dir(p: Path) -> None:
@@ -163,8 +164,10 @@ def main(cfg: DictConfig) -> None:
     nnunet_preprocessed = project_root / str(cfg.paths.get("nnunet_preprocessed", "data/nnUNet_preprocessed"))
     nnunet_results = project_root / str(cfg.paths.get("nnunet_results", "data/nnUNet_results"))
 
-    run_dir = Path.cwd()  # Hydra sets this to outputs/<date>/<time>
-    log_path = run_dir / "nnunet.log"
+    logs_dir = project_root / str(cfg.logging.get("logs_dir", "logs"))
+    ensure_dir(logs_dir)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_path = logs_dir / f"nnunet_{dataset_id}_{nnunet_config}_fold{fold}_{timestamp}.log"
 
     # --- setup logging ---
     setup_logger(log_path)
