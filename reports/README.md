@@ -402,7 +402,17 @@ Lastly, a log is created as part of the nnU-Net pipeline and saved together with
 >
 > Answer:
 
---- question 15 fill here ---
+We used ```docker``` to create a containerized application. Building a dockerfile creates a Docker image, which can be executed to run the application. The advantage of using ```docker``` is that when you execute the Docker image the dependencies and the project are automatically installed before lauching whatever task the image is made to run, for instance model training. 
+
+We developed images for model training and API. To run the training image write in the terminal (in the directory where the dockerfile is locate):
+1. Build Docker image: ```docker build -f train.dockerfile . -t train:latest``` (Alternatively: ```docker build -f dockerfiles/train.dockerfile . -t train:latest``` if the working directory is the repo root of our GitHub repo).
+2. Excute Docker image to train model: ```docker run --rm --shm-size=2g -v $(pwd)/data:/data --name experiment1 train:latest```.
+Link to [dockerfile](https://github.com/rikkeals/MLOps_Project/blob/main/dockerfiles/train.dockerfile).
+
+Notes: 
+- The data is not build into the image to keep the image size small, so it must be mounted at runtime using ```-v $(pwd)/data:/data```. The data folder should be located in the working directory of the terminal. 
+- ```--shm-size=2g``` sets the shared memory to 2 GB in the Docker container (default is 64 MB). You can try without, but will most likely get the error message "No space left on device". This is because PyTorch and nnU-Net use multiprocessing and has workers that share large tensors. 
+
 
 ### Question 16
 
