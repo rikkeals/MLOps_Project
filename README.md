@@ -36,14 +36,33 @@ As mentioned above, the deep learning model used will be a U-Net model for image
 
 The directory structure of the project looks like this:
 ```txt
+├── .devcontainer/            # Devcontainer setup
+│   ├── devcontainer.json     
+│   └── post_create.sh        
+├── .dvc/                     # Data version control setup
+│   ├── .gitignore            
+│   └── configs               # DVC configuration
 ├── .github/                  # Github actions and dependabot
-│   ├── dependabot.yaml
-│   └── workflows/
-│       └── tests.yaml
+│   ├── agents/               # We did not make use of the dtu_mlops_agent.md
+│   ├── promts/
+│   ├── workflows/
+|       ├── ci.yaml           # Continous integration pipeline
+|       ├── linting.yaml      # Code quality check
+│       └── pre-commit-update.yaml
+|   └── dependabot.yaml       # Automated dependency update configuration
 ├── configs/                  # Configuration files
-├── data/                     # Data directory
-│   ├── processed
-│   └── raw
+├── data/                     # Data directory (with nnUNet data structure)
+│   ├── nnUNet_preprocessed/.../
+|       ├── gt_segmentation/  # ground truth labels
+|       ├── nnUNetPlans_2d/   # created by nnUNet planning
+|       ├── dataset_fingerprint.json # created by nnUNet preprocessing
+|       ├── dataset.json      # manual setup file
+|       ├── nnUNetPlans.json  # created by nnUNet planning
+│       └── splits_final.json # created by nnUNet preprocessing
+│   ├── nnUNet_results/       # nnUNet creates during training
+│   ├── .gitignore            # Data not uploadet to github but to cloud
+│   ├── nnUNet_raw.dvc        # Data tracking 
+│   └── original.dvc          # Data tracking
 ├── dockerfiles/              # Dockerfiles
 │   ├── api.Dockerfile
 │   └── train.Dockerfile
@@ -51,34 +70,36 @@ The directory structure of the project looks like this:
 │   ├── mkdocs.yml
 │   └── source/
 │       └── index.md
-├── models/                   # Trained models
-├── notebooks/                # Jupyter notebooks
 ├── reports/                  # Reports
-│   └── figures/
+│   ├── figures /
+│   ├── drift_train_vs_test.html # Data drift summary
+│   └── README.me             # Report and checklist
 ├── src/                      # Source code
-│   ├── project_name/
+│   ├── mlops_project/
 │   │   ├── __init__.py
 │   │   ├── api.py
-│   │   ├── data.py
-│   │   ├── evaluate.py
-│   │   ├── models.py
-│   │   ├── train.py
-│   │   └── visualize.py
+│   │   ├── data_drift.py
+│   │   ├── data.py           # Provides correct datastructure
+│   │   ├── model.py
+│   │   └── train.py
 └── tests/                    # Tests
 │   ├── __init__.py
+│   ├── conftest.py
 │   ├── test_api.py
 │   ├── test_data.py
 │   └── test_model.py
 ├── .gitignore
 ├── .pre-commit-config.yaml
+├── AGENTS.md                 # We havn't used the agent
+├── Cloudbuild.yaml
 ├── LICENSE
 ├── pyproject.toml            # Python project file
+├── pytest.ini                # Pytest configuration and custom test markers
 ├── README.md                 # Project README
-├── requirements.txt          # Project requirements
 ├── requirements_dev.txt      # Development requirements
+├── requirements.txt          # Project requirements
 └── tasks.py                  # Project tasks
 ```
-
 
 Created using [mlops_template](https://github.com/SkafteNicki/mlops_template),
 a [cookiecutter template](https://github.com/cookiecutter/cookiecutter) for getting
