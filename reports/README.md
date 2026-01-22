@@ -444,7 +444,11 @@ Notes:
 >
 > Answer:
 
---- question 17 fill here ---
+We have used the following GCP services: 
+- Cloud Storage (Bucket): used to store datasets as a form of DVC. 
+- Artifact Registry: used to store Docker images. 
+- Cloud build: used to build and push Docker images automatically.
+- IAM: used to grant permissions. 
 
 ### Question 18
 
