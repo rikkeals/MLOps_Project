@@ -136,15 +136,9 @@ will check the repositories and the code to verify your answers.
 > **Did you end up using any open-source frameworks/packages not covered in the course during your project? If so**
 > **which did you use and how did they help you complete the project?**
 >
-> Recommended answer length: 0-200 words.
->
-> Example:
-> *We used the third-party framework ... in our project. We used functionality ... and functionality ... from the*
-> *package to do ... and ... in our project*.
->
 > Answer:
 
-We used nnU-Net as a third-party framework because it provide good configurations of the hyperparameters. We used the datastructure and the pre-train configurations, the model and the inferens which is evaluation of the model. 
+We used nnU-Net as a third-party framework to support the development of a medical image segmentation algorithm for our project. nnU-Net provides a standardized datastructure and well default configurations for model architecture and the hyperparameters. We relied on nnU-Net’s built-in planning and preprocessing steps to adapt the model to the Hippocampus MRI dataset, as well as its predefined training and inference pipelines for model training and evaluation.
 
 ## Coding environment
 
