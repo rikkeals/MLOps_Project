@@ -14,6 +14,9 @@ paths:
 logging:
   logs_dir: logs
 
+reproducibility:
+  seed: 42
+
 model:
   configuration: 2d
   defaults:
