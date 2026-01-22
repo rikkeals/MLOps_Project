@@ -172,4 +172,4 @@ The datasets should be downloaded into data/ locally.
 Type in terminal:
 PYTHONPATH=src python -m uvicorn mlops_project.api:app --reload --port 8000
 
-The API will be available at: http://localhost:8000
+The API will be available at: http://127.0.0.1:8000
