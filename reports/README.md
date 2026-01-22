@@ -238,7 +238,7 @@ We did not talk about any specific rules for typing and documentation. This is c
 >
 > Answer:
 
---- question 7 fill here ---
+We implemented nine tests in total. Eight unit tests focus on the data preprocessing pipeline and verify that helper functions correctly rename files, filter unwanted files, copy images and labels, and generate the expected nnU-Net v2 dataset structure. Initially, the tests assumed that the dataset had already been downloaded, but they were later refactored into pure unit tests so they run without requiring real data files. Additionally, one unit test was implemented for the model code to verify that preprocessing outputs from nnUNet are correctly added to the project’s configuration, which is the main responsibility of the model.py file.
 
 ### Question 8
 
