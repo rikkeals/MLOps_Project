@@ -55,7 +55,7 @@ def run_and_tee(cmd: list[str], log_path: Path, env: dict[str, str]) -> None:
             raise RuntimeError(f"Command failed with exit code {rc}: {' '.join(cmd)}")
 
 
-def maybe_init_wandb(cfg: DictConfig, log_path: Path) -> Optional[object]:
+def maybe_init_wandb(cfg: DictConfig) -> Optional[object]:
     if not cfg.get("wandb") or not bool(cfg.wandb.get("enabled", False)):
         return None
 
@@ -81,7 +81,6 @@ def maybe_init_wandb(cfg: DictConfig, log_path: Path) -> Optional[object]:
         },
     )
 
-    wandb.save(str(log_path), policy="now")
     return run
 
 
@@ -91,6 +90,7 @@ def parse_final_dice(log_path: Path) -> float | None:
     Returns None if not found.
     """
     dice_patterns = [
+        r"Mean Validation Dice[:=]\s*([0-9]*\.?[0-9]+)",
         r"Mean Dice[:=]\s*([0-9]*\.?[0-9]+)",
         r"Dice score[:=]\s*([0-9]*\.?[0-9]+)",
     ]
@@ -162,15 +162,12 @@ def main(cfg: DictConfig) -> None:
     nnunet_preprocessed = project_root / str(cfg.paths.get("nnunet_preprocessed", "data/nnUNet_preprocessed"))
     nnunet_results = project_root / str(cfg.paths.get("nnunet_results", "data/nnUNet_results"))
 
-    logs_dir = project_root / str(cfg.logging.get("logs_dir", "logs"))
-    ensure_dir(logs_dir)
-
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_path = logs_dir / f"nnunet_{dataset_id}_{nnunet_config}_fold{fold}_{timestamp}.log"
+    run_dir = Path.cwd()  # Hydra sets this to outputs/<date>/<time>
+    log_path = run_dir / "nnunet.log"
 
     # --- setup logging ---
     setup_logger(log_path)
-    wb_run = maybe_init_wandb(cfg, log_path)
+    wb_run = maybe_init_wandb(cfg)
 
     logger.info(f"Using seed: {seed}")
     logger.info("Initializing nnU-Net training")
@@ -214,7 +211,6 @@ def main(cfg: DictConfig) -> None:
         logger.success(f"Done! Training finished in {duration_s:.1f}s")
         logger.info(f"Log written to {log_path}")
 
-
         if wb_run is not None:
             import wandb  # type: ignore
             metrics = {
@@ -231,7 +227,6 @@ def main(cfg: DictConfig) -> None:
                 metrics["final_mean_dice"] = final_dice
 
             wandb.log(metrics)
-            wandb.save(str(log_path), policy="now")
             wb_run.finish()
 
     except Exception as e:
@@ -241,7 +236,6 @@ def main(cfg: DictConfig) -> None:
             try:
                 import wandb  # type: ignore
                 wandb.log({"failed": 1})
-                wandb.save(str(log_path), policy="now")
                 wb_run.finish(exit_code=1)
             except Exception:
                 pass
