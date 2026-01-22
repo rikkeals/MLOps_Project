@@ -38,15 +38,17 @@ NICE TO HAVE:
 - Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
 
 PROJECT SPØRGSMÅL
-Questions we are ready to answer: Q1, Q2, Q3, Q4, Q5, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q17, Q19, Q20, Q21, Q23, Q24, Q25, Q27, Q28, Q30, Q31
+Questions answered: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q12, Q13, Q15, Q17, Q19, Q20, Q23, Q24, Q28
+
+Questions we are ready to answer: Q11 (Rikke), Q14 (i morgen, Mejse), Q21 (i morgen), Q27 (slut i morgen, Mejse), Q30 (i morgen), Q31 (individuelt)
 
 Questions we need to "solve"
-Q6: rules for code quality and format (vi kan komme ind under version control her)
-Q16: Have we used debugging
-Q18: (manglende punkt i M21)
-Q22: Train model in the cloud using Engine or Vertex AI
-Q26: (manglende punkt i M28) 
-Q29: Lav flow diagram
+Q16: Have we used debugging (Lotte)
+Q18: (manglende punkt i M21) (Lotte)
+Q22: Train model in the cloud using Engine or Vertex AI (Lotte)
+Q25: Unit testing using API (Rikke)
+Q26: (manglende punkt i M28) (Mejse)
+Q29: Lav flow diagram (Rikke)
 
 
 
