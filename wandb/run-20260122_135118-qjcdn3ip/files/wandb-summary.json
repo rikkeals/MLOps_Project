@@ -1,0 +1,1 @@
+{"fold":"0","duration_seconds":7880.9271903038025,"_timestamp":1.7690941611370227e+09,"_wandb":{"runtime":7888},"device":"cpu","nnunet_config":"2d","_step":0,"dataset_id":621,"final_mean_dice":0.8638054813222902,"trainer":"nnUNetTrainer_5epochs","_runtime":7888}

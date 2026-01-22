@@ -402,7 +402,17 @@ Lastly, a log is created as part of the nnU-Net pipeline and saved together with
 >
 > Answer:
 
---- question 15 fill here ---
+We used ```docker``` to create a containerized application. Building a dockerfile creates a Docker image, which can be executed to run the application. The advantage of using ```docker``` is that when you execute the Docker image the dependencies and the project are automatically installed before lauching whatever task the image is made to run, for instance model training. 
+
+We developed images for model training and API. To run the training image write in the terminal (in the directory where the dockerfile is locate):
+1. Build Docker image: ```docker build -f train.dockerfile . -t train:latest``` (Alternatively: ```docker build -f dockerfiles/train.dockerfile . -t train:latest``` if the working directory is the repo root of our GitHub repo).
+2. Excute Docker image to train model: ```docker run --rm --shm-size=2g -v $(pwd)/data:/data --name experiment1 train:latest```.
+Link to [dockerfile](https://github.com/rikkeals/MLOps_Project/blob/main/dockerfiles/train.dockerfile).
+
+Notes: 
+- The data is not build into the image to keep the image size small, so it must be mounted at runtime using ```-v $(pwd)/data:/data```. The data folder should be located in the working directory of the terminal. 
+- ```--shm-size=2g``` sets the shared memory to 2 GB in the Docker container (default is 64 MB). You can try without, but will most likely get the error message "No space left on device". This is because PyTorch and nnU-Net use multiprocessing and has workers that share large tensors. 
+
 
 ### Question 16
 
@@ -434,7 +444,11 @@ Lastly, a log is created as part of the nnU-Net pipeline and saved together with
 >
 > Answer:
 
---- question 17 fill here ---
+We have used the following GCP services: 
+- Cloud Storage (Bucket): used to store datasets as a form of DVC. 
+- Artifact Registry: used to store Docker images. 
+- Cloud build: used to build and push Docker images automatically.
+- IAM: used to grant permissions. 
 
 ### Question 18
 
@@ -458,7 +472,9 @@ Lastly, a log is created as part of the nnU-Net pipeline and saved together with
 >
 > Answer:
 
---- question 19 fill here ---
+Our GCP buckets: [figure](figures/buckets.png).
+The data folders in our data bucket: [figure](figures/data_bucket.png).
+
 
 ### Question 20
 
@@ -467,7 +483,8 @@ Lastly, a log is created as part of the nnU-Net pipeline and saved together with
 >
 > Answer:
 
---- question 20 fill here ---
+Our GCP artifact registry: [figure](figures/artifact_registry.png).
+Docker images in our GCP artifact registry: [figure](figures/artifact_registry_docker.png).
 
 ### Question 21
 
@@ -599,7 +616,8 @@ While the service was reachable both locally and in the cloud, full end-to-end i
 >
 > Answer:
 
---- question 28 fill here ---
+We have implemented a simple form of drift detection, which in the future can be optimized to detect data drifting between the original training data and future data. The drift detection is implemented in ```data_drift.py``` to check for data drifting between the training and test data. This is done using ```evidently``` and the test checks drifting in the following image features: brightness, contrast, sharpness. The results are saved as an HTML file in the ```reports``` folder. To check for data drifting with future data, the line ```IMAGES_TS = DATASET / "imagesTs"``` in the script needs to be modified to contain the path to the new data. 
+
 
 ### Question 29
 
