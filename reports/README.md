@@ -164,7 +164,16 @@ We used nnU-Net as a third-party framework because it provide good configuration
 >
 > Answer:
 
---- question 4 fill here ---
+We used ```conda``` and ```pip``` to manage packages and environments. Each group member created their own local clean conda environment for the project to help keep track of which packages were used specifically for the project. We kept track of Python dependencies through ```requirements.txt``` and ```requirements_dev.txt```, where we listed all Python packages as well as versions used in the project. 
+
+If a new group member was to get an exact copy of our environment they would go through the following steps in the terminal:
+1. Create a fresh ```conda``` environment using Python version 3.12: ```conda create -n mlops_project python=3.12```
+2. Activate above environment: ```conda activate mlops_project```
+3. Install the dependencies and the project itself using the ```requirement.txt``` file:
+```txt 
+python3 -m pip install -r requirements.txt 
+python3 -m pip install -e .
+```
 
 ### Question 5
 
