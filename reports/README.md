@@ -427,7 +427,7 @@ Notes:
 >
 > Answer:
 
---- question 16 fill here ---
+Debugging was primarily done through inspection of error messages, stack traces, and incremental testing of individual components. We also relied heavily on ChatGPT to help interpret errors and suggest fixes. No formal code profiling was performed, as we mainly used nnU-Net’s optimized training and inference pipelines.
 
 ## Working in the cloud
 
