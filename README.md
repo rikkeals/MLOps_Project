@@ -91,6 +91,10 @@ The directory structure of the project looks like this:
 │   ├── test_api.py
 │   ├── test_data.py
 │   └── test_model.py
+└── wandb/                    # Outputs from W&B 
+│    ├── latest-run/
+│    │   └── ...
+│    └── ...
 ├── .gitignore
 ├── .pre-commit-config.yaml
 ├── AGENTS.md                 # We havn't used the agent
