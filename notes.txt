@@ -1,12 +1,11 @@
 TO-DO:
 - Cloud deployment / M23 (Lotte)
-- Datadrifting / M27 punkt 3 (Lotte)
 
 - API testing / M24 (Rikke)
 
-- Datadrifting / M27 punkt 2 (Mejse)
-- dobbelttjek container virker / M10 (Mejse)
-- dobbelttjek wandb virker / M14 (Mejse)
+- Fix loguru (Mejse)
+- (Fix wandb) (Mejse)
+
 
 CORE MODULES:
 Week 1:
@@ -21,18 +20,17 @@ Week 2:
 - M17 - DONE
 - M21 - DONE (to ud af tre) 
 - M22 - DONE
-- M23
+- M23 - DONE
 - M24
 Week 3:
-- M27
-- M29 
+- M27 - DONE
+- M29 - NOT DONE because it is not applicable for us
 
 HUSK! At opdatere evaluate.py filen med interferens 
 HUSK! At opdatere/gennemlæse README inkl. folder structure 
 
 QUESTIONS:
 - Is the integration test (data) a unit test? 
-- Hvorfor virker vores cloud trigger ikke længere?
 
 NICE TO HAVE:
 - Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
@@ -45,7 +43,7 @@ Questions we are ready to answer: Q11 (Rikke), Q14 (i morgen, Mejse), Q21 (i mor
 Questions we need to "solve"
 Q16: Have we used debugging (Lotte)
 Q18: (manglende punkt i M21) (Lotte)
-Q22: Train model in the cloud using Engine or Vertex AI (Lotte)
+Q22: Train model in the cloud using Engine or Vertex AI (manglende punkt i M21) (Lotte)
 Q25: Unit testing using API (Rikke)
 Q26: (manglende punkt i M28) (Mejse)
 Q29: Lav flow diagram (Rikke)
