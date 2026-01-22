@@ -121,12 +121,16 @@ will check the repositories and the code to verify your answers.
 ### Question 1
 > **Enter the group number you signed up on <learn.inside.dtu.dk>**
 >
-> Answer: 65
+> Answer:
+
+65
 
 ### Question 2
 > **Enter the study number for each member in the group**
 >
-> Answer: *s204297, s196050, s194693*
+> Answer:
+
+*s204297, s196050, s194693*
 
 ### Question 3
 > **Did you end up using any open-source frameworks/packages not covered in the course during your project? If so**
