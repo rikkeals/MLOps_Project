@@ -606,7 +606,8 @@ Docker images in our GCP artifact registry: [figure](figures/artifact_registry_d
 >
 > Answer:
 
---- question 28 fill here ---
+We have implemented a simple form of drift detection, which in the future can be optimized to detect data drifting between the original training data and future data. The drift detection is implemented in ```data_drift.py``` to check for data drifting between the training and test data. This is done using ```evidently``` and the test checks drifting in the following image features: brightness, contrast, sharpness. The results are saved as an HTML file in the ```reports``` folder. To check for data drifting with future data, the line ```IMAGES_TS = DATASET / "imagesTs"``` in the script needs to be modified to contain the path to the new data. 
+
 
 ### Question 29
 
