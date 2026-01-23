@@ -2,12 +2,14 @@ import os
 import shutil
 import subprocess
 import tempfile
+import time
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, File, HTTPException, Query, UploadFile
+from fastapi import FastAPI, File, HTTPException, Query, Response, UploadFile
 from fastapi.responses import FileResponse
 from omegaconf import OmegaConf
+from prometheus_client import Counter, Histogram, generate_latest
 
 # Load project config
 CONFIG_PATH = Path("configs/config.yaml")
@@ -51,6 +53,17 @@ def find_checkpoint() -> Optional[Path]:
 
 app = FastAPI(title="nnU-Net Inference API")
 
+REQUEST_COUNT = Counter(
+    "api_requests_total",
+    "Total API requests",
+    ["endpoint"],
+)
+
+REQUEST_LATENCY = Histogram(
+    "api_request_latency_seconds",
+    "API request latency",
+    ["endpoint"],
+)
 
 @app.get("/")
 def health():
@@ -97,42 +110,44 @@ async def predict(
     image: UploadFile = File(...),
     device: str = Query(DEFAULT_DEVICE, description="cpu / cuda / mps"),
 ):
-    ckpt = find_checkpoint()
-    if ckpt is None:
-        raise HTTPException(
-            status_code=503,
-            detail=(
-                "Model not trained yet. "
-                "Run nnU-Net training to create checkpoint_final.pth "
-                "under data/nnUNet_results."
-            ),
-        )
+    start_time = time.time()
+    endpoint = "/predict"
 
-    if not image.filename.endswith((".nii", ".nii.gz")):
-        raise HTTPException(status_code=400, detail="Upload a .nii or .nii.gz file")
+    try:
+        ckpt = find_checkpoint()
+        if ckpt is None:
+            raise HTTPException(status_code=503, detail="Model not ready")
 
-    with tempfile.TemporaryDirectory() as tmp:
-        tmp = Path(tmp)
-        in_dir = tmp / "input"
-        out_dir = tmp / "output"
-        in_dir.mkdir()
-        out_dir.mkdir()
+        if not image.filename.endswith((".nii", ".nii.gz")):
+            raise HTTPException(status_code=400, detail="Upload a .nii or .nii.gz file")
 
-        # single-channel input
-        case_file = in_dir / "case_0000.nii.gz"
-        case_file.write_bytes(await image.read())
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            in_dir = tmp / "input"
+            out_dir = tmp / "output"
+            in_dir.mkdir()
+            out_dir.mkdir()
 
-        try:
+            case_file = in_dir / "case_0000.nii.gz"
+            case_file.write_bytes(await image.read())
+
             run_nnunet_predict(in_dir, out_dir, device)
-        except RuntimeError as e:
-            raise HTTPException(status_code=500, detail=str(e))
 
-        pred = out_dir / "case.nii.gz"
-        if not pred.exists():
-            raise HTTPException(status_code=500, detail="Prediction failed")
+            pred = out_dir / "case.nii.gz"
+            if not pred.exists():
+                raise HTTPException(status_code=500, detail="Prediction failed")
 
-        return FileResponse(
-            pred,
-            media_type="application/gzip",
-            filename="prediction_case.nii.gz",
-        )
+            return FileResponse(
+                pred,
+                media_type="application/gzip",
+                filename="prediction_case.nii.gz",
+            )
+
+    finally:
+        REQUEST_COUNT.labels("/predict").inc()
+        REQUEST_LATENCY.labels("/predict").observe(time.time() - start_time)
+
+@app.get("/metrics")
+def metrics():
+    return Response(generate_latest(), media_type="text/plain")
+
