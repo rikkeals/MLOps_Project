@@ -677,9 +677,9 @@ Model training is performed either locally, within Docker containers, or through
 
 We had a lot of challenges with Git and GitHub (mostly in the beginning), esepcially since branches and pull requests are new to some of the members in the group. In the beginning there was a lot of trial and error to figure out for each member how they preferred to work with Git, i.e. through the terminal, in VS Code, or with GitHub Desktop. Most mistakes were avoided by creating a good practice of always pulling the latest updates from ```main``` and creating a separate local branch to work in. A lot of mistakes were easy to fix by learning how to e.g. undo a commit, but a few times we encountered problems where our only solution was to delete the local repo and make a new clone from GitHub. This worked, but we also learned (the hard way) to check for and backup local files not tracked by Git (files included in .gitignore, for instance keys) before doing this maneuver. 
 
-One of our biggest challenges was working with GCP. We quickly learned that almost everything in ```Google Cloud``` requires very specific permissions for each user or service, so we ended up spending a lot of time dealing with ```IAM```. After a few days, we figured out how to give all group members owner access, which made things much easier
+One of our biggest challenges was working with GCP. We quickly learned that almost everything in ```Google Cloud``` requires very specific permissions for each user or service, so we ended up spending a lot of time dealing with ```IAM```. After a few days, we figured out how to give all group members owner access, which made things much easier.
 
-Using the cloud to train ```nnU-Net``` with ```Vertex AI``` was also difficult. ```nnU-Net``` has very strict requirements around directory structure and setup, which made it hard to get running in a cloud environment. On top of that challenge we were also working in three different operating systems, which caused issues with package versions and dependencies—especially on Macs with Apple Silicon.
+Using the cloud to train ```nnU-Net``` with ```Vertex AI``` was also difficult. ```nnU-Net``` has very strict requirements around directory structure and setup, which made it hard to get running in a cloud environment. On top of that challenge we were also working in three different operating systems, which caused issues with package versions and dependencies - especially on Macs with Apple Silicon.
 
 When we chose nnU-Net, it seemed like a simple and well-supported model, but it turned out to be quite rigid and somewhat of a black box. The dataset was large (which was okay because we uploaded it to the cloud). Training locally on CPU took around 2.5 hours, which made experimenting and logging with ```wandb``` slow and sometimes frustrating. But Nicki told us at a lecture that we should stick to the model we chose in the begining, so that's what we did. 
 
@@ -706,6 +706,8 @@ In collaboration we solved:
 - Filling out requirements.txt and requirements_dev.txt
 - Writing the report
 - Creating configs.yaml
+- Ruff issues
+- Upload code to GitHub
 
 Student s194693 was in charge of: 
 - Create a initial file structure using CookieCutter
@@ -727,12 +729,12 @@ Student s204297 was in charge of:
 - Updating Readme and folder structure
 
 Student s196050 was in charge of: 
-- Logging in wandb, logure, hydra
+- Logging in wandb, loguru, hydra
 - Data version control
-- Making docker file
+- Making docker file and building docker image
 - Making cloudbuild and data storage in GCP
 - Create trigger in GCP
 - Data drifting
 - Set up cloud monitoring
 
-We used generative AI for debugging code when errors occured, asking questions when in doubt of specific terms or processes and grammatic corrections in text. GitHub Copilot was used for commit messages when commiting in github in Browser; as well as helping in code when small errors occured. 
+We used generative AI (ChatGPT) for debugging code when errors occured, asking questions when in doubt of specific terms or processes and grammatic corrections in text. GitHub Copilot was used for commit messages when commiting in github in Browser; as well as helping in code when small errors occured. 
