@@ -506,7 +506,7 @@ Docker images in our GCP artifact registry: [figure](figures/artifact_registry_d
 >
 > Answer:
 
-Top of our GCP cloud build history: [figure](figures/build_history.png).
+Part of our GCP cloud build history: [figure](figures/build_history.png).
 
 ### Question 22
 
