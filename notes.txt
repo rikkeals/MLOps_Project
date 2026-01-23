@@ -1,7 +1,7 @@
 TO-DO:
 - API testing / M24 (Rikke)
 
-- Train model igen (Mejse) - I gang
+- Train model igen (Mejse) - I GANG
 
 - Opdatere evaluate.py filen med interferens (Lotte)
 
