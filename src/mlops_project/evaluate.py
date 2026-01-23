@@ -2,14 +2,14 @@ import json
 import os
 import subprocess
 import sys
-import numpy as np
-import nibabel as nib
+from pathlib import Path
 from typing import Dict, List, Tuple
 
-from pathlib import Path
-
 import hydra
+import nibabel as nib
+import numpy as np
 from omegaconf import DictConfig, OmegaConf
+
 
 def set_nnunet_env(project_root: Path) -> None:
     """Force nnUNet env vars to be relative to the project root."""
@@ -39,7 +39,11 @@ def dice_per_class(seg_pred: np.ndarray, seg_gt: np.ndarray, classes: List[int])
     return out
 
 
-def evaluate_dice(pred_dir: Path, gt_dir: Path, classes: List[int]) -> Tuple[Dict[int, float], Dict[str, Dict[int, float]]]:
+def evaluate_dice(
+        pred_dir: Path,
+        gt_dir: Path,
+        classes: List[int]
+        ) -> Tuple[Dict[int, float], Dict[str, Dict[int, float]]]:
     """
     Evaluate Dice for each file in pred_dir against gt_dir.
     Returns:
@@ -81,9 +85,9 @@ def main(cfg: DictConfig) -> None:
     # Hydra changes the working dir. This returns the dir you launched python from (repo root typically).
     project_root = Path(hydra.utils.get_original_cwd())
 
-    INPUT_FOLDER = project_root / "data/nnUNet_raw/Dataset621_Hippocampus/ImagesTr"
-    OUTPUT_FOLDER = project_root / "data/nnUNet_predictions/Dataset621_Hippocampus/predictionsTr"
-    LABELS_FOLDER = project_root / "data/nnUNet_raw/Dataset621_Hippocampus/labelsTr"
+    input_folder = project_root / "data/nnUNet_raw/Dataset621_Hippocampus/ImagesTr"
+    output_folder = project_root / "data/nnUNet_predictions/Dataset621_Hippocampus/predictionsTr"
+    labels_folder = project_root / "data/nnUNet_raw/Dataset621_Hippocampus/labelsTr"
 
     # 1) Set env vars (must be set before calling nnUNet CLI)
     set_nnunet_env(project_root)
@@ -99,8 +103,8 @@ def main(cfg: DictConfig) -> None:
 
     cmd = [
         "nnUNetv2_predict",
-        "-i", str(INPUT_FOLDER),
-        "-o", str(OUTPUT_FOLDER),
+        "-i", str(input_folder),
+        "-o", str(output_folder),
         "-d", str(dataset_id),
         "-c", str(configuration),
         "-f", fold,
@@ -128,7 +132,7 @@ def main(cfg: DictConfig) -> None:
     # Adjust if your dataset uses different label IDs.
     classes = [1, 2]
 
-    mean_dice, per_case = evaluate_dice(OUTPUT_FOLDER, LABELS_FOLDER, classes)
+    mean_dice, per_case = evaluate_dice(output_folder, labels_folder, classes)
 
     print("\n=== Dice results (mean over cases) ===")
     for c in classes:
@@ -144,7 +148,7 @@ def main(cfg: DictConfig) -> None:
         json.dump({"mean_per_class": mean_dice, "per_case": per_case}, f, indent=2)
     print(f"\nSaved Dice scores to: {results_path}")
 
-    
+
 
 if __name__ == "__main__":
     main()
