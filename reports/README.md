@@ -520,7 +520,9 @@ Top of our GCP cloud build history: [figure](figures/build_history.png).
 >
 > Answer:
 
---- question 22 fill here ---
+We attempted to train our model in the cloud using ```Vertex AI```, but did not fully succeed in completing cloud-based training. Our setup relied on the ```nnU-Net``` framework, which has strict assumptions about directory structure, environment variables, and filesystem access. While we successfully built and pushed ```Docker images``` for training to Artifact Registry and configured a cloud build pipeline, running the full ```nnU-Net``` training job on ```Vertex AI``` proved challenging within the project timeframe.
+
+Also managing persistent storage for large preprocessed medical imaging data, configuring GPU resources correctly, and ensuring compatibility between ```nnU-Net’s``` internal paths and ```Vertex AI’s``` execution environment introduced significant complexity. Due to these constraints, and given the limited scope and time of the course project, we decided to perform the actual model training locally, where debugging and iteration were more controllable.
 
 ## Deployment
 
@@ -578,7 +580,7 @@ While the service was reachable both locally and in the cloud, full end-to-end i
 >
 > Answer:
 
---- question 25 fill here ---
+We did not perform unit testing or load testing of the API during the project. This was mainly due to time constraints and our primary focus being on model training, containerization, and deployment setup. If we were to implement testing, we would use a framework such as ```pytest``` to unit test individual API endpoints, including input validation and response formats. For load testing, we would use a tool like ```Locust``` to simulate concurrent requests and measure response times, throughput, and failure rates. This would allow us to identify performance bottlenecks and understand how the API scales under increased load.
 
 ### Question 26
 
@@ -669,26 +671,15 @@ Model training is performed either locally, within Docker containers, or through
 >
 > Answer:
 
-
 We had a lot of challenges with Git and GitHub (mostly in the beginning), esepcially since branches and pull requests are new to some of the members in the group. In the beginning there was a lot of trial and error to figure out for each member how they preferred to work with Git, i.e. through the terminal, in VS Code, or with GitHub Desktop. Most mistakes were avoided by creating a good practice of always pulling the latest updates from ```main``` and creating a separate local branch to work in. A lot of mistakes were easy to fix by learning how to e.g. undo a commit, but a few times we encountered problems where our only solution was to delete the local repo and make a new clone from GitHub. This worked, but we also learned (the hard way) to check for and backup local files not tracked by Git (files included in .gitignore, for instance keys) before doing this maneuver. 
 
-One of our biggest struggles was with GCP. We learned that almost everything in Google Cloud warrants a specific permission to a specific user (human or computer), so we became very familiar with IAM.  
+One of our biggest challenges was working with GCP. We quickly learned that almost everything in ```Google Cloud``` requires very specific permissions for each user or service, so we ended up spending a lot of time dealing with ```IAM```. After a few days, we figured out how to give all group members owner access, which made things much easier
 
-- Git + GitHub
-    - branches + pull request was new for some members
-- Cloud
-    - permissions
-    - vertex: specific syntax
-- Different OS (mac vs windows vs linux)
-- Model
-    - black box + unflexible 
-    - cpu: training takes a long time
-        - It was difficult to test a lot of thing because training took such a long time 
-- Lot of new tools / keep an overview
+Using the cloud to train ```nnU-Net``` with ```Vertex AI``` was also difficult. ```nnU-Net``` has very strict requirements around directory structure and setup, which made it hard to get running in a cloud environment. On top of that challenge we were also working in three different operating systems, which caused issues with package versions and dependencies—especially on Macs with Apple Silicon.
 
+When we chose nnU-Net, it seemed like a simple and well-supported model, but it turned out to be quite rigid and somewhat of a black box. The dataset was large (which was okay because we uploaded it to the cloud). Training locally on CPU took around 2.5 hours, which made experimenting and logging with ```wandb``` slow and sometimes frustrating. But Nicki told us at a lecture that we should stick to the model we chose in the begining, so that's what we did. 
 
-
-
+Overall, keeping track of many new tools was challenging, but we learned a lot and gained useful hands-on experience.
 
 ### Question 31
 
@@ -706,8 +697,13 @@ One of our biggest struggles was with GCP. We learned that almost everything in 
 > *We have used ChatGPT to help debug our code. Additionally, we used GitHub Copilot to help write some of our code.*
 > Answer:
 
-Student s194693 was in charge of: 
+In collaboration we solved:
 - Creating Git Repository and making sure all members have accces
+- Filling out requirements.txt and requirements_dev.txt
+- Writing the report
+- Creating configs.yaml
+
+Student s194693 was in charge of: 
 - Create a initial file structure using CookieCutter
 - Fill out data.py
 - Saving the nnUNets configs in our configs file in model.py
@@ -717,4 +713,22 @@ Student s194693 was in charge of:
 - Continous Integration running in GitHub, adding linting and catches etc.
 - Create Architectural Diagram of MLOps Pipeline
 
-I used generative AI for debugging code when errors occured, asking questions when in doubt of specific terms or processes and grammatic corrections in text. GitHub Copilot was used for commit messages when commiting in github in Browser; as well as helping in code when small errors occured. 
+Student s204297 was in charge of: 
+- Training procedure in train.py
+- Also evaluate.py which failed due to nnU-Net restrictions
+- Creating the fastAPI
+- Making API docker file
+- Deploying model in GCP
+- Making Vertex AI work in GCP
+- Updating Readme and folder structure
+
+Student s196050 was in charge of: 
+- Logging in wandb, logure, hydra
+- Data version control
+- Making docker file
+- Making cloudbuild and data storage in GCP
+- Create trigger in GCP
+- Data drifting
+- Set up cloud monitoring
+
+We used generative AI for debugging code when errors occured, asking questions when in doubt of specific terms or processes and grammatic corrections in text. GitHub Copilot was used for commit messages when commiting in github in Browser; as well as helping in code when small errors occured. 
