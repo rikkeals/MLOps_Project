@@ -463,7 +463,11 @@ We have used the following GCP services:
 >
 > Answer:
 
---- question 18 fill here ---
+In our project we used Google Compute Engine as the underlying infrastructure for both model training and container execution, managed by GCP services. Instead of manually creating virtual machines, we relied on Vertex AI Custom Jobs, which automatically ran our training workloads.
+
+Model training was done on CPU-based Compute Engine instances (n1-standard-8) using a custom Docker container stored in Artifact Registry. Vertex AI handled VM lifecycle management, including startup, execution, and teardown, while our training script produced model artifacts and logs stored in Google Cloud Storage.
+
+Also, Cloud Build used temporary Compute Engine VMs to build and push Docker images for training and inference. This approach allowed us to improve Compute Engine efficiently without managing VMs directly.
 
 ### Question 19
 
