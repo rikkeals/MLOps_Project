@@ -13,8 +13,6 @@ import hydra
 from loguru import logger
 from omegaconf import DictConfig
 
-from tests.test_model import project_root
-
 
 def ensure_dir(p: Path) -> None:
     p.mkdir(parents=True, exist_ok=True)
