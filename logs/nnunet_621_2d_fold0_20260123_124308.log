@@ -1,0 +1,67 @@
+2026-01-23 12:43:10.964 | INFO     | __main__:main:215 - Using seed: 42
+2026-01-23 12:43:10.965 | INFO     | __main__:main:216 - Initializing nnU-Net training
+2026-01-23 12:43:10.965 | INFO     | __main__:main:217 - Dataset=621, config=2d, fold=0, trainer=nnUNetTrainer_5epochs, device=cpu
+2026-01-23 12:43:10.966 | INFO     | __main__:main:226 - nnU-Net environment variables set
+2026-01-23 12:43:10.966 | DEBUG    | __main__:main:227 - nnUNet_raw=/home/mejse/dtu/MLOps_Project/data/nnUNet_raw
+2026-01-23 12:43:10.966 | DEBUG    | __main__:main:228 - nnUNet_preprocessed=/home/mejse/dtu/MLOps_Project/data/nnUNet_preprocessed
+2026-01-23 12:43:10.968 | DEBUG    | __main__:main:229 - nnUNet_results=/home/mejse/dtu/MLOps_Project/data/nnUNet_results
+2026-01-23 12:43:10.969 | INFO     | __main__:main:249 - Starting nnU-Net training. Logs will be written to: /home/mejse/dtu/MLOps_Project/logs/nnunet_621_2d_fold0_20260123_124308.log
+2026-01-23 12:43:10.969 | INFO     | __main__:main:250 - Executing command: nnUNetv2_train 621 2d 0 -tr nnUNetTrainer_5epochs -device cpu
+
+========================================================================================================================
+COMMAND: nnUNetv2_train 621 2d 0 -tr nnUNetTrainer_5epochs -device cpu
+========================================================================================================================
+Traceback (most recent call last):
+  File "/home/mejse/miniconda3/envs/mlops_project/bin/nnUNetv2_train", line 3, in <module>
+    from nnunetv2.run.run_training import run_training_entry
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/nnunetv2/run/run_training.py", line 13, in <module>
+    from nnunetv2.training.nnUNetTrainer.nnUNetTrainer import nnUNetTrainer
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/nnunetv2/training/nnUNetTrainer/nnUNetTrainer.py", line 43, in <module>
+    from torch import GradScaler
+ImportError: cannot import name 'GradScaler' from 'torch' (/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/torch/__init__.py)
+2026-01-23 12:43:15.289 | ERROR    | __main__:main:278 - Training failed
+Traceback (most recent call last):
+
+  File "/home/mejse/dtu/MLOps_Project/src/mlops_project/train.py", line 292, in <module>
+    main()
+    └ <function main at 0x7c5a9023ad40>
+
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+    └ <function _run_hydra at 0x7c5a90cd2a20>
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+    └ <function _run_app at 0x7c5a90cd2ac0>
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+    └ <function run_and_report at 0x7c5a90cd2980>
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           └ <function _run_app.<locals>.<lambda> at 0x7c5a9011dc60>
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            │     └ <function Hydra.run at 0x7c5a90c12ca0>
+            └ <hydra._internal.hydra.Hydra object at 0x7c5a90b4a450>
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+          └ <function run_job at 0x7c5a90cd1940>
+  File "/home/mejse/miniconda3/envs/mlops_project/lib/python3.12/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+    │   │              │             └ {'dataset': {'name': 'Dataset621_Hippocampus', 'dataset_id': 621, 'raw_root': 'data/original', 'nnunet_raw_root': 'data/nnUNe...
+    │   │              └ <function main at 0x7c5a9023aca0>
+    │   └ <property object at 0x7c5a90c8ae30>
+    └ JobReturn(overrides=[], cfg={'dataset': {'name': 'Dataset621_Hippocampus', 'dataset_id': 621, 'raw_root': 'data/original', 'n...
+
+> File "/home/mejse/dtu/MLOps_Project/src/mlops_project/train.py", line 251, in main
+    run_and_tee(cmd_train, log_path, env)
+    │           │          │         └ {'SHELL': '/bin/bash', 'WSL2_GUI_APPS_ENABLED': '1', 'CONDA_EXE': '/home/mejse/miniconda3/bin/conda', '_CE_M': '', 'WSL_DISTR...
+    │           │          └ PosixPath('/home/mejse/dtu/MLOps_Project/logs/nnunet_621_2d_fold0_20260123_124308.log')
+    │           └ ['nnUNetv2_train', '621', '2d', '0', '-tr', 'nnUNetTrainer_5epochs', '-device', 'cpu']
+    └ <function run_and_tee at 0x7c5a9023a660>
+
+  File "/home/mejse/dtu/MLOps_Project/src/mlops_project/train.py", line 55, in run_and_tee
+    raise RuntimeError(f"Command failed with exit code {rc}: {' '.join(cmd)}")
+                                                        │              └ ['nnUNetv2_train', '621', '2d', '0', '-tr', 'nnUNetTrainer_5epochs', '-device', 'cpu']
+                                                        └ 1
+
+RuntimeError: Command failed with exit code 1: nnUNetv2_train 621 2d 0 -tr nnUNetTrainer_5epochs -device cpu

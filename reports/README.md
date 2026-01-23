@@ -669,7 +669,26 @@ Model training is performed either locally, within Docker containers, or through
 >
 > Answer:
 
---- question 30 fill here ---
+
+We had a lot of challenges with Git and GitHub (mostly in the beginning), esepcially since branches and pull requests are new to some of the members in the group. In the beginning there was a lot of trial and error to figure out for each member how they preferred to work with Git, i.e. through the terminal, in VS Code, or with GitHub Desktop. Most mistakes were avoided by creating a good practice of always pulling the latest updates from ```main``` and creating a separate local branch to work in. A lot of mistakes were easy to fix by learning how to e.g. undo a commit, but a few times we encountered problems where our only solution was to delete the local repo and make a new clone from GitHub. This worked, but we also learned (the hard way) to check for and backup local files not tracked by Git (files included in .gitignore, for instance keys) before doing this maneuver. 
+
+One of our biggest struggles was with GCP. We learned that almost everything in Google Cloud warrants a specific permission to a specific user (human or computer), so we became very familiar with IAM.  
+
+- Git + GitHub
+    - branches + pull request was new for some members
+- Cloud
+    - permissions
+    - vertex: specific syntax
+- Different OS (mac vs windows vs linux)
+- Model
+    - black box + unflexible 
+    - cpu: training takes a long time
+        - It was difficult to test a lot of thing because training took such a long time 
+- Lot of new tools / keep an overview
+
+
+
+
 
 ### Question 31
 

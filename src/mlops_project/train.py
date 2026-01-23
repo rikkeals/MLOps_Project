@@ -13,8 +13,6 @@ import hydra
 from loguru import logger
 from omegaconf import DictConfig
 
-from tests.test_model import project_root
-
 
 def ensure_dir(p: Path) -> None:
     p.mkdir(parents=True, exist_ok=True)
@@ -87,31 +85,33 @@ def maybe_init_wandb(cfg: DictConfig) -> Optional[object]:
 
 
 def parse_epoch_metrics(log_path: Path) -> list[dict]:
-    """
-    Parse per-epoch metrics from nnU-Net log.
-    Returns a list of dicts: [{epoch, train_loss, val_loss, pseudo_dice}]
-    """
     epoch_data = []
-    current = {}
+    current = None
 
     for line in log_path.read_text(errors="ignore").splitlines():
-        if line.startswith("Epoch "):
-            if current:
+        # Epoch start (ignore "Epoch time")
+        if "Epoch " in line and "Epoch time" not in line:
+            if current and "epoch" in current:
                 epoch_data.append(current)
-            current = {"epoch": int(line.split()[1])}
 
-        elif "train_loss" in line:
-            current["train_loss"] = float(line.split()[-1])
+            m = re.search(r"Epoch\s+(\d+)", line)
+            current = {"epoch": int(m.group(1))} if m else None
+            continue
+
+        if current is None:
+            continue
+
+        if "train_loss" in line:
+            m = re.search(r"train_loss\s+(-?\d+\.\d+)", line)
+            if m:
+                current["train_loss"] = float(m.group(1))
 
         elif "val_loss" in line:
-            current["val_loss"] = float(line.split()[-1])
+            m = re.search(r"val_loss\s+(-?\d+\.\d+)", line)
+            if m:
+                current["val_loss"] = float(m.group(1))
 
-        elif "Pseudo dice" in line:
-            nums = re.findall(r"[0-9]*\.?[0-9]+", line)
-            if nums:
-                current["pseudo_dice"] = sum(map(float, nums)) / len(nums)
-
-    if current:
+    if current and "epoch" in current:
         epoch_data.append(current)
 
     return epoch_data
