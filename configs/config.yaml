@@ -12,6 +12,9 @@ paths:
   nnunet_results: data/nnUNet_results
   gcs_output: null
 
+logging:
+  logs_dir: logs
+
 reproducibility:
   seed: 42
 
