@@ -618,7 +618,9 @@ Monitoring of an application provides important information to help ensure a lon
 >
 > Answer:
 
---- question 27 fill here ---
+Group member s196050 used 14.51DKK, which was taken from the 300$ free credits provided by Google Cloud. The cloud project was connected to this member's billing account which is why only she spent Google Cloud credits. Most of the credits were spent on Artifact Registry, which was used on storing Docker images. Smaller costs were spent on Cloud Storage, Cloud Run, and Cloud Build.
+
+Google Cloud has what seems like endless services and there are so many possibilities when working in the cloud. This is a great advantage once you get to know and understand the services, but can also be difficult to navigate. 
 
 ### Question 28
 
