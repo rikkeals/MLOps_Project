@@ -674,19 +674,14 @@ Model training is performed either locally, within Docker containers, or through
 
 We had a lot of challenges with Git and GitHub (mostly in the beginning), esepcially since branches and pull requests are new to some of the members in the group. In the beginning there was a lot of trial and error to figure out for each member how they preferred to work with Git, i.e. through the terminal, in VS Code, or with GitHub Desktop. Most mistakes were avoided by creating a good practice of always pulling the latest updates from ```main``` and creating a separate local branch to work in. A lot of mistakes were easy to fix by learning how to e.g. undo a commit, but a few times we encountered problems where our only solution was to delete the local repo and make a new clone from GitHub. This worked, but we also learned (the hard way) to check for and backup local files not tracked by Git (files included in .gitignore, for instance keys) before doing this maneuver. 
 
-One of our biggest struggles was with GCP. We learned that almost everything in Google Cloud warrants a specific permission to a specific user (human or computer), so we became very familiar with IAM.  
+One of our biggest challenges was working with GCP. We quickly learned that almost everything in ```Google Cloud``` requires very specific permissions for each user or service, so we ended up spending a lot of time dealing with ```IAM```. After a few days, we figured out how to give all group members owner access, which made things much easier
 
-- Git + GitHub
-    - branches + pull request was new for some members
-- Cloud
-    - permissions
-    - vertex: specific syntax
-- Different OS (mac vs windows vs linux)
-- Model
-    - black box + unflexible 
-    - cpu: training takes a long time
-        - It was difficult to test a lot of thing because training took such a long time 
-- Lot of new tools / keep an overview
+Using the cloud to train ```nnU-Net``` with ```Vertex AI``` was also difficult. ```nnU-Net``` has very strict requirements around directory structure and setup, which made it hard to get running in a cloud environment. On top of that challenge we were also working in three different operating systems, which caused issues with package versions and dependencies—especially on Macs with Apple Silicon.
+
+When we chose nnU-Net, it seemed like a simple and well-supported model, but it turned out to be quite rigid and somewhat of a black box. The dataset was large (which was okay because we uploaded it to the cloud). Training locally on CPU took around 2.5 hours, which made experimenting and logging with ```wandb``` slow and sometimes frustrating. But Nicki told us at a lecture that we should stick to the model we chose in the begining, so that's what we did. 
+
+Overall, keeping track of many new tools was challenging, but we learned a lot and gained useful hands-on experience.
+
 
 
 
