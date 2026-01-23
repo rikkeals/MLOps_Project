@@ -580,7 +580,7 @@ While the service was reachable both locally and in the cloud, full end-to-end i
 >
 > Answer:
 
---- question 25 fill here ---
+We did not perform unit testing or load testing of the API during the project. This was mainly due to time constraints and our primary focus being on model training, containerization, and deployment setup. If we were to implement testing, we would use a framework such as ```pytest``` to unit test individual API endpoints, including input validation and response formats. For load testing, we would use a tool like ```Locust``` to simulate concurrent requests and measure response times, throughput, and failure rates. This would allow us to identify performance bottlenecks and understand how the API scales under increased load.
 
 ### Question 26
 
