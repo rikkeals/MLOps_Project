@@ -330,13 +330,13 @@ The datasets tracked by DVC was ignored by Git, ie. not uploaded to GitHub. If a
 >
 > Answer:
 
-We organized our continuous integration (CI) into **three GitHub Actions workflows**. First, we have a **linting workflow** using **Ruff**, which checks that the code follows basic code-quality rules and is broadly **PEP 8 compliant**. This helps catch issues like unused imports, wrong import order, and style problems before code is merged.
+We organized our continuous integration (CI) into three GitHub Actions workflows. First, we have a linting workflow using ```Ruff```, which checks that the code follows basic code-quality rules and is broadly ```PEP 8 compliant```. This helps catch issues like unused imports, wrong import order, and style problems before code is merged.
 
-Second, we have a workflow for **unit tests and coverage**. Here we run pytest tests (excluding integration tests) and collect coverage to see which parts of the code are executed during testing. The unit tests mainly focus on verifying that changes do not break key functions, especially in the data and model-related parts of the pipeline. The workflow is set up as a **matrix**, so it tests across **multiple operating systems** (Linux, macOS, and Windows) and **multiple Python versions** (3.11 and 3.12). This reduces the risk of platform-specific issues and increases confidence that the project behaves the same across systems.
+Second, we have a workflow for ```unit tests and coverage```. Here we run pytest tests (excluding integration tests) and collect coverage to see which parts of the code are executed during testing. The unit tests mainly focus on verifying that changes do not break key functions, especially in the data and model-related parts of the pipeline. The workflow is set up as a matrix, so it tests across multiple operating systems (Linux, macOS, and Windows) and multiple Python versions (3.11 and 3.12). This reduces the risk of platform-specific issues and increases confidence that the project behaves the same across systems.
 
-Third, we added a **pre-commit auto-update workflow** that runs on a schedule (daily at midnight) and creates a pull request if pre-commit hooks can be updated. This keeps our formatting and linting tools up to date and reduces manual maintenance.
+Third, we added a pre-commit auto-update workflow that runs on a schedule (daily at midnight) and creates a pull request if pre-commit hooks can be updated. This keeps our formatting and linting tools up to date and reduces manual maintenance.
 
-We also make use of **caching**, mainly by caching pip dependencies through `actions/setup-python`, which speeds up repeated CI runs. Early in the project we did not prioritize getting CI stable immediately, which led to several commits with failing workflows. Later, we improved the setup and learned the value of making CI pass early and continuously.
+We also make use of caching, mainly by caching pip dependencies through ```actions/setup-python```, which speeds up repeated CI runs. Early in the project we did not prioritize getting CI stable immediately, which led to several commits with failing workflows. Later, we improved the setup and learned the value of making CI pass early and continuously.
 
 
 ## Running code and tracking experiments
