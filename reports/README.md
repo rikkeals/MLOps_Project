@@ -394,7 +394,7 @@ Lastly, a log is created as part of the nnU-Net pipeline and saved together with
 >
 > Answer:
 
-Screenshots from experiments in W&B: [W&B workspace](figures/wandb.png) [Final mean dice & duration in seconds](figures/wandb_scalars.png), [Training and validation loss](figures/wandb_losses.png).
+Screenshots from experiments in W&B: [W&B workspace](figures/wandb.png), [Final mean dice & duration in seconds](figures/wandb_scalars.png), [Training and validation loss](figures/wandb_losses.png).
 
 At first we logged the final mean dice and the duration of the training in seconds. However, since these metrics were single scalars it didn't really show the advantages of tracking metrics in W&B. We instead tracked the training loss and validation loss for each epoch during training, which was visualized nicely in W&B. Training and validation loss are metrics that are much more common and meaningful metrics to track, since they give insight into how the model training evolves over time. From the visualizations of these losses in W&B you can rather easily assess whether the model converge or for instance show signs of overfitting.
 
