@@ -687,4 +687,15 @@ Model training is performed either locally, within Docker containers, or through
 > *We have used ChatGPT to help debug our code. Additionally, we used GitHub Copilot to help write some of our code.*
 > Answer:
 
---- question 31 fill here ---
+Student s194693 was in charge of: 
+- Creating Git Repository and making sure all members have accces
+- Create a initial file structure using CookieCutter
+- Fill out data.py
+- Saving the nnUNets configs in our configs file in model.py
+- Used Hydra to load configurations
+- Write Unit tests for data and model
+- Calculate the code coverage
+- Continous Integration running in GitHub, adding linting and catches etc.
+- Create Architectural Diagram of MLOps Pipeline
+
+I used generative AI for debugging code when errors occured, asking questions when in doubt of specific terms or processes and grammatic corrections in text. GitHub Copilot was used for commit messages when commiting in github in Browser; as well as helping in code when small errors occured. 
