@@ -29,7 +29,7 @@ steps:
       OUTDIR="gs://${_BUCKET}/models/vertex-${BUILD_ID}"
 
       echo "Submitting Vertex AI training job"
-      echo "Image: ${IMAGE}"
+      echo "Image: $${IMAGE}"
       echo "Output: ${OUTDIR}"
 
       # (safe to call even if already enabled)
@@ -38,7 +38,7 @@ steps:
       gcloud ai custom-jobs create \
         --region="${_REGION}" \
         --display-name="nnunet-train-${BUILD_ID}" \
-        --worker-pool-spec=machine-type=n1-standard-8,replica-count=1,container-image-uri="${IMAGE}" \
+        --worker-pool-spec=machine-type=n1-standard-8,replica-count=1,container-image-uri="$${IMAGE}" \
         -- \
         python -m mlops_project.train \
           dataset.dataset_id=621 \
