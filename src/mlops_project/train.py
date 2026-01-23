@@ -272,8 +272,14 @@ def main(cfg: DictConfig) -> None:
 
             epoch_metrics = parse_epoch_metrics(log_path)
             for m in epoch_metrics:
-                wandb.log(m, step=m["epoch"])
-
+                wandb.log(
+                    {
+                        "train_loss": m["train_loss"],
+                        "val_loss": m["val_loss"],
+                    },
+                    step=m["epoch"],
+                )
+                
             wb_run.finish()
 
     except Exception as e:
