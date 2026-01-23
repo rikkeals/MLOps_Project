@@ -9,7 +9,7 @@ pytest==9.0.2
 coverage==7.13.1
 
 # linting
-ruff==0.14.13
+ruff==0.14.14
 
 # docs
 mkdocs==1.6.1
