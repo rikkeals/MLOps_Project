@@ -1,5 +1,5 @@
 # --- Core training framework ---
-torch>=2.2,<2.3
+torch>=2.2,<2.11
 nnunetv2
 
 # --- Scientific stack ---
