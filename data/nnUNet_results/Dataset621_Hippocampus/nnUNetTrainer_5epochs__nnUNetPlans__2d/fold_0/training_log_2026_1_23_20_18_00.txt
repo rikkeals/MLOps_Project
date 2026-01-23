@@ -1,0 +1,172 @@
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+ 
+2026-01-23 20:18:00.917252: do_dummy_2d_data_aug: False 
+2026-01-23 20:18:00.918707: Using splits from existing split file: /home/mejse/dtu/MLOps_Project/data/nnUNet_preprocessed/Dataset621_Hippocampus/splits_final.json 
+2026-01-23 20:18:00.920163: The split file contains 5 splits. 
+2026-01-23 20:18:00.920475: Desired fold for training: 0 
+2026-01-23 20:18:00.920661: This split has 208 training and 52 validation cases. 
+
+This is the configuration used by this training:
+Configuration name: 2d
+ {'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 366, 'patch_size': [56, 40], 'median_image_size_in_voxels': [50.0, 35.0], 'spacing': [1.0, 1.0], 'normalization_schemes': ['ZScoreNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 4, 'features_per_stage': [32, 64, 128, 256], 'conv_op': 'torch.nn.modules.conv.Conv2d', 'kernel_sizes': [[3, 3], [3, 3], [3, 3], [3, 3]], 'strides': [[1, 1], [2, 2], [2, 2], [2, 2]], 'n_conv_per_stage': [2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2], 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm2d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ['conv_op', 'norm_op', 'dropout_op', 'nonlin']}, 'batch_dice': True} 
+ 
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset621_Hippocampus', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [1.0, 1.0, 1.0], 'original_median_shape_after_transp': [36, 50, 35], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 486420.21875, 'mean': 22360.326171875, 'median': 362.88250732421875, 'min': 0.0, 'percentile_00_5': 28.0, 'percentile_99_5': 277682.03125, 'std': 60656.1328125}}} 
+ 
+2026-01-23 20:18:03.835613: Unable to plot network architecture: 
+2026-01-23 20:18:03.835983: No module named 'hiddenlayer' 
+2026-01-23 20:18:03.873863:  
+2026-01-23 20:18:03.874111: Epoch 0 
+2026-01-23 20:18:03.874327: Current learning rate: 0.01 
+2026-01-23 20:44:07.825239: train_loss 0.0429 
+2026-01-23 20:44:07.831712: val_loss -0.2646 
+2026-01-23 20:44:07.832204: Pseudo dice [0.5452, 0.0745] 
+2026-01-23 20:44:07.832656: Epoch time: 1563.95 s 
+2026-01-23 20:44:07.832891: Yayy! New best EMA pseudo Dice: 0.3098 
+2026-01-23 20:44:07.998411:  
+2026-01-23 20:44:07.999113: Epoch 1 
+2026-01-23 20:44:07.999498: Current learning rate: 0.00818 
+2026-01-23 21:12:09.399763: train_loss -0.498 
+2026-01-23 21:12:09.405519: val_loss -0.7283 
+2026-01-23 21:12:09.406507: Pseudo dice [0.8265, 0.8116] 
+2026-01-23 21:12:09.407699: Epoch time: 1681.4 s 
+2026-01-23 21:12:09.408037: Yayy! New best EMA pseudo Dice: 0.3608 
+2026-01-23 21:12:11.197825:  
+2026-01-23 21:12:11.198688: Epoch 2 
+2026-01-23 21:12:11.199004: Current learning rate: 0.00631 
+2026-01-23 22:02:22.904325: train_loss -0.7318 
+2026-01-23 22:02:22.910550: val_loss -0.7706 
+2026-01-23 22:02:22.912313: Pseudo dice [0.8524, 0.8365] 
+2026-01-23 22:02:22.913235: Epoch time: 3011.71 s 
+2026-01-23 22:02:22.914120: Yayy! New best EMA pseudo Dice: 0.4091 
+2026-01-23 22:02:23.300273:  
+2026-01-23 22:02:23.300994: Epoch 3 
+2026-01-23 22:02:23.301180: Current learning rate: 0.00438 
+2026-01-23 22:32:52.288690: train_loss -0.7682 
+2026-01-23 22:32:52.294022: val_loss -0.788 
+2026-01-23 22:32:52.294302: Pseudo dice [0.8641, 0.8465] 
+2026-01-23 22:32:52.294784: Epoch time: 1828.99 s 
+2026-01-23 22:32:52.294954: Yayy! New best EMA pseudo Dice: 0.4538 
+2026-01-23 22:32:53.249281:  
+2026-01-23 22:32:53.250051: Epoch 4 
+2026-01-23 22:32:53.250220: Current learning rate: 0.00235 
+2026-01-23 22:54:44.446000: train_loss -0.7821 
+2026-01-23 22:54:44.461976: val_loss -0.7915 
+2026-01-23 22:54:44.462291: Pseudo dice [0.8664, 0.8496] 
+2026-01-23 22:54:44.462954: Epoch time: 1311.2 s 
+2026-01-23 22:54:44.463109: Yayy! New best EMA pseudo Dice: 0.4942 
+2026-01-23 22:54:45.982231: Training done. 
+2026-01-23 22:54:46.099241: Using splits from existing split file: /home/mejse/dtu/MLOps_Project/data/nnUNet_preprocessed/Dataset621_Hippocampus/splits_final.json 
+2026-01-23 22:54:46.102544: The split file contains 5 splits. 
+2026-01-23 22:54:46.102882: Desired fold for training: 0 
+2026-01-23 22:54:46.103124: This split has 208 training and 52 validation cases. 
+2026-01-23 22:54:46.103986: predicting hippocampus_017 
+2026-01-23 22:54:46.135713: hippocampus_017, shape torch.Size([1, 32, 48, 35]), rank 0 
+2026-01-23 22:55:03.602087: predicting hippocampus_019 
+2026-01-23 22:55:03.612722: hippocampus_019, shape torch.Size([1, 41, 47, 36]), rank 0 
+2026-01-23 22:55:13.712216: predicting hippocampus_033 
+2026-01-23 22:55:13.721648: hippocampus_033, shape torch.Size([1, 38, 48, 33]), rank 0 
+2026-01-23 22:55:24.997487: predicting hippocampus_035 
+2026-01-23 22:55:25.002804: hippocampus_035, shape torch.Size([1, 37, 47, 35]), rank 0 
+2026-01-23 22:55:35.816410: predicting hippocampus_037 
+2026-01-23 22:55:35.826230: hippocampus_037, shape torch.Size([1, 32, 51, 34]), rank 0 
+2026-01-23 22:55:43.444564: predicting hippocampus_049 
+2026-01-23 22:55:43.451259: hippocampus_049, shape torch.Size([1, 36, 51, 35]), rank 0 
+2026-01-23 22:55:54.282611: predicting hippocampus_052 
+2026-01-23 22:55:54.288814: hippocampus_052, shape torch.Size([1, 40, 52, 34]), rank 0 
+2026-01-23 22:56:05.951610: predicting hippocampus_065 
+2026-01-23 22:56:05.959278: hippocampus_065, shape torch.Size([1, 37, 52, 39]), rank 0 
+2026-01-23 22:56:14.285394: predicting hippocampus_083 
+2026-01-23 22:56:14.299091: hippocampus_083, shape torch.Size([1, 37, 52, 33]), rank 0 
+2026-01-23 22:56:24.704523: predicting hippocampus_088 
+2026-01-23 22:56:24.718024: hippocampus_088, shape torch.Size([1, 35, 52, 40]), rank 0 
+2026-01-23 22:56:34.602997: predicting hippocampus_090 
+2026-01-23 22:56:34.617210: hippocampus_090, shape torch.Size([1, 40, 50, 37]), rank 0 
+2026-01-23 22:56:44.357131: predicting hippocampus_092 
+2026-01-23 22:56:44.360785: hippocampus_092, shape torch.Size([1, 28, 49, 38]), rank 0 
+2026-01-23 22:56:52.399441: predicting hippocampus_095 
+2026-01-23 22:56:52.409046: hippocampus_095, shape torch.Size([1, 39, 49, 34]), rank 0 
+2026-01-23 22:57:03.445139: predicting hippocampus_107 
+2026-01-23 22:57:03.450648: hippocampus_107, shape torch.Size([1, 34, 55, 35]), rank 0 
+2026-01-23 22:57:13.021951: predicting hippocampus_108 
+2026-01-23 22:57:13.035811: hippocampus_108, shape torch.Size([1, 37, 53, 36]), rank 0 
+2026-01-23 22:57:21.886430: predicting hippocampus_123 
+2026-01-23 22:57:21.899822: hippocampus_123, shape torch.Size([1, 38, 53, 32]), rank 0 
+2026-01-23 22:57:32.671736: predicting hippocampus_125 
+2026-01-23 22:57:32.678880: hippocampus_125, shape torch.Size([1, 39, 42, 43]), rank 0 
+2026-01-23 22:57:53.117640: predicting hippocampus_157 
+2026-01-23 22:57:53.131607: hippocampus_157, shape torch.Size([1, 35, 51, 36]), rank 0 
+2026-01-23 22:58:03.364300: predicting hippocampus_164 
+2026-01-23 22:58:03.374278: hippocampus_164, shape torch.Size([1, 47, 48, 41]), rank 0 
+2026-01-23 22:58:28.345557: predicting hippocampus_169 
+2026-01-23 22:58:28.359002: hippocampus_169, shape torch.Size([1, 39, 45, 36]), rank 0 
+2026-01-23 22:58:39.700201: predicting hippocampus_175 
+2026-01-23 22:58:39.713740: hippocampus_175, shape torch.Size([1, 35, 47, 33]), rank 0 
+2026-01-23 22:58:47.652700: predicting hippocampus_185 
+2026-01-23 22:58:47.663554: hippocampus_185, shape torch.Size([1, 33, 49, 35]), rank 0 
+2026-01-23 22:58:56.898805: predicting hippocampus_190 
+2026-01-23 22:58:56.903074: hippocampus_190, shape torch.Size([1, 30, 52, 37]), rank 0 
+2026-01-23 22:59:05.820028: predicting hippocampus_194 
+2026-01-23 22:59:05.825939: hippocampus_194, shape torch.Size([1, 30, 50, 35]), rank 0 
+2026-01-23 22:59:14.675728: predicting hippocampus_204 
+2026-01-23 22:59:14.689703: hippocampus_204, shape torch.Size([1, 39, 48, 36]), rank 0 
+2026-01-23 22:59:23.524085: predicting hippocampus_205 
+2026-01-23 22:59:23.536337: hippocampus_205, shape torch.Size([1, 32, 47, 32]), rank 0 
+2026-01-23 22:59:32.604427: predicting hippocampus_210 
+2026-01-23 22:59:32.610456: hippocampus_210, shape torch.Size([1, 40, 48, 34]), rank 0 
+2026-01-23 22:59:44.002487: predicting hippocampus_217 
+2026-01-23 22:59:44.005035: hippocampus_217, shape torch.Size([1, 27, 53, 38]), rank 0 
+2026-01-23 22:59:50.103202: predicting hippocampus_219 
+2026-01-23 22:59:50.118111: hippocampus_219, shape torch.Size([1, 39, 45, 37]), rank 0 
+2026-01-23 23:00:01.323059: predicting hippocampus_229 
+2026-01-23 23:00:01.330635: hippocampus_229, shape torch.Size([1, 35, 50, 33]), rank 0 
+2026-01-23 23:00:11.348105: predicting hippocampus_244 
+2026-01-23 23:00:11.362338: hippocampus_244, shape torch.Size([1, 30, 53, 38]), rank 0 
+2026-01-23 23:00:18.120199: predicting hippocampus_261 
+2026-01-23 23:00:18.125177: hippocampus_261, shape torch.Size([1, 33, 58, 36]), rank 0 
+2026-01-23 23:00:36.943192: predicting hippocampus_264 
+2026-01-23 23:00:36.950916: hippocampus_264, shape torch.Size([1, 37, 51, 38]), rank 0 
+2026-01-23 23:00:47.578003: predicting hippocampus_277 
+2026-01-23 23:00:47.582334: hippocampus_277, shape torch.Size([1, 29, 59, 33]), rank 0 
+2026-01-23 23:01:02.210580: predicting hippocampus_280 
+2026-01-23 23:01:02.224730: hippocampus_280, shape torch.Size([1, 32, 47, 37]), rank 0 
+2026-01-23 23:01:11.510319: predicting hippocampus_286 
+2026-01-23 23:01:11.516373: hippocampus_286, shape torch.Size([1, 46, 45, 37]), rank 0 
+2026-01-23 23:01:22.460956: predicting hippocampus_288 
+2026-01-23 23:01:22.465661: hippocampus_288, shape torch.Size([1, 42, 50, 38]), rank 0 
+2026-01-23 23:01:34.401158: predicting hippocampus_289 
+2026-01-23 23:01:34.414316: hippocampus_289, shape torch.Size([1, 36, 49, 35]), rank 0 
+2026-01-23 23:01:44.727255: predicting hippocampus_296 
+2026-01-23 23:01:44.734744: hippocampus_296, shape torch.Size([1, 35, 54, 35]), rank 0 
+2026-01-23 23:01:52.937278: predicting hippocampus_305 
+2026-01-23 23:01:52.951017: hippocampus_305, shape torch.Size([1, 30, 49, 34]), rank 0 
+2026-01-23 23:02:01.529556: predicting hippocampus_308 
+2026-01-23 23:02:01.543674: hippocampus_308, shape torch.Size([1, 40, 48, 38]), rank 0 
+2026-01-23 23:02:13.107430: predicting hippocampus_317 
+2026-01-23 23:02:13.114998: hippocampus_317, shape torch.Size([1, 34, 51, 33]), rank 0 
+2026-01-23 23:02:20.942844: predicting hippocampus_327 
+2026-01-23 23:02:20.947752: hippocampus_327, shape torch.Size([1, 27, 54, 36]), rank 0 
+2026-01-23 23:02:28.555836: predicting hippocampus_330 
+2026-01-23 23:02:28.568143: hippocampus_330, shape torch.Size([1, 33, 55, 35]), rank 0 
+2026-01-23 23:02:37.851550: predicting hippocampus_332 
+2026-01-23 23:02:37.860192: hippocampus_332, shape torch.Size([1, 33, 52, 35]), rank 0 
+2026-01-23 23:02:47.087152: predicting hippocampus_338 
+2026-01-23 23:02:47.101210: hippocampus_338, shape torch.Size([1, 43, 43, 37]), rank 0 
+2026-01-23 23:02:57.135702: predicting hippocampus_349 
+2026-01-23 23:02:57.149173: hippocampus_349, shape torch.Size([1, 34, 50, 34]), rank 0 
+2026-01-23 23:03:06.687285: predicting hippocampus_350 
+2026-01-23 23:03:06.692629: hippocampus_350, shape torch.Size([1, 34, 49, 35]), rank 0 
+2026-01-23 23:03:16.314685: predicting hippocampus_356 
+2026-01-23 23:03:16.321715: hippocampus_356, shape torch.Size([1, 37, 51, 36]), rank 0 
+2026-01-23 23:03:24.753927: predicting hippocampus_358 
+2026-01-23 23:03:24.757053: hippocampus_358, shape torch.Size([1, 34, 50, 35]), rank 0 
+2026-01-23 23:03:34.377333: predicting hippocampus_374 
+2026-01-23 23:03:34.383805: hippocampus_374, shape torch.Size([1, 39, 48, 38]), rank 0 
+2026-01-23 23:03:45.165507: predicting hippocampus_394 
+2026-01-23 23:03:45.171206: hippocampus_394, shape torch.Size([1, 32, 52, 36]), rank 0 
+2026-01-23 23:03:58.414047: Validation complete 
+2026-01-23 23:03:58.414308: Mean Validation Dice:  0.8607830875756117 
