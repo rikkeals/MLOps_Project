@@ -4,6 +4,10 @@ TO-DO:
 - (Fix wandb) (Mejse)
 - (Train model igen) (Mejse)
 
+- Opdatere evaluate.py filen med interferens (Lotte)
+
+- Opdatere/gennemlæse README inkl. folder structure 
+- Tjekke at requirements.txt er up to date (tror der er noget software til a scanne projektet)
 
 CORE MODULES:
 Week 1:
@@ -23,9 +27,6 @@ Week 2:
 Week 3:
 - M27 - DONE
 - M29 - NOT DONE because it is not applicable for us
-
-HUSK! At opdatere evaluate.py filen med interferens 
-HUSK! At opdatere/gennemlæse README inkl. folder structure 
 
 QUESTIONS:
 - Is the integration test (data) a unit test? 
