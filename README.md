@@ -26,7 +26,7 @@ The dataset used in this project is [Task04 – Hippocampus from the Medical Seg
 
 The dataset contains a total of 394 3D MRI scans: 263 for training and 131 for testing. Each MRI volume is provided as a NIfTI file (.nii.gz) along with a segmentation mask where each voxel is labeled as background, left hippocampus, or right hippocampus. This makes the task a multiclass, voxel-wise segmentation problem.
 
-The data is split into predefined training and test sets and is stored in the project’s data/raw directory before being processed and converted into the format required by nnU-Net.
+The data is split into predefined training and test sets. See how the data is stored in Data versioning and storage section below. 
 
 ### Deep learning model used
 
