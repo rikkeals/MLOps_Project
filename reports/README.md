@@ -101,7 +101,7 @@ will check the repositories and the code to verify your answers.
 * [ ] Setup collection of input-output data from your deployed application (M27)
 * [ ] Deploy to the cloud a drift detection API (M27)
 * [x] Instrument your API with a couple of system metrics (M28)
-* [ ] Setup cloud monitoring of your instrumented application (M28)
+* [x] Setup cloud monitoring of your instrumented application (M28)
 * [ ] Create one or more alert systems in GCP to alert you if your app is not behaving correctly (M28)
 * [ ] If applicable, optimize the performance of your data loading using distributed data loading (M29)
 * [ ] If applicable, optimize the performance of your training pipeline by using distributed training (M30)
@@ -111,10 +111,10 @@ will check the repositories and the code to verify your answers.
 
 * [ ] Write some documentation for your application (M32)
 * [ ] Publish the documentation to GitHub Pages (M32)
-* [ ] Revisit your initial project description. Did the project turn out as you wanted?
-* [ ] Create an architectural diagram over your MLOps pipeline
-* [ ] Make sure all group members have an understanding about all parts of the project
-* [ ] Uploaded all your code to GitHub
+* [x] Revisit your initial project description. Did the project turn out as you wanted?
+* [x] Create an architectural diagram over your MLOps pipeline
+* [x] Make sure all group members have an understanding about all parts of the project
+* [x] Uploaded all your code to GitHub
 
 ## Group information
 
@@ -456,7 +456,8 @@ We have used the following GCP services:
 - Artifact Registry: used to store Docker images. 
 - Cloud Build: used to build and push Docker images automatically.
 - Cloud Run: used to deploy and monitor API.
-- IAM: used to grant permissions. 
+- Cloud Monitoring: used to monitor metrics from deployed API. 
+- IAM: used to manage permissions. 
 
 ### Question 18
 
@@ -595,7 +596,10 @@ We did not perform unit testing or load testing of the API during the project. T
 >
 > Answer:
 
---- question 26 fill here ---
+We implemented monitoring of the deployed model with Google Cloud Monitoring. First we instrumented the API with the metrics request count and request latency. We used Cloud Run to deploy the API serving the model, and Cloud Run automatically exports metrics such as request count and request latency to Google Cloud Monitoring. We verified this monitoring setup by sending requests to the deployed API endpoint and observing the request count metric in the Metrics Explorer of Google Cloud Monitoring (see [screenshot](figures/metrics_explorer.png) from Metrics Explorer). 
+
+Monitoring of an application provides important information to help ensure a longer lifespan and more durable application. For instance if suddenly the request latency increases this can indicate issues in the model, which can then be addressed. 
+
 
 ## Overall discussion of project
 
