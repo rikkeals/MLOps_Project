@@ -124,7 +124,10 @@ started with Machine Learning Operations (MLOps).
 python3 -m pip install -r requirements.txt 
 python3 -m pip install -e .
 ```
-4. 
+4. Train the model by typing
+```txt
+python src/mlops_project/train.py
+```
 
 ### Run using Docker 
 
