@@ -1,9 +1,6 @@
 TO-DO:
-- API testing / M24 (Rikke)
-
 - Train model igen (Mejse) - I GANG
-
-- Opdatere evaluate.py filen med interferens (Lotte)
+- Indsæt et billede mere i Q21
 
 - Opdatere/gennemlæse README inkl. folder structure 
 
@@ -33,12 +30,11 @@ NICE TO HAVE:
 - Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
 
 PROJECT SPØRGSMÅL
-Questions answered: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q28, Q29
+Questions answered: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q28, Q29, Q30, Q31
 
-Questions we are ready to answer: Q14 (i morgen, Mejse), Q27 (slut i morgen, Mejse), Q30 (i morgen), Q31 (individuelt)
+Questions we are ready to answer: Q14 (i morgen, Mejse), Q27 (slut i morgen, Mejse)
 
-Questions we need to "solve"
-Q26: (manglende punkt i M28) (Mejse)
+
 
 
 
