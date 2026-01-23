@@ -1,0 +1,98 @@
+dataset:
+  name: Dataset621_Hippocampus
+  dataset_id: 621
+  raw_root: data/original
+  nnunet_raw_root: data/nnUNet_raw
+  channel_name: T1
+  gdrive_id: 1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C
+paths:
+  nnunet_raw: data/nnUNet_raw
+  nnunet_preprocessed: data/nnUNet_preprocessed
+  nnunet_results: data/nnUNet_results
+  gcs_output: null
+  INPUT_FOLDER: data/nnUNet_raw/Dataset621_Hippocampus/ImagesTr
+  OUTPUT_FOLDER: data/nnUNet_predictions/Dataset621_Hippocampus/predictionsTr
+reproducibility:
+  seed: 42
+model:
+  configuration: 2d
+  defaults:
+    data_identifier: nnUNetPlans_2d
+    batch_size: 366
+    patch_size:
+    - 56
+    - 40
+    spacing:
+    - 1.0
+    - 1.0
+    normalization_schemes:
+    - ZScoreNormalization
+    architecture:
+      network_class_name: dynamic_network_architectures.architectures.unet.PlainConvUNet
+      arch_kwargs:
+        n_stages: 4
+        features_per_stage:
+        - 32
+        - 64
+        - 128
+        - 256
+        conv_op: torch.nn.modules.conv.Conv2d
+        kernel_sizes:
+        - - 3
+          - 3
+        - - 3
+          - 3
+        - - 3
+          - 3
+        - - 3
+          - 3
+        strides:
+        - - 1
+          - 1
+        - - 2
+          - 2
+        - - 2
+          - 2
+        - - 2
+          - 2
+        n_conv_per_stage:
+        - 2
+        - 2
+        - 2
+        - 2
+        n_conv_per_stage_decoder:
+        - 2
+        - 2
+        - 2
+        conv_bias: true
+        norm_op: torch.nn.modules.instancenorm.InstanceNorm2d
+        norm_op_kwargs:
+          eps: 1.0e-05
+          affine: true
+        dropout_op: null
+        dropout_op_kwargs: null
+        nonlin: torch.nn.LeakyReLU
+        nonlin_kwargs:
+          inplace: true
+      _kw_requires_import:
+      - conv_op
+      - norm_op
+      - dropout_op
+      - nonlin
+  override: {}
+training:
+  dataset_id: 621
+  nnunet_config: 2d
+  fold: 0
+  epochs: 5
+  trainer: nnUNetTrainer_5epochs
+  device: cpu
+  plans: nnUNetPlans
+  preprocess: true
+  num_processes: 8
+wandb:
+  enabled: true
+  project: mlops_project
+  entity: mejsegk-technical-university-of-denmark
+  run_name: nnunetv2_fold0
+  job_type: train
