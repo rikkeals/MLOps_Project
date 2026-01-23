@@ -671,7 +671,6 @@ Model training is performed either locally, within Docker containers, or through
 >
 > Answer:
 
-
 We had a lot of challenges with Git and GitHub (mostly in the beginning), esepcially since branches and pull requests are new to some of the members in the group. In the beginning there was a lot of trial and error to figure out for each member how they preferred to work with Git, i.e. through the terminal, in VS Code, or with GitHub Desktop. Most mistakes were avoided by creating a good practice of always pulling the latest updates from ```main``` and creating a separate local branch to work in. A lot of mistakes were easy to fix by learning how to e.g. undo a commit, but a few times we encountered problems where our only solution was to delete the local repo and make a new clone from GitHub. This worked, but we also learned (the hard way) to check for and backup local files not tracked by Git (files included in .gitignore, for instance keys) before doing this maneuver. 
 
 One of our biggest challenges was working with GCP. We quickly learned that almost everything in ```Google Cloud``` requires very specific permissions for each user or service, so we ended up spending a lot of time dealing with ```IAM```. After a few days, we figured out how to give all group members owner access, which made things much easier
@@ -681,11 +680,6 @@ Using the cloud to train ```nnU-Net``` with ```Vertex AI``` was also difficult. 
 When we chose nnU-Net, it seemed like a simple and well-supported model, but it turned out to be quite rigid and somewhat of a black box. The dataset was large (which was okay because we uploaded it to the cloud). Training locally on CPU took around 2.5 hours, which made experimenting and logging with ```wandb``` slow and sometimes frustrating. But Nicki told us at a lecture that we should stick to the model we chose in the begining, so that's what we did. 
 
 Overall, keeping track of many new tools was challenging, but we learned a lot and gained useful hands-on experience.
-
-
-
-
-
 
 ### Question 31
 
@@ -703,8 +697,13 @@ Overall, keeping track of many new tools was challenging, but we learned a lot a
 > *We have used ChatGPT to help debug our code. Additionally, we used GitHub Copilot to help write some of our code.*
 > Answer:
 
-Student s194693 was in charge of: 
+In collaboration we solved:
 - Creating Git Repository and making sure all members have accces
+- Filling out requirements.txt and requirements_dev.txt
+- Writing the report
+- Creating configs.yaml
+
+Student s194693 was in charge of: 
 - Create a initial file structure using CookieCutter
 - Fill out data.py
 - Saving the nnUNets configs in our configs file in model.py
@@ -714,4 +713,22 @@ Student s194693 was in charge of:
 - Continous Integration running in GitHub, adding linting and catches etc.
 - Create Architectural Diagram of MLOps Pipeline
 
-I used generative AI for debugging code when errors occured, asking questions when in doubt of specific terms or processes and grammatic corrections in text. GitHub Copilot was used for commit messages when commiting in github in Browser; as well as helping in code when small errors occured. 
+Student s204297 was in charge of: 
+- Training procedure in train.py
+- Also evaluate.py which failed due to nnU-Net restrictions
+- Creating the fastAPI
+- Making API docker file
+- Deploying model in GCP
+- Making Vertex AI work in GCP
+- Updating Readme and folder structure
+
+Student s196050 was in charge of: 
+- Logging in wandb, logure, hydra
+- Data version control
+- Making docker file
+- Making cloudbuild and data storage in GCP
+- Create trigger in GCP
+- Data drifting
+- Set up cloud monitoring
+
+We used generative AI for debugging code when errors occured, asking questions when in doubt of specific terms or processes and grammatic corrections in text. GitHub Copilot was used for commit messages when commiting in github in Browser; as well as helping in code when small errors occured. 
