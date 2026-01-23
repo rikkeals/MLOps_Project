@@ -18,24 +18,24 @@ steps:
     - europe-west1-docker.pkg.dev/$PROJECT_ID/mlops-project-group65-docker/train:latest
 
 # VERTEX
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
-  id: 'Submit Vertex AI training job'
-  entrypoint: bash
-  args:
-    - -c
-    - |
-      set -e
-      IMAGE="${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/train:latest"
-      OUTDIR="gs://${_BUCKET}/models/vertex-${BUILD_ID}"
-
-      echo "Submitting Vertex AI training job"
-      echo "Image: $${IMAGE}"
-      echo "Output: $${OUTDIR}"
-
-      gcloud ai custom-jobs create \
-        --region="${_REGION}" \
-        --display-name="nnunet-train-${BUILD_ID}" \
-        --worker-pool-spec=machine-type=n1-standard-8,replica-count=1,container-image-uri="$${IMAGE}",container-command=python,container-args="-m,mlops_project.train,dataset.dataset_id=621,training.device=cpu,paths.gcs_output=$${OUTDIR}"
+#- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+#  id: 'Submit Vertex AI training job'
+#  entrypoint: bash
+#  args:
+#    - -c
+#    - |
+#      set -e
+#      IMAGE="${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/train:latest"
+#      OUTDIR="gs://${_BUCKET}/models/vertex-${BUILD_ID}"
+#
+#      echo "Submitting Vertex AI training job"
+#      echo "Image: $${IMAGE}"
+#      echo "Output: $${OUTDIR}"
+#
+#      gcloud ai custom-jobs create \
+#        --region="${_REGION}" \
+#        --display-name="nnunet-train-${BUILD_ID}" \
+#        --worker-pool-spec=machine-type=n1-standard-8,replica-count=1,container-image-uri="$${IMAGE}",container-command=python,container-args="-m,mlops_project.train,dataset.dataset_id=621,training.device=cpu,paths.gcs_output=$${OUTDIR}"
 
 # API IMAGE
 - name: 'gcr.io/cloud-builders/docker'
