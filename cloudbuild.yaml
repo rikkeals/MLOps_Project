@@ -68,7 +68,7 @@ steps:
   args:
     - run
     - deploy
-    - mlops-api
+    - ${_SERVICE}
     - --image
     - europe-west1-docker.pkg.dev/$PROJECT_ID/mlops-project-group65-docker/api:latest
     - --region
