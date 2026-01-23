@@ -18,7 +18,7 @@ The overall goal of this project is to succesfully utilize machine learning oper
 
 We will use [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) as our third party framework. U-Net is a convolutional neural network (CNN) specially designed for image segmentation. nnU-Net is a framework based on U-Net designed specifically for segmentation of medical images. Instead of designing a new neural network architecture for every new dataset, the nnU-Net framework analyzes the given dataset and configures a U-Net based pipeline suited to said dataset. nnU-Net automatically determines configurations such as normalization methods and loss functions as well as hyperparameters such as batch size and network depth, reducing the "startup" time when creating a new model for a new dataset. Therefore, nnU-Net can easily adapt to different datasets. 
 
-We will use nnU-Net to configure a U-Net model based on our dataset (see section below). This is the model we will train to segment hippocampus and hopefully fine-tune to enhance performance.
+We will use nnU-Net to configure a U-Net model based on our dataset (see section below). 
 
 ### Data 
 
