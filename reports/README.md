@@ -520,7 +520,9 @@ Top of our GCP cloud build history: [figure](figures/build_history.png).
 >
 > Answer:
 
---- question 22 fill here ---
+We attempted to train our model in the cloud using Vertex AI, but did not fully succeed in completing cloud-based training. Our setup relied on the nnU-Net framework, which has strict assumptions about directory structure, environment variables, and filesystem access. While we successfully built and pushed Docker images for training to Artifact Registry and configured a cloud build pipeline, running the full nnU-Net training job on Vertex AI proved challenging within the project timeframe.
+
+In particular, managing persistent storage for large preprocessed medical imaging data, configuring GPU resources correctly, and ensuring compatibility between nnU-Net’s internal paths and Vertex AI’s execution environment introduced significant complexity. Due to these constraints, and given the limited scope and time of the course project, we decided to perform the actual model training locally, where debugging and iteration were more controllable.
 
 ## Deployment
 
