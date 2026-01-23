@@ -34,9 +34,9 @@ NICE TO HAVE:
 - Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
 
 PROJECT SPØRGSMÅL
-Questions answered: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q12, Q13, Q15, Q16, Q17, Q19, Q20, Q23, Q24, Q28
+Questions answered: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q12, Q13, Q15, Q16, Q17, Q19, Q20, Q21, Q23, Q24, Q28
 
-Questions we are ready to answer: Q11 (Rikke), Q14 (i morgen, Mejse), Q21 (i morgen), Q27 (slut i morgen, Mejse), Q30 (i morgen), Q31 (individuelt)
+Questions we are ready to answer: Q11 (Rikke), Q14 (i morgen, Mejse), Q27 (slut i morgen, Mejse), Q30 (i morgen), Q31 (individuelt)
 
 Questions we need to "solve"
 Q18: (manglende punkt i M21) (Lotte)
