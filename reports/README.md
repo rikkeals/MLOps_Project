@@ -646,7 +646,7 @@ We have implemented a simple form of drift detection, which in the future can be
 >
 > Answer:
 
-[figure](figures/MLOps_pipeline.png)
+Machine Learning Operations Pipeline Diagram: [figure](figures/MLOps_pipeline.png)
 
 The figure presents the complete machine learning operations pipeline used in this project, spanning development, experimentation, continuous integration, cloud infrastructure, containerization, and model usage. The pipeline begins with the developers working on their local machines, where the codebase is developed and configured. Experiment settings such as default model parameters and experiment-specific changes are defined using Hydra configuration files. During training runs, hyperparameters, metrics, and other experiment information are logged using Weights & Biases (W&B), which enables comparison across multiple experiments.
 
