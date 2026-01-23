@@ -32,9 +32,6 @@ steps:
       echo "Image: $${IMAGE}"
       echo "Output: $${OUTDIR}"
 
-      # (safe to call even if already enabled)
-      gcloud services enable aiplatform.googleapis.com
-
       gcloud ai custom-jobs create \
         --region="${_REGION}" \
         --display-name="nnunet-train-${BUILD_ID}" \
