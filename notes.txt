@@ -1,13 +1,11 @@
 TO-DO:
 - API testing / M24 (Rikke)
 
-- (Fix wandb) (Mejse)
-- (Train model igen) (Mejse)
+- Train model igen (Mejse) - I gang
 
 - Opdatere evaluate.py filen med interferens (Lotte)
 
 - Opdatere/gennemlæse README inkl. folder structure 
-- Tjekke at requirements.txt er up to date (tror der er noget software til a scanne projektet)
 
 CORE MODULES:
 Week 1:
@@ -35,9 +33,9 @@ NICE TO HAVE:
 - Hash kode til data filerne der bliver downloadet fra det offentlige link, så man kan tjekke om det ændrer sig.
 
 PROJECT SPØRGSMÅL
-Questions answered: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q12, Q13, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q23, Q24, Q28
+Questions answered: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q23, Q24, Q28
 
-Questions we are ready to answer: Q11 (Rikke), Q14 (i morgen, Mejse), Q27 (slut i morgen, Mejse), Q30 (i morgen), Q31 (individuelt)
+Questions we are ready to answer: Q14 (i morgen, Mejse), Q27 (slut i morgen, Mejse), Q30 (i morgen), Q31 (individuelt)
 
 Questions we need to "solve"
 Q22: Train model in the cloud using Engine or Vertex AI (manglende punkt i M21) (Lotte)
