@@ -86,25 +86,35 @@ def maybe_init_wandb(cfg: DictConfig) -> Optional[object]:
     return run
 
 
-def parse_final_dice(log_path: Path) -> float | None:
+def parse_epoch_metrics(log_path: Path) -> list[dict]:
     """
-    Try to extract a final Dice score from nnU-Net logs.
-    Returns None if not found.
+    Parse per-epoch metrics from nnU-Net log.
+    Returns a list of dicts: [{epoch, train_loss, val_loss, pseudo_dice}]
     """
-    dice_patterns = [
-        r"Mean Validation Dice[:=]\s*([0-9]*\.?[0-9]+)",
-        r"Mean Dice[:=]\s*([0-9]*\.?[0-9]+)",
-        r"Dice score[:=]\s*([0-9]*\.?[0-9]+)",
-    ]
+    epoch_data = []
+    current = {}
 
-    text = log_path.read_text(errors="ignore")
+    for line in log_path.read_text(errors="ignore").splitlines():
+        if line.startswith("Epoch "):
+            if current:
+                epoch_data.append(current)
+            current = {"epoch": int(line.split()[1])}
 
-    for pattern in dice_patterns:
-        matches = re.findall(pattern, text)
-        if matches:
-            return float(matches[-1])  # use final value
+        elif "train_loss" in line:
+            current["train_loss"] = float(line.split()[-1])
 
-    return None
+        elif "val_loss" in line:
+            current["val_loss"] = float(line.split()[-1])
+
+        elif "Pseudo dice" in line:
+            nums = re.findall(r"[0-9]*\.?[0-9]+", line)
+            if nums:
+                current["pseudo_dice"] = sum(map(float, nums)) / len(nums)
+
+    if current:
+        epoch_data.append(current)
+
+    return epoch_data
 
 
 def set_nnunet_env_vars(env: dict[str, str], nnunet_raw: Path, nnunet_preprocessed: Path, nnunet_results: Path) -> None:
@@ -259,20 +269,11 @@ def main(cfg: DictConfig) -> None:
 
         if wb_run is not None:
             import wandb  # type: ignore
-            metrics = {
-                "duration_seconds": duration_s,
-                "dataset_id": dataset_id,
-                "fold": fold,
-                "device": device,
-                "trainer": trainer,
-                "nnunet_config": nnunet_config,
-            }
 
-            final_dice = parse_final_dice(log_path)
-            if final_dice is not None:
-                metrics["final_mean_dice"] = final_dice
+            epoch_metrics = parse_epoch_metrics(log_path)
+            for m in epoch_metrics:
+                wandb.log(m, step=m["epoch"])
 
-            wandb.log(metrics)
             wb_run.finish()
 
     except Exception as e:
