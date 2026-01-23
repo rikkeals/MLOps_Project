@@ -30,7 +30,7 @@ steps:
 
       echo "Submitting Vertex AI training job"
       echo "Image: $${IMAGE}"
-      echo "Output: ${OUTDIR}"
+      echo "Output: $${OUTDIR}"
 
       # (safe to call even if already enabled)
       gcloud services enable aiplatform.googleapis.com
@@ -43,7 +43,7 @@ steps:
         python -m mlops_project.train \
           dataset.dataset_id=621 \
           training.device=cpu \
-          paths.gcs_output="${OUTDIR}"
+          paths.gcs_output="$${OUTDIR}"
 
 # API IMAGE
 - name: 'gcr.io/cloud-builders/docker'
