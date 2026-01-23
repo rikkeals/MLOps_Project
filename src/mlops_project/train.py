@@ -279,7 +279,7 @@ def main(cfg: DictConfig) -> None:
                     },
                     step=m["epoch"],
                 )
-                
+
             wb_run.finish()
 
     except Exception as e:
