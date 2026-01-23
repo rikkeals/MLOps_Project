@@ -493,7 +493,7 @@ Docker images in our GCP artifact registry: [figure](figures/artifact_registry_d
 >
 > Answer:
 
---- question 21 fill here ---
+Top of our GCP cloud build history: [figure](figures/build_history.png).
 
 ### Question 22
 
