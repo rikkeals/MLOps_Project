@@ -100,7 +100,7 @@ will check the repositories and the code to verify your answers.
 * [x] Check how robust your model is towards data drifting (M27)
 * [ ] Setup collection of input-output data from your deployed application (M27)
 * [ ] Deploy to the cloud a drift detection API (M27)
-* [ ] Instrument your API with a couple of system metrics (M28)
+* [x] Instrument your API with a couple of system metrics (M28)
 * [ ] Setup cloud monitoring of your instrumented application (M28)
 * [ ] Create one or more alert systems in GCP to alert you if your app is not behaving correctly (M28)
 * [ ] If applicable, optimize the performance of your data loading using distributed data loading (M29)
@@ -447,7 +447,8 @@ Debugging was primarily done through inspection of error messages, stack traces,
 We have used the following GCP services: 
 - Cloud Storage (Bucket): used to store datasets as a form of DVC. 
 - Artifact Registry: used to store Docker images. 
-- Cloud build: used to build and push Docker images automatically.
+- Cloud Build: used to build and push Docker images automatically.
+- Cloud Run: used to deploy and monitor API.
 - IAM: used to grant permissions. 
 
 ### Question 18
