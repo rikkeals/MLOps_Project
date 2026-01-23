@@ -138,6 +138,36 @@ def set_seed(seed: int) -> None:
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
+def is_gcs_path(p: str) -> bool:
+    return isinstance(p, str) and p.startswith("gs://")
+
+
+def gcs_rsync_dir(local_dir: Path, gcs_dir: str, env: dict[str, str]) -> None:
+    """
+    Sync a local directory to a GCS directory.
+    Requires 'gsutil' to be available inside the container.
+    """
+    if not local_dir.exists():
+        raise FileNotFoundError(f"Local directory not found for upload: {local_dir}")
+
+    cmd = ["gsutil", "-m", "rsync", "-r", str(local_dir), gcs_dir]
+    logger.info(f"Uploading directory to GCS: {local_dir} -> {gcs_dir}")
+    run_and_tee(cmd, (Path.cwd() / "gcs_upload.log"), env)
+
+
+def gcs_cp_file(local_file: Path, gcs_path: str, env: dict[str, str]) -> None:
+    """
+    Copy a single local file to a GCS path (file or folder).
+    Requires 'gsutil' in the container.
+    """
+    if not local_file.exists():
+        raise FileNotFoundError(f"Local file not found for upload: {local_file}")
+
+    cmd = ["gsutil", "cp", str(local_file), gcs_path]
+    logger.info(f"Uploading file to GCS: {local_file} -> {gcs_path}")
+    run_and_tee(cmd, (Path.cwd() / "gcs_upload.log"), env)
+
+
 
 @hydra.main(version_base=None, config_path="../../configs", config_name="config")
 def main(cfg: DictConfig) -> None:
@@ -216,6 +246,17 @@ def main(cfg: DictConfig) -> None:
         logger.success(f"Done! Training finished in {duration_s:.1f}s")
         logger.info(f"Log written to {log_path}")
 
+        # upload to GCS (Vertex)
+        gcs_out = cfg.paths.get("gcs_output", None)
+        if gcs_out and is_gcs_path(str(gcs_out)):
+            gcs_out = str(gcs_out).rstrip("/")
+
+            # Upload nnU-Net results + logs
+            gcs_rsync_dir(nnunet_results, f"{gcs_out}/nnUNet_results", env)
+            gcs_cp_file(log_path, f"{gcs_out}/nnunet.log", env)
+            logger.success(f"Uploaded artifacts to: {gcs_out}")
+
+
         if wb_run is not None:
             import wandb  # type: ignore
             metrics = {
@@ -245,6 +286,7 @@ def main(cfg: DictConfig) -> None:
             except Exception:
                 pass
         raise
+
 
 
 if __name__ == "__main__":
