@@ -10,6 +10,7 @@ paths:
   nnunet_raw: data/nnUNet_raw
   nnunet_preprocessed: data/nnUNet_preprocessed
   nnunet_results: data/nnUNet_results
+  gcs_output: null
 
 reproducibility:
   seed: 42
