@@ -52,6 +52,7 @@ The directory structure of the project looks like this:
 |   └── dependabot.yaml       # Automated dependency update configuration
 ├── configs/                  # Configuration files
 ├── data/                     # Data directory (with nnUNet data structure)
+│   ├── nnUNet_predictions/.../
 │   ├── nnUNet_preprocessed/.../
 |       ├── gt_segmentation/  # ground truth labels
 |       ├── nnUNetPlans_2d/   # created by nnUNet planning
@@ -70,9 +71,10 @@ The directory structure of the project looks like this:
 │   ├── mkdocs.yml
 │   └── source/
 │       └── index.md
+├── logs/                     # loguru logs
+│   └── ...
 ├── outputs/                  # Outputs from Hydra and Loguru
 │   └── folder with date/
-
 ├── reports/                  # Reports
 │   ├── figures /
 │   ├── drift_train_vs_test.html # Data drift summary
@@ -83,6 +85,7 @@ The directory structure of the project looks like this:
 │   │   ├── api.py
 │   │   ├── data_drift.py
 │   │   ├── data.py           # Provides correct datastructure
+│   │   ├── evaluate.py
 │   │   ├── model.py
 │   │   └── train.py
 └── tests/                    # Tests
