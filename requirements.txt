@@ -21,7 +21,7 @@ pydantic>=2.6
 # --- Config / experiment management / Logging ---
 hydra-core==1.3.2
 omegaconf==2.3.0
-wandb==0.24.0
+wandb==0.24.1
 loguru==0.7.3
 
 # --- Utilities / data download ---
