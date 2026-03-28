@@ -43,6 +43,6 @@ prometheus-client==0.24.1
 
 # --- Data drifting ---
 evidently==0.7.20
-pandas==2.3.3
+pandas==3.0.0
 
 
